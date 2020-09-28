@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "registrostore",
+        "designer|userAliasPrefix": "store",
+        "designer|userClassName": "Registro",
+        "model": "RegistroModel",
+        "storeId": "Registro"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "7d9014dd-fd27-4d23-94fd-a61f3d0a3cff",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "api": [
+                    "{create: '../servidor/tramites/registro/save',",
+                    "          read: '../servidor/tramites/registro/get_tramite',",
+                    "          update: '../servidor/tramites/registro/update',",
+                    "          destroy: '../servidor/tramites/registro/update'}"
+                ]
+            },
+            "configAlternates": {
+                "actionMethods": "object",
+                "url": "string",
+                "api": "object"
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "cf0ec469-3a86-4d7e-a63c-b7dc74cae0fd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "28594b5b-ed27-40e7-bdc0-995c12cd335c"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "52ae3a21-d6ab-495c-994e-19be48c5b5e2"
+                }
+            ]
+        }
+    ]
+}

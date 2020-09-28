@@ -1,0 +1,268 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "constrainHeader": true,
+        "designer|userAlias": "consultar.winestadocons",
+        "designer|userClassName": "consultar.winEstadoCons",
+        "height": 316,
+        "layout": "fit",
+        "modal": true,
+        "title": "Estados",
+        "width": 900
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "constrainHeader": "boolean",
+        "modal": "boolean"
+    },
+    "name": "MyWindow",
+    "designerId": "81ac9b06-7fca-4dde-a41b-a587d1c58a42",
+    "viewControllerInstanceId": "160458fd-a03f-4da9-a7b8-3b17a2f6a9c1",
+    "viewModelInstanceId": "d242092c-8a52-4e92-be00-8d5bf99809fc",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "forceFit": true,
+                "id": "grdEstadosCons",
+                "store": "Estado"
+            },
+            "configAlternates": {
+                "id": "string",
+                "store": "store",
+                "forceFit": "boolean"
+            },
+            "name": "MyGridPanel2",
+            "designerId": "4829e4b0-bd6a-40a1-8112-a84464e5aaf9",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "UND_NOMBRE",
+                        "text": "Destino"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn45",
+                    "designerId": "f9f484e1-22ec-45f9-8f2f-3ef8a823c453"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "TIP_NOMBRE",
+                        "text": "Estado"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn44",
+                    "designerId": "7da90b1e-e69a-4567-af6b-65710b9bd282"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_FECHARECIBIDO",
+                        "format": "Y-m-d",
+                        "text": "Fecha"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyDateColumn6",
+                    "designerId": "e7876091-1d42-4afb-991d-b59a2d3e1158"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_OBSERVACION",
+                        "text": "Observacion"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn40",
+                    "designerId": "88db073e-c25d-4d25-9877-5b491d90ba55"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_FECHAFIN",
+                        "format": "Y-m-d",
+                        "text": "Fecha de finalizacion"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyDateColumn4",
+                    "designerId": "4b26d670-91c5-4136-9283-e3a1a2dac6f1"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_DESCRIPCION",
+                        "text": "Descripción de la Unidad"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn41",
+                    "designerId": "a0692d7c-4820-4acf-a95b-24e9de0afdb3"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_TRAMITADO_A",
+                        "text": "Tramitado A"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn42",
+                    "designerId": "f6896024-e1b4-43da-bde7-f94ca66e394b"
+                },
+                {
+                    "type": "Ext.grid.column.Check",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_REVISADO_UNIDAD",
+                        "disabled": true,
+                        "text": "Revisado"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "disabled": "boolean"
+                    },
+                    "name": "MyCheck3",
+                    "designerId": "b610886f-d348-4f8c-a5a0-c00e4224b869"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_ASIGNADO_A",
+                        "text": "Asignado A"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn43",
+                    "designerId": "7fcc0111-f8c8-4b75-9d02-ad15b7b92c86"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable2",
+                    "designerId": "bb312ca1-b151-4519-8fb1-28665fbcfbca"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGrdEstadosConsRender",
+                        "implHandler": [
+                            "var grid = Ext.getCmp('grdEstadosCons');",
+                            "var store = grid.getStore();",
+                            "var forma = Ext.getCmp('frmConsultarTramite');",
+                            "var tramiteNum = forma.getRecord().data.TRA_CODIGO;",
+                            "var parametroNum = forma.getRecord().data.TRA_PRM_ID;",
+                            "store.proxy.extraParams = {",
+                            "    busqueda: 1,",
+                            "    idtramite: tramiteNum,",
+                            "    idparametro: parametroNum",
+                            "};",
+                            "store.load();"
+                        ],
+                        "name": "render",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onGrdEstadosConsRender",
+                    "designerId": "755dc453-a2fa-4e16-b52b-12103d6b7052"
+                }
+            ]
+        }
+    ]
+}

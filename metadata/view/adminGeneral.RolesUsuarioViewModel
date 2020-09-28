@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.rolesusuario",
+        "designer|userClassName": "adminGeneral.RolesUsuarioViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "cfcfddf8-cb9c-4068-a976-f644bffadbc6"
+}

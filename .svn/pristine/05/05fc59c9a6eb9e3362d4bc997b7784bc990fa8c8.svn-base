@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "consulta1store",
+        "designer|userAliasPrefix": "store",
+        "designer|userClassName": "Consulta1",
+        "model": "Consulta1Model",
+        "storeId": "Consulta1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "05e48667-aeea-4051-9db9-1557de6afdfd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "url": "../servidor/tramites/consulta/consultas"
+            },
+            "configAlternates": {
+                "actionMethods": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "3d425d4d-0c37-4b0a-8f38-ea089af5d982",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "1076b261-b64f-4c74-b4ce-f4bf5ceb3461"
+                }
+            ]
+        }
+    ]
+}

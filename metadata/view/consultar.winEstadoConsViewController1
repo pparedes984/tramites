@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "consultageneral.winestadogeneral",
+        "designer|userClassName": "consultar.winEstadoConsViewController1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "consultar.winEstadoConsViewController1",
+    "designerId": "4f379f98-7e86-4d3f-a60b-92da5f402d7d"
+}

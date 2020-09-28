@@ -1,0 +1,487 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "administracion.usuarioparametrobasico",
+        "designer|userClassName": "administracion.UsuarioParametroBasico",
+        "layout": "hbox",
+        "title": "Asignación de Usuarios a Parametro",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "titleAlign": "string"
+    },
+    "name": "adminGeneral.UsuarioParametro1",
+    "designerId": "c3f63b9a-05d3-4d56-bca5-2440e0d8fdb8",
+    "viewControllerInstanceId": "a8127be0-4a2f-44ad-a878-cb1226f146b3",
+    "viewModelInstanceId": "90077424-abf7-4b9b-abd3-b8a64c65d9a8",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlUsuariosNoAsigBasico",
+                "layout": "fit",
+                "layout|flex": 1.25,
+                "title": "Usuarios no Asignados"
+            },
+            "configAlternates": {
+                "id": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "scrollable": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "536fd5b2-aee8-4d21-917e-da11b340075c",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUsuariosNoAsigBasica",
+                        "store": "Usuario"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyGridPanel3",
+                    "designerId": "71225cf3-380e-4080-bbec-7860c01489f6",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable3",
+                            "designerId": "f957e0dd-5e8f-4c2c-9061-0704fdea8014"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_USUARIO",
+                                "text": "Usuario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "c8913adf-0024-431c-bc14-fdff11c29b78"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_CEDULA",
+                                "text": "Cedula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "c06bc0fc-2e8e-4710-a109-2aabec2925ec"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "dock": null,
+                "layout": "vbox",
+                "layout|flex": 0.1,
+                "title": "|",
+                "titleAlign": "center"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "titleAlign": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "c9058e8e-d23a-422b-808d-bcb02f8d7d2d",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-refresh",
+                        "id": "btnRefreshUsxPBasica",
+                        "layout|flex": null,
+                        "margin": "",
+                        "text": ""
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "margin": "auto"
+                    },
+                    "name": "MyButton9",
+                    "designerId": "c4031c87-b40b-45ef-a828-31b0225261c0",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnRefreshUsxPBasicaClick",
+                                "implHandler": [
+                                    "Ext.getCmp('grdUsuariosAsigBasica').getStore().removeAll();",
+                                    "var strUsuario = Ext.getCmp('grdUsuariosAsigBasica').getStore();",
+                                    "strUsuario.proxy.extraParams = {",
+                                    "    usr: 3,",
+                                    "    parametro : Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "};",
+                                    "strUsuario.load();",
+                                    "",
+                                    "Ext.getCmp('grdUsuariosNoAsigBasica').getStore().removeAll();",
+                                    "var strUsuario1 = Ext.getCmp('grdUsuariosNoAsigBasica').getStore();",
+                                    "strUsuario1.proxy.extraParams = {",
+                                    "    parametro : Ext.getCmp('cbParametroPrincipal').getValue(),",
+                                    "    usr:4",
+                                    "};",
+                                    "strUsuario1.load();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnRefreshUsxPBasicaClick",
+                            "designerId": "6a140aff-9ef9-4ff0-a5b6-72bed19d42db"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-arrow-right",
+                        "id": "btnAsignarUsrXParamBasica",
+                        "layout|flex": null,
+                        "margin": "20 0 10 0"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "4050abac-5830-4ed8-9eaf-eacf0d71b53c",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnAsignarUsrXParamBasicaClick",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "var grid = Ext.getCmp('grdUsuariosNoAsigBasica');",
+                                    "var NoAsignadoarrayKeys = grid.getSelectionModel().selected.items;",
+                                    "",
+                                    "if(NoAsignadoarrayKeys.length === 0)",
+                                    "    Ext.Msg.alert('Error', 'Debe escoger un Usuario para asignar');",
+                                    "",
+                                    "else",
+                                    "{",
+                                    "    var store = Ext.getStore('UsuarioParametro');",
+                                    "    store.add(Ext.getCmp('cbParametroPrincipal').getValue());",
+                                    "    store.sync(",
+                                    "        {",
+                                    "            params:{",
+                                    "                usuario: NoAsignadoarrayKeys[0].data.USR_USUARIO,",
+                                    "                parametro : Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "            },",
+                                    "            success: function(batch, success)",
+                                    "            {",
+                                    "",
+                                    "            },",
+                                    "",
+                                    "            failure: function(batch, success)",
+                                    "            {",
+                                    "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "            }",
+                                    "        });",
+                                    "    me.onBtnRefreshUsxPBasicaClick();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnAsignarUsrXParamBasicaClick",
+                            "designerId": "4a9e0055-6768-4b5d-93c1-8135165b2205"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-arrow-left",
+                        "id": "btnQuitarUsrXParamBasica"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "c0875c63-05f5-4f50-b397-9de87a294967",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnQuitarUsrXParamBasicaClick",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "var grid = Ext.getCmp('grdUsuariosAsigBasica');",
+                                    "var AsignadoarrayKeys = grid.getSelectionModel().selected.items;",
+                                    "if(AsignadoarrayKeys.length === 0)",
+                                    "    Ext.Msg.alert('Error', 'Debe escoger un Usuario a remover');",
+                                    "else",
+                                    "{",
+                                    "    var rec = grid.selection;",
+                                    "    Ext.Ajax.request",
+                                    "    (",
+                                    "        {",
+                                    "            method: 'post',",
+                                    "            url: '../servidor/tramites/usuarioparametro/delete',",
+                                    "            params: {",
+                                    "                usuario: AsignadoarrayKeys[0].data.USR_USUARIO,",
+                                    "                parametro: Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "            },",
+                                    "            success: function (response, options) {",
+                                    "",
+                                    "            },",
+                                    "            failure: function (response, options){",
+                                    "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "            }",
+                                    "        }",
+                                    "    );",
+                                    "    me.onBtnRefreshUsxPBasicaClick();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnQuitarUsrXParamBasicaClick",
+                            "designerId": "186ac72e-6a13-491e-866a-c5891b9d1e11"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlUsuariosAsigBasica",
+                "layout": "fit",
+                "layout|flex": 1.25,
+                "title": "Usuarios Asignados"
+            },
+            "configAlternates": {
+                "id": "string",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel6",
+            "designerId": "49334ada-8f8f-43cf-805f-4765d6138951",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUsuariosAsigBasica",
+                        "store": "Usuario"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyGridPanel8",
+                    "designerId": "b00a623d-e0f9-446f-8c12-5b9382b7ecaf",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable8",
+                            "designerId": "210c4cd6-27b0-4f0f-b96f-2f36d67c24cf"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_USUARIO",
+                                "text": "Usuario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn6",
+                            "designerId": "439ed921-964f-453c-9ac3-4ac6323187b6"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_CEDULA",
+                                "text": "Cedula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn7",
+                            "designerId": "0e41c4b4-3df1-4234-a4aa-70dd1580e429"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUsuariosAsigBasicaRender",
+                                "implHandler": [
+                                    "var nuevoUsuario = Ext.create('Tramites.store.Usuario');",
+                                    "Ext.getCmp('grdUsuariosAsigBasica').setStore(nuevoUsuario);",
+                                    "this.onBtnRefreshUsxPBasicaClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdUsuariosAsigBasicaRender",
+                            "designerId": "831f8862-c762-4f2c-8cca-ef0db92bdeb4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

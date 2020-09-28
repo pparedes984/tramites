@@ -1,0 +1,917 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "constrainHeader": true,
+        "container|align": "stretch",
+        "designer|userAlias": "consultar.wintramite",
+        "designer|userClassName": "consultar.winTramite",
+        "height": 650,
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Informacion de Trámite",
+        "width": 763
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto",
+        "constrainHeader": "boolean",
+        "container|align": "string",
+        "layout": "string"
+    },
+    "name": "MyWindow",
+    "designerId": "a71ca016-0a94-46d9-a723-18beb460933d",
+    "viewControllerInstanceId": "82b4e6a1-c20f-4b38-b307-1437c4f7a7e1",
+    "viewModelInstanceId": "694cbcb8-6dbf-43ef-a493-0fd30b56eb08",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "center",
+                "margin": "5 0 0 0",
+                "width": 455
+            },
+            "configAlternates": {
+                "layout": "string",
+                "margin": "auto",
+                "width": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "7280f479-7de2-4f30-aa73-60811ce05990",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "btnEstadosConsultar",
+                        "style": "background-color:#264685;",
+                        "text": "Ver Estados",
+                        "width": 156
+                    },
+                    "configAlternates": {
+                        "style": "string",
+                        "text": "string",
+                        "width": "auto",
+                        "id": "string"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "637d06ed-504b-4287-b275-133b440ba148",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnEstadosConsultarClick",
+                                "implHandler": [
+                                    "var winEstado = Ext.create('Tramites.view.consultar.winEstadoCons');",
+                                    "winEstado.show();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnEstadosConsultarClick",
+                            "designerId": "07542403-604a-408b-ab3d-943a3a6de1ad"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 538,
+                "id": "frmConsultarTramite",
+                "layout": "column",
+                "reference": "form",
+                "scrollable": true,
+                "title": "",
+                "width": 600
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "scrollable": "auto",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm1",
+            "designerId": "d22307e5-6986-40cc-98e0-d39101c9c0a7",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 728,
+                        "id": "pnlCol1",
+                        "margin": "0 15 0 0"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "margin": "auto",
+                        "height": "auto"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "b5a38898-430a-41eb-a87c-d5a9cad6025a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Codigo de Tramite",
+                                "id": "dspTraCodigo",
+                                "labelStyle": "font-weight:bold;",
+                                "modal": true,
+                                "name": "TRA_CODIGO",
+                                "width": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "width": "auto",
+                                "id": "string",
+                                "modal": "boolean"
+                            },
+                            "name": "MyDisplayField1",
+                            "designerId": "920e448b-a4dc-4a8a-bdf7-51b338e4216b"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Fecha",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_FECHA",
+                                "width": 274
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField3",
+                            "designerId": "2cfc8924-cc56-41cf-a463-df75b4583a4f"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "fieldLabel": "Recibido",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_RECIBIDO"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheckbox1",
+                            "designerId": "45638fc0-7c31-43de-be5e-5aadd9e4e5ed"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "N° de Oficio",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_OFICIO",
+                                "width": 271
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField4",
+                            "designerId": "9686b99a-8814-4bc3-b616-0ec86bb6a507"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Beneficiario",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_BENEFICIARIO1"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField5",
+                            "designerId": "05377df3-9b03-483e-a63b-61ccd9250341"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Cedula",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_CEDULA1"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField13",
+                            "designerId": "df6a8f61-2192-49b0-b592-e21dfa25c27a"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Beneficiario 2",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_BENEFICIARIO2"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField6",
+                            "designerId": "e1e3bd65-949b-4bfb-bf53-d0ebce082c21"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Cedula 2",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_CEDULA2"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField14",
+                            "designerId": "00de61ee-4c24-437e-86d8-034fe6caaa82"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Proyecto / Partida Presupuestaria",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_PROYECTO",
+                                "width": 315
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField7",
+                            "designerId": "eb05c58d-b160-428a-b45b-dabc9f777bba"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Unidad de Gasto",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_GASTO",
+                                "width": 317
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField8",
+                            "designerId": "b504a11c-6f22-4013-8a0e-a57971a6dfed"
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "editable": false,
+                                "fieldLabel": "Descripcion",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_DESCRIPCION",
+                                "width": 340
+                            },
+                            "configAlternates": {
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "width": "auto",
+                                "border": "auto"
+                            },
+                            "name": "MyTextArea1",
+                            "designerId": "356a93e9-64e3-472c-a0a9-f2448ea61fdb"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "fieldLabel": "Anulado",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_ANULADO"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheckbox2",
+                            "designerId": "8b99c067-5923-4978-8570-6dac0c5dc49a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlCOl2"
+                    },
+                    "configAlternates": {
+                        "id": "string"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "17a206a3-9ba9-4464-9903-2d13621d2006",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Unidad Solicitante",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "UND_NOMBRE",
+                                "width": 219
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField9",
+                            "designerId": "e32da7f0-d030-4741-8960-f37842d86533"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Asunto",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "ASU_DESCRIPCION",
+                                "width": 271
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField10",
+                            "designerId": "f24966f7-4d31-4c5c-9dfd-da4d9816a881"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Parámetro",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "PRM_NOMBRE",
+                                "width": 247
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField11",
+                            "designerId": "918d371b-0b89-4d33-bbc8-dabba7bbb02b"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Fecha de Recibido",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_FECHARECIBIDO",
+                                "width": 280
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField12",
+                            "designerId": "1b280dc7-987a-4f50-a197-9a11c47d832b"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Reserva",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_COMPROMISO",
+                                "width": 189
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField15",
+                            "designerId": "eb4fcba5-cb5e-4b71-9751-a538c3754d14"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Posición",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_POSICION",
+                                "value": "",
+                                "width": 189
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "value": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField22",
+                            "designerId": "b8d4cae1-a727-4dde-b8a5-e2453b21cc9b"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Persona que Autoriza",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_PERSONA_AUTORIZA",
+                                "width": 305
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "width": "auto",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField16",
+                            "designerId": "3ec1f500-33ee-4da7-9dc6-52c85ba4b0b3"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Teléfono/Ext",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_TELEFONO"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField17",
+                            "designerId": "a24088e5-8a8e-4562-a710-4398c5be2479"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Valor",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_VALOR"
+                            },
+                            "configAlternates": {
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "hideTrigger": "boolean",
+                                "labelStyle": "string",
+                                "name": "string"
+                            },
+                            "name": "MyDisplayField2",
+                            "designerId": "6fd94e29-fbfc-41b9-a2a0-fb6acf7e6295"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Detalle de Factura",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_DETALLE_FACTURA"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField18",
+                            "designerId": "bfc0bbf9-ece0-4ce7-a710-fb5871f954fa"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Viáticos, si aplica:"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "46b05ab7-e91c-4dc2-9da8-83b3a801d072"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": 0,
+                                "fieldLabel": "Fecha de Viaje",
+                                "format": "Y-m-d",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_FECHA_VIAJE_VIATICO",
+                                "readOnly": true,
+                                "style": "border:0px;"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "border": "auto",
+                                "format": "string",
+                                "readOnly": "boolean",
+                                "style": "string"
+                            },
+                            "name": "MyDisplayField",
+                            "designerId": "c0e24d23-94d3-4c2c-9d39-e9f1b40a6053"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Fecha fin de Viaje",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_FECHA_VIAJE_FIN_VIATICO"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string"
+                            },
+                            "name": "MyDisplayField21",
+                            "designerId": "712e6c83-1d02-45b6-9946-05ac3a0f33c4"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Destino",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_DESTINO_VIATICO"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField20",
+                            "designerId": "2d1f57ab-7a8c-454d-a726-b6c2e960ce12"
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "editable": false,
+                                "fieldLabel": "Personas Adicionales",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_PERSONAS_ADIC_VIATICO",
+                                "width": 340
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "width": "auto",
+                                "editable": "boolean"
+                            },
+                            "name": "MyTextArea4",
+                            "designerId": "656871f4-cf13-4a9f-ad1e-94e797c3430c"
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "editable": false,
+                                "fieldLabel": "Observaciones de Viaje",
+                                "labelStyle": "font-weight:bold;",
+                                "name": "TRA_OBSERV_VIAJE_VIATICO",
+                                "width": 340
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelStyle": "string",
+                                "name": "string",
+                                "width": "auto",
+                                "editable": "boolean"
+                            },
+                            "name": "MyTextArea5",
+                            "designerId": "bc3d8f29-0d58-4e81-aab9-720c0361713b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "2d84e3ea-c917-4c35-9bf6-cd2de8ac6d79"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "f07708b3-0ec8-4b20-ab4f-148b6f6e3ed1"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "274067a0-a28e-438e-bd45-0163345ce3cc"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "61d915d6-9b27-4ea8-b992-6d463fd4e5b7"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "var forma = Ext.getCmp('frmConsultarTramite').getForm();",
+                    "if(component.curRec){",
+                    "    forma.loadRecord(component.curRec);",
+                    "    if(component.curRec.data.TRA_RECIBIDO!==true)",
+                    "        Ext.getCmp('btnEstadosConsultar').setDisabled(true);",
+                    "}"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "57763a5a-64a7-4f37-93a6-761f9374cbe8"
+        }
+    ]
+}

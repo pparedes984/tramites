@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UnidadParametroModel",
+        "idProperty": "UND_PRM_ID"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "31e92000-ca23-4d48-b1fd-57711badd981",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger17",
+            "designerId": "bc927115-5f50-4f36-91bf-7c7904696cc0"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRM_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger18",
+            "designerId": "ed363553-c95b-4a3e-b0f3-589a4cffa5b5"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRM_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString39",
+            "designerId": "23756114-7fef-4cf0-9727-71ab1a72c88f"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString5",
+            "designerId": "a9508c42-533b-428b-bc1f-f729343a8297"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_PRM_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger5",
+            "designerId": "3d19cedd-06cf-46df-bf64-31e8ead80ea8"
+        }
+    ]
+}

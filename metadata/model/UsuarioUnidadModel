@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsuarioUnidadModel",
+        "idProperty": "UND_CODIGO"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "f234232d-bc1d-456c-9e16-8e8111935129",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_USUARIO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString37",
+            "designerId": "e825bd62-1454-4b41-b1c3-162f91de7630"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger16",
+            "designerId": "e87bb2eb-f2df-49d2-99de-9d363e4bc5af"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString38",
+            "designerId": "c8ec3d93-eb3c-43fe-8757-9719a77d081d"
+        }
+    ]
+}

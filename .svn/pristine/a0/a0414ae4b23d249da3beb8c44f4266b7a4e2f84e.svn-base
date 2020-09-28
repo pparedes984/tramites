@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.unidadgasto",
+        "designer|userClassName": "adminGeneral.UnidadViewController1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "adminGeneral.UnidadViewController1",
+    "designerId": "b72cbc40-cb48-412c-983a-5f5b2f6f0279"
+}

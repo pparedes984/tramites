@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "direccionar.wintramitedetalle",
+        "designer|userClassName": "direccionar.winTramiteDetalleViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "d4abc6e3-cbe1-4cb8-a931-4d16caeb4fa9"
+}

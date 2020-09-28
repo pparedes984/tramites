@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.usuarioparametro",
+        "designer|userClassName": "administracion.AsuntosParametrosViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "administracion.AsuntosParametrosViewController",
+    "designerId": "57eca351-1ee9-4d94-b406-608b19697b7c"
+}

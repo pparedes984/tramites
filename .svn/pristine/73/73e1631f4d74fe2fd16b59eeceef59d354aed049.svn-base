@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UnidadGastoModel",
+        "idProperty": "GST_ID"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "ba32c6be-3e36-4b22-a3ae-7ed7e8de7d39",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "GST_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString3",
+            "designerId": "ce868068-ff5d-404c-adfe-a302dc205b4f"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "GST_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger2",
+            "designerId": "297fca30-17aa-4d7f-ab9c-84b473d655cd"
+        }
+    ]
+}

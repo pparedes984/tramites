@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsuarioUnidadParametroModel"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "8ce074be-3384-428e-889c-eca909443872",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_USUARIO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString40",
+            "designerId": "76987d37-4417-4abf-b019-913f41940ff8"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_PRM_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger19",
+            "designerId": "37e4c90f-c6c1-4935-b88d-61dec0b3aaa6"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UUP_JEFE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyBoolean6",
+            "designerId": "90cc5928-278f-4e97-a662-8a725be93fd6"
+        }
+    ]
+}

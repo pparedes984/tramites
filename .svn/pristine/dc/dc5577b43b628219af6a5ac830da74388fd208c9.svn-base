@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "consultageneral.wintramitegeneral",
+        "designer|userClassName": "consultar.winTramiteViewModel1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "consultar.winTramiteViewModel1",
+    "designerId": "908e0e52-e339-472f-9055-fbf0e552e5db"
+}

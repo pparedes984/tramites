@@ -1,0 +1,895 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "myCls"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "admingeneral.rolesusuario",
+        "designer|userClassName": "adminGeneral.RolesUsuario",
+        "flex": 2,
+        "layout": "hbox",
+        "title": "Asignación de Roles a Usuarios",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "container|align": "string",
+        "flex": "number",
+        "titleAlign": "string",
+        "cls": "typedarray"
+    },
+    "name": "MyPanel1",
+    "designerId": "2a36399d-1f55-4d9c-807c-9f9e49719b8a",
+    "viewControllerInstanceId": "733d483f-a1ae-4ec4-a581-5dd4c7c9333d",
+    "viewModelInstanceId": "cfcfddf8-cb9c-4068-a976-f644bffadbc6",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "myCls2"
+                ],
+                "flex": 1,
+                "layout": "fit",
+                "layout|flex": 1,
+                "scrollable": true,
+                "title": "Usuarios",
+                "titleAlign": "center"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "layout|flex": "number",
+                "scrollable": "auto",
+                "cls": "typedarray",
+                "titleAlign": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "d0a62e09-74cc-4f26-8d5d-02645e010823",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUsuarioRol",
+                        "store": "Usuario"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "id": "string",
+                        "forceFit": "boolean",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel2",
+                    "designerId": "ca28e3aa-e99d-47d5-b0e9-50b309769d56",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top"
+                            },
+                            "configAlternates": {
+                                "dock": "string"
+                            },
+                            "name": "MyToolbar",
+                            "designerId": "1ea36cf7-c855-476a-9468-1c38ca3c419c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "USR_USUARIO",
+                                        "enableKeyEvents": true,
+                                        "hideTrigger": true,
+                                        "id": "cbUsuarioBuscar",
+                                        "layout|flex": null,
+                                        "queryMode": "local",
+                                        "store": "Usuario",
+                                        "valueField": "USR_USUARIO"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|flex": "number",
+                                        "id": "string",
+                                        "displayField": "datafield",
+                                        "enableKeyEvents": "boolean",
+                                        "hideTrigger": "boolean",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "valueField": "datafield"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "9db8d96a-ef65-49b8-828b-bee1b5c9172f",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCbUsuarioBuscarKeyup",
+                                                "implHandler": [
+                                                    "var txtUsuario = Ext.getCmp('cbUsuarioBuscar').getValue();",
+                                                    "if(txtUsuario !== null && e.isSpecialKey() === false){//8 = Backspace",
+                                                    "    var strUsuario = Ext.getCmp('cbUsuarioBuscar').getStore();",
+                                                    "    strUsuario.removeAll();",
+                                                    "    Ext.Ajax.request({",
+                                                    "    method: 'post',",
+                                                    "    url: '../servidor/tramites/usuario/getUsuarioBusqueda',",
+                                                    "    params: {",
+                                                    "        usuario: txtUsuario",
+                                                    "    },",
+                                                    "    success: function (response, options) {",
+                                                    "        strUsuario.load();",
+                                                    "        Ext.getCmp('cbUsuarioBuscar').expand();",
+                                                    "    }",
+                                                    "    });",
+                                                    "}"
+                                                ],
+                                                "name": "keyup",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCbUsuarioBuscarKeyup",
+                                            "designerId": "dbb90c4d-3c2f-4c4f-9697-37a026ce8ab0"
+                                        },
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCbUsuarioBuscarSelect",
+                                                "implHandler": [
+                                                    "var txtUsuario = Ext.getCmp('cbUsuarioBuscar').getValue();",
+                                                    "var strUsuario = Ext.getCmp('cbUsuarioBuscar').getStore();",
+                                                    "    strUsuario.removeAll();",
+                                                    "    Ext.Ajax.request({",
+                                                    "    method: 'post',",
+                                                    "    url: '../servidor/tramites/usuario/getUsuarioBusqueda',",
+                                                    "    params: {",
+                                                    "        usuario: txtUsuario",
+                                                    "    },",
+                                                    "    success: function (response, options) {",
+                                                    "        strUsuario.load();",
+                                                    "    }",
+                                                    "    });"
+                                                ],
+                                                "name": "select",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCbUsuarioBuscarSelect",
+                                            "designerId": "d812a831-9629-432a-97e4-5b9925439ec1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "x-fa fa-refresh",
+                                        "id": "btnLimpiarUsuario",
+                                        "layout|flex": null,
+                                        "text": "Limpiar"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "0c5606b0-7485-4729-9ca5-de96f2f33087",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnLimpiarUsuarioClick",
+                                                "implHandler": [
+                                                    "Ext.getCmp('grdUsuarioRol').getStore().removeAll();",
+                                                    "var strUsuario = Ext.getStore('Usuario');",
+                                                    "strUsuario.proxy.extraParams={",
+                                                    "    usr: 0",
+                                                    "};",
+                                                    "strUsuario.load();",
+                                                    "Ext.getCmp('cbParamRol').reset();",
+                                                    "Ext.getCmp('grdRol').getStore().removeAll();",
+                                                    "Ext.getCmp('btnAgregarRol').setHidden(true);",
+                                                    "Ext.getCmp('btnQuitarRol').setHidden(true);"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnLimpiarUsuarioClick",
+                                            "designerId": "df075e64-b3ef-4e23-a502-77a59b89c3f2"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable2",
+                            "designerId": "4dfe1554-e3e5-4ee9-a5d4-e8b6fcbb8c68"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_CEDULA",
+                                "text": "Cédula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "afc94981-f9be-4a1c-9a26-51d04c1a86bf"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_USUARIO",
+                                "text": "Usuario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "4112e630-ffe4-4e07-822c-f13e1afba9db"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUsuarioRolRender",
+                                "implHandler": [
+                                    "this.onBtnLimpiarUsuarioClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdUsuarioRolRender",
+                            "designerId": "bdb6a272-b1e9-46cb-8318-3d19e3c483d3"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUsuarioRolItemClick",
+                                "implHandler": [
+                                    "Ext.getCmp('cbParamRol').reset();",
+                                    "Ext.getCmp('grdRol').getStore().removeAll();",
+                                    "Ext.getCmp('btnAgregarRol').setHidden(true);",
+                                    "Ext.getCmp('btnQuitarRol').setHidden(true);",
+                                    ""
+                                ],
+                                "name": "itemclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdUsuarioRolItemClick",
+                            "designerId": "cb368091-513b-44f4-85a1-6b8a9a0387d0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "myCls2"
+                ],
+                "dock": null,
+                "flex": 1,
+                "layout": "fit",
+                "title": "Roles",
+                "titleAlign": "center"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "width": "auto",
+                "title": "string",
+                "dock": "string",
+                "flex": "number",
+                "layout": "string",
+                "cls": "typedarray",
+                "titleAlign": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "ce7bc6e1-8922-48d7-9e91-23638b71daea",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "ba430e97-beb4-412c-ad29-51117a394729",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "PRM_NOMBRE",
+                                "editable": false,
+                                "fieldLabel": "Escoja un Parámetro",
+                                "id": "cbParamRol",
+                                "labelStyle": "font-weight:bold;",
+                                "layout|flex": null,
+                                "store": "Parametro",
+                                "valueField": "PRM_ID"
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "id": "string",
+                                "labelStyle": "string",
+                                "layout|flex": "number",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox2",
+                            "designerId": "ec2a9703-33bb-4f04-9dc8-efb48faef4da",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbParamRolExpand",
+                                        "implHandler": [
+                                            "var storeParamRol = Ext.getCmp('cbParamRol').getStore();",
+                                            "var g = Ext.getCmp('grdUsuarioRol');",
+                                            "var arrayKeys = g.getSelectionModel().selected.items;",
+                                            "var indice = g.getSelectionModel().selectionStartIdx;",
+                                            "if(arrayKeys.length === 0){",
+                                            "    Ext.Msg.alert('Error', 'Debe escoger un usuario');",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    storeParamRol.proxy.extraParams={",
+                                            "        param:2",
+                                            "    };",
+                                            "    storeParamRol.load();",
+                                            "}"
+                                        ],
+                                        "name": "expand",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbParamRolExpand",
+                                    "designerId": "bba06b9e-8153-4f54-b1f9-dbc07bec3559"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbParamRolSelect",
+                                        "implHandler": [
+                                            "if(Ext.getCmp('cbParamRol').getValue !== null){",
+                                            "    var g = Ext.getCmp('grdUsuarioRol');",
+                                            "    var rec = g.selection;",
+                                            "    var strRoles = Ext.getCmp('grdRol').getStore();",
+                                            "    strRoles.removeAll();",
+                                            "    strRoles.proxy.extraParams = {",
+                                            "        usuario: rec.data.USR_USUARIO,",
+                                            "        parametro: Ext.getCmp('cbParamRol').getValue()",
+                                            "    };",
+                                            "    strRoles.load();",
+                                            "    Ext.getCmp('btnAgregarRol').setHidden(false);",
+                                            "    Ext.getCmp('btnQuitarRol').setHidden(false);",
+                                            "}"
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbParamRolSelect",
+                                    "designerId": "00cc0c99-664b-47fa-b0d3-f7d4712f6eb8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarRol",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "id": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "2a262725-edff-467d-b8ff-644cb37efc9a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarRolClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdRol');",
+                                            "var store = grid.getStore();",
+                                            "var g = Ext.getCmp('grdUsuarioRol');",
+                                            "var arrayKeys = g.getSelectionModel().selected.items;",
+                                            "var indice = g.getSelectionModel().selectionStartIdx;",
+                                            "if(arrayKeys.length === 0){",
+                                            "    Ext.Msg.alert('Error', 'Debe escoger un usuario');",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    var rec = g.selection;",
+                                            "    var usuariot = rec.data.USR_USUARIO;",
+                                            "    var strRol = Ext.getCmp('cbRoles').getStore();",
+                                            "    strRol.proxy.extraParams = {",
+                                            "        usuario: usuariot,",
+                                            "        parametro : Ext.getCmp('cbParamRol').getValue()",
+                                            "    };",
+                                            "    store.insert(0,",
+                                            "                 {",
+                                            "        USR_USUARIO: usuariot,",
+                                            "        ROL_ID: 0",
+                                            "    });",
+                                            "    strRol.load();",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarRolClick",
+                                    "designerId": "03d97e62-c93e-4574-bbd6-43a6e0df0141"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "iconCls": "x-fa fa-trash",
+                                "id": "btnQuitarRol",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "id": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "b708fa5d-dec6-445f-b052-cd485f382d89",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnQuitarRolClick",
+                                        "implHandler": [
+                                            "var g = Ext.getCmp('grdUsuarioRol');",
+                                            "var arrayKeys = g.getSelectionModel().selected.items;",
+                                            "var indice = g.getSelectionModel().selectionStartIdx;",
+                                            "if(arrayKeys.length === 0)",
+                                            "    Ext.Msg.alert('Error', 'Debe escoger un usuario');",
+                                            "else",
+                                            "{",
+                                            "    var grid = Ext.getCmp('grdRol');",
+                                            "    var arrayKeys = grid.getSelectionModel().selected.items;",
+                                            "    var indice = grid.getSelectionModel().selectionStartIdx;",
+                                            "    if(arrayKeys.length === 0)",
+                                            "        Ext.Msg.alert('Error', 'Debe escoger un rol');",
+                                            "    else",
+                                            "    {",
+                                            "        var store = grid.getStore();",
+                                            "        var rec = grid.selection;",
+                                            "        var reco = g.selection;",
+                                            "        store.remove(rec);",
+                                            "        store.sync(",
+                                            "            {",
+                                            "                params:{",
+                                            "                    usuario: reco.data.USR_USUARIO,",
+                                            "                    rol: rec.data.ROL_ID,",
+                                            "                    parametro : Ext.getCmp('cbParamRol').getValue()",
+                                            "                },",
+                                            "                success: function(batch, success)",
+                                            "                {",
+                                            "                    store.commitChanges();",
+                                            "                    store.load();",
+                                            "                },",
+                                            "",
+                                            "                failure: function(batch, success)",
+                                            "                {",
+                                            "                    Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                }",
+                                            "            });",
+                                            "    }",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnQuitarRolClick",
+                                    "designerId": "1bc07250-4619-49bf-a0fc-3c2b029a56e8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdRol",
+                        "store": "RolUsuario"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "id": "string",
+                        "store": "store",
+                        "forceFit": "boolean"
+                    },
+                    "name": "MyGridPanel3",
+                    "designerId": "ac36d32c-bec3-410c-a5f8-f03721925a8c",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable3",
+                            "designerId": "82f97eff-e751-46f9-9018-ecc2dd2fccf9"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ROL_ID",
+                                "id": "cbRol",
+                                "text": "Rol"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "id": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "3a9f5817-9e4e-4bfe-8297-d39db0f774d4",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "displayField": "ROL_NOMBRE",
+                                        "id": "cbRoles",
+                                        "store": "Roles",
+                                        "valueField": "ROL_ID"
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "displayField": "datafield",
+                                        "id": "string",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "autoLoadOnValue": "boolean"
+                                    },
+                                    "name": "MyComboBox1",
+                                    "designerId": "9e9191d8-a5a9-44dd-956f-4cf83a789e68"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "    var descripcion = record.data.ROL_ID;",
+                                            "    var combo = metaData.column.getEditor();",
+                                            "    var comboStore = Ext.getCmp('grdRol').getStore();",
+                                            "    var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "    if (indice >= 0)",
+                                            "         return comboStore.getAt(indice).get(combo.displayField);",
+                                            "    else",
+                                            "         return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "cec7e181-156d-4db9-817a-1189619b5814"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin",
+                            "designerId": "52938649-13a7-4ff2-9f9f-fc4b15241a96",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdRol').getStore();",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "          params:{",
+                                            "              usuario: reco.data.USR_USUARIO,",
+                                            "              parametro: Ext.getCmp('cbParamRol').getValue()",
+                                            "          },",
+                                            "          success: function(batch, success)",
+                                            "          {",
+                                            "            store.commitChanges();",
+                                            "            store.load();",
+                                            "          },",
+                                            "",
+                                            "          failure: function(batch, success)",
+                                            "          {",
+                                            "            Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "          }",
+                                            "        });",
+                                            "",
+                                            "}",
+                                            "//me.onGrdUsuarioRolItemClick();"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "adf7425a-ce14-47fe-8303-7c8ea2015605"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdRolCellDblClick",
+                                "implHandler": [
+                                    "if(record.data.ROL_ID === 0)",
+                                    "    Ext.getCmp('cbRoles').setDisabled(false);",
+                                    "else",
+                                    "    Ext.getCmp('cbRoles').setDisabled(true);"
+                                ],
+                                "name": "celldblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdRolCellDblClick",
+                            "designerId": "f67d4027-63e5-4d1a-a111-28c5ab4a5ec5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

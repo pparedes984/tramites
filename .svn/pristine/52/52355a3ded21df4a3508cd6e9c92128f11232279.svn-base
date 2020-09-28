@@ -1,0 +1,518 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "panel.pnlconsultageneral",
+        "designer|userClassName": "panel.pnlConsultaGeneral",
+        "layout": "hbox",
+        "title": "Consulta general de Trámites"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "layout": "string",
+        "container|align": "string"
+    },
+    "name": "panel.pnlConsultar1",
+    "designerId": "396f8010-54b4-44be-b36a-c7ee372c5df0",
+    "viewControllerInstanceId": "97085ab5-903d-4c72-9def-833a79f4cf11",
+    "viewModelInstanceId": "5b9f9dc1-14cd-49cd-b1b6-be88f43dd41c",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "border",
+                "layout|flex": 1,
+                "scrollable": true
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout": "string",
+                "scrollable": "auto",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel3",
+            "designerId": "56941abd-a7e2-4732-89d9-5351f41bd5cd",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "myCls"
+                        ],
+                        "forceFit": false,
+                        "id": "grdConsulta2",
+                        "layout|region": "center",
+                        "store": "Consulta1",
+                        "title": "Trámites"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "store": "store",
+                        "title": "string",
+                        "forceFit": "boolean",
+                        "cls": "typedarray"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "ce362e6f-4f2f-4f7a-aef3-e9ba0eca8c3e",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable1",
+                            "designerId": "c4666e3b-e2d6-4738-a8b1-18827ebc648a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTableCellDblClick",
+                                        "implHandler": [
+                                            "if (record)",
+                                            "{",
+                                            "  var winTramite = Ext.create('Tramites.view.consultaGeneral.winTramiteGeneral');",
+                                            "  winTramite.curRec = record;",
+                                            "  winTramite.store = Ext.getStore('Consulta1');",
+                                            "  Ext.getStore('Consulta1').load();",
+                                            "  winTramite.modal = true;",
+                                            "  winTramite.show();",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "  Ext.Msg.alert('Error', 'Seleccione un registro para editar');",
+                                            "}"
+                                        ],
+                                        "name": "celldblclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onTableCellDblClick",
+                                    "designerId": "008c36ec-5066-4e9b-a044-e125a750dc27"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_CODIGO",
+                                "format": "0",
+                                "text": "Código de trámite",
+                                "width": 119
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyNumberColumn",
+                            "designerId": "95b2f164-741d-4291-9fff-37d87b562f18"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHA",
+                                "text": "Fecha trámite"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "2d63ceab-b210-4f37-ae3a-971a886204eb"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "PRM_NOMBRE",
+                                "text": "Parámetro"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "b0cc4d68-078f-4e6b-9692-d2f3532cc885"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "76c9439d-a404-4d4c-9ae8-85b49692bddd"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_NOMBRE",
+                                "text": "Unidad Solicitante"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "71dc1456-711e-4a8e-a00b-4d100f406be9"
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_RECIBIDO",
+                                "disabled": true,
+                                "text": "Recibido (DGF)"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheck",
+                            "designerId": "df56d98d-4e26-4fe8-8304-48073c517fca"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHARECIBIDO",
+                                "text": "Fecha Recibido (DGF)"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "3eb69eed-437e-47a5-b8fe-bbfb5f628d9e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_GASTO",
+                                "text": "Und. de Gasto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn10",
+                            "designerId": "663cdc48-f14b-406b-abbc-ceff82b3d18b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_OFICIO",
+                                "text": "N° Oficio"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn6",
+                            "designerId": "e533e000-50f4-44f1-96ce-9ca0fd9c41ba"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_BENEFICIARIO1",
+                                "text": "Beneficiario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn7",
+                            "designerId": "d509e29f-c422-45b6-993c-1272fc47426a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_BENEFICIARIO2",
+                                "text": "2do Beneficiario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn8",
+                            "designerId": "0bddf484-4b5e-4869-86ab-54a7b8349d55"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_PROYECTO",
+                                "text": "Proyecto/Partida"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn9",
+                            "designerId": "ba47916e-40a5-4155-bb1f-e6332fff3a30"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_DESCRIPCION",
+                                "text": "Descripcion"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn11",
+                            "designerId": "129b6cda-5a34-4016-893b-e2eef068b373"
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_ANULADO",
+                                "disabled": true,
+                                "text": "Anulado"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheck2",
+                            "designerId": "dd2e6b0a-f5b2-4b06-8e83-b683dbba1077"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdConsulta1Render",
+                                "implHandler": [
+                                    "//this.onBtnConsultarTodosClick();",
+                                    "",
+                                    "//Cargar combobox Unidad",
+                                    "var strUnidad = Ext.getStore('Unidad');",
+                                    "strUnidad.proxy.extraParams = {",
+                                    "    destino: 0,",
+                                    "};",
+                                    "strUnidad.load();",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "var strConsulta1 = Ext.getStore('Consulta1');",
+                                    "Ext.getCmp('grdConsulta2').getStore().removeAll();",
+                                    "",
+                                    "    ",
+                                    "strConsulta1.proxy.extraParams = {",
+                                    "    busqueda: 3,//Parametro para elegir el tipo de busqueda",
+                                    "    codtramite:null,",
+                                    "    anulado: null,",
+                                    "    beneficiario: null,",
+                                    "    unidadsolicitante : null,",
+                                    "    //parametro: Ext.getCmp('cbParamConsulta1').getValue(),//cb Parametro de filtros",
+                                    "    parametro: null,//cb Parametro principal",
+                                    "    undgasto:  null,",
+                                    "    proyecto:  null,",
+                                    "    asunto:  null,",
+                                    "    descripcion:  null,",
+                                    "    noficio:  null,",
+                                    "    desde: null,",
+                                    "    hasta: null",
+                                    "};",
+                                    "strConsulta1.load();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdConsulta1Render",
+                            "designerId": "72966a41-b3a8-4496-a6c7-ee1da94ff5f0"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top"
+                            },
+                            "configAlternates": {
+                                "dock": "string"
+                            },
+                            "name": "MyToolbar",
+                            "designerId": "8be3d85a-81b9-40ea-8e3b-2a3c16146666",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-search",
+                                        "layout|flex": null,
+                                        "text": "Buscar"
+                                    },
+                                    "configAlternates": {
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton",
+                                    "designerId": "cac2ee8d-5481-4e00-9fc9-b2d21e0b21ef",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "",
+                                                    "  var winTramite = Ext.create('Tramites.view.consultaGeneral.winFiltro');",
+                                                    "  winTramite.modal = true;",
+                                                    "  winTramite.show();",
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onButtonClick",
+                                            "designerId": "66e94ba1-83c9-4191-88d2-89d9ed58a338"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

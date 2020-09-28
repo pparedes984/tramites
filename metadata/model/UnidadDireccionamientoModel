@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UnidadDireccionamientoModel"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "948f409d-2861-44ad-b44a-d86c08a815b7",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString23",
+            "designerId": "91177681-d284-4ca3-9a8b-b6269dba486a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString24",
+            "designerId": "ee3c7c93-e0d8-4813-b406-fde4f215fad6"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iconCls"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString25",
+            "designerId": "471f09c7-c9cd-4bfc-a1fa-91004434a2e5"
+        }
+    ]
+}

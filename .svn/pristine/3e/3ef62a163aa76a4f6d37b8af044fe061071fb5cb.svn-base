@@ -1,0 +1,453 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "administracion.asuntosparametros",
+        "designer|userClassName": "administracion.AsuntosParametros",
+        "layout": "hbox",
+        "title": "Asignación de Asuntos a parámetros",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "titleAlign": "string"
+    },
+    "name": "administracion.AsuntosParametros1",
+    "designerId": "6dec964a-f1c1-4157-95a4-a32de9feddf1",
+    "viewControllerInstanceId": "0dbf8e3c-7c5d-4f7e-8fb8-66d56c8825af",
+    "viewModelInstanceId": "edf37138-4b0f-42bb-ab7b-9484b267e9f5",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlAsuntosNoAsig",
+                "layout": "fit",
+                "layout|flex": 1.25,
+                "title": "Asuntos no Asignados"
+            },
+            "configAlternates": {
+                "id": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "scrollable": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "160ee495-33fa-4df2-850e-249a43315b40",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdAsuntosNoAsig",
+                        "store": "Asunto"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel3",
+                    "designerId": "9295b812-1ca1-46f3-a70f-2a80dbcec004",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable3",
+                            "designerId": "b37240fd-b7d0-4608-8d7f-a617f5b7d24a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn13",
+                            "designerId": "a95ddffe-8660-4c66-a8b4-c115c99e084a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "dock": null,
+                "layout": "vbox",
+                "layout|flex": 0.1,
+                "title": "|",
+                "titleAlign": "center"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "dock": "string",
+                "layout": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "titleAlign": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "d700652f-22fd-4507-86db-3ff5b5a1fd24",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-refresh",
+                        "id": "btnRefreshAxP",
+                        "layout|flex": null,
+                        "margin": "",
+                        "text": ""
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "margin": "auto"
+                    },
+                    "name": "MyButton9",
+                    "designerId": "4cbeb576-65ae-4aca-a068-c3b303592b84",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnRefreshAxPClick",
+                                "implHandler": [
+                                    "Ext.getCmp('grdAsuntosAsig').getStore().removeAll();",
+                                    "var strAsunto = Ext.getCmp('grdAsuntosAsig').getStore();",
+                                    "strAsunto.proxy.extraParams = {",
+                                    "    parametro : Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "};",
+                                    "strAsunto.load();",
+                                    "",
+                                    "Ext.getCmp('grdAsuntosNoAsig').getStore().removeAll();",
+                                    "var strAsunto1 = Ext.getCmp('grdAsuntosNoAsig').getStore();",
+                                    "strAsunto1.proxy.extraParams = {",
+                                    "    parametro : Ext.getCmp('cbParametroPrincipal').getValue(),",
+                                    "    falta:1",
+                                    "};",
+                                    "strAsunto1.load();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnRefreshAxPClick",
+                            "designerId": "3a80873c-778d-4356-b443-1ecc469c4cbb"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-arrow-right",
+                        "id": "btnAsignar",
+                        "layout|flex": null,
+                        "margin": "20 0 10 0"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "7ed50cd0-1c58-4a6a-af7f-accb1edf8ed6",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnAsignarClick",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "var grid = Ext.getCmp('grdAsuntosNoAsig');",
+                                    "var NoAsignadoarrayKeys = grid.getSelectionModel().selected.items;",
+                                    "",
+                                    "if(NoAsignadoarrayKeys.length === 0)",
+                                    "    Ext.Msg.alert('Error', 'Debe escoger un Asunto');",
+                                    "",
+                                    "else",
+                                    "{",
+                                    "    var store = Ext.getStore('AsuntoParametro');",
+                                    "    store.add(Ext.getCmp('cbParametroPrincipal').getValue());",
+                                    "    store.sync(",
+                                    "        {",
+                                    "            params:{",
+                                    "                asunto: NoAsignadoarrayKeys[0].data.ASU_CODIGO,",
+                                    "                parametro : Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "            },",
+                                    "            success: function(batch, success)",
+                                    "            {",
+                                    "                store.commitChanges();",
+                                    "                store.load();",
+                                    "            },",
+                                    "",
+                                    "            failure: function(batch, success)",
+                                    "            {",
+                                    "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "            }",
+                                    "        });",
+                                    "    me.onBtnRefreshAxPClick();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnAsignarClick",
+                            "designerId": "8af619a3-3cb0-4f1a-b1d6-7ba9c2a65595"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-arrow-left",
+                        "id": "btnQuitarAsignacion"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "40f34486-4461-4e5b-8d87-08c02891dc66",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnQuitarAsignacionClick",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "var grid = Ext.getCmp('grdAsuntosAsig');",
+                                    "var AsignadoarrayKeys = grid.getSelectionModel().selected.items;",
+                                    "if(AsignadoarrayKeys.length === 0)",
+                                    "    Ext.Msg.alert('Error', 'Debe escoger un asunto a remover');",
+                                    "else",
+                                    "{",
+                                    "    var rec = grid.selection;",
+                                    "    Ext.Ajax.request",
+                                    "    (",
+                                    "        {",
+                                    "            method: 'post',",
+                                    "            url: '../servidor/tramites/asuntoparametro/delete',",
+                                    "            params: {",
+                                    "                asunto: AsignadoarrayKeys[0].data.ASU_CODIGO,",
+                                    "                parametro: Ext.getCmp('cbParametroPrincipal').getValue()",
+                                    "            },",
+                                    "            success: function (response, options) {",
+                                    "",
+                                    "            },",
+                                    "            failure: function (response, options){",
+                                    "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "            }",
+                                    "        }",
+                                    "    );",
+                                    "    me.onBtnRefreshAxPClick();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnQuitarAsignacionClick",
+                            "designerId": "80e55cf5-057f-470d-a689-4d63589f6ede"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlAsuntosAsig",
+                "layout": "fit",
+                "layout|flex": 1.25,
+                "title": "Asuntos Asignados"
+            },
+            "configAlternates": {
+                "id": "string",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel6",
+            "designerId": "65f0a8b8-bf3b-483a-a3e8-33dc99af727e",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdAsuntosAsig",
+                        "store": "Asunto"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel8",
+                    "designerId": "896e7fee-0c7e-4036-8cc0-c03869697938",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable8",
+                            "designerId": "f23efb9f-4b78-47e6-abb0-4f4b54caef6a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn12",
+                            "designerId": "557fa873-f12f-47cb-a7c0-be02cbcd2ee4"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdAsuntosAsigRender",
+                                "implHandler": [
+                                    "var nuevoAsunto = Ext.create('Tramites.store.Asunto');",
+                                    "Ext.getCmp('grdAsuntosAsig').setStore(nuevoAsunto);",
+                                    "this.onBtnRefreshAxPClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdAsuntosAsigRender",
+                            "designerId": "3879a0c6-14d4-4463-b81b-0c126a0b0891"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

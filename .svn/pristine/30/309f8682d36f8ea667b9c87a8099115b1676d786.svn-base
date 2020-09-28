@@ -1,0 +1,222 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "panel.pnldireccionar",
+        "designer|userClassName": "panel.pnlDireccionar",
+        "dock": null,
+        "height": 900,
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Direccionamiento de trámites"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "layout": "string",
+        "container|align": "string",
+        "dock": "string",
+        "height": "auto",
+        "scrollable": "auto"
+    },
+    "name": "panel.pnlNuevo4",
+    "designerId": "11a421d3-7289-46c6-9a9b-ffa4855eb2ad",
+    "viewControllerInstanceId": "66d3ac85-0904-4d72-8c3e-0b088104e08c",
+    "viewModelInstanceId": "5cc9206d-4ef8-4b67-857b-dcf9e1f8d168",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "panelCentro",
+                "layout": "border",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout": "string",
+                "layout|flex": "number",
+                "id": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "94298f69-1f88-43da-ba0a-ebe1ca5542fd",
+            "cn": [
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ArbolUnidad",
+                        "layout|region": "west",
+                        "rootVisible": false,
+                        "store": "UnidadDireccionamientoTree",
+                        "width": 188
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "rootVisible": "boolean",
+                        "store": "store",
+                        "width": "auto"
+                    },
+                    "name": "MyTreePanel",
+                    "designerId": "58da6890-132a-44e3-ac1c-fc9a1094195e",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "frame": false,
+                                "rootVisible": false,
+                                "toggleOnDblClick": false,
+                                "width": 169
+                            },
+                            "configAlternates": {
+                                "frame": "boolean",
+                                "rootVisible": "boolean",
+                                "toggleOnDblClick": "boolean",
+                                "width": "auto"
+                            },
+                            "name": "MyTreeView1",
+                            "designerId": "ce4174ee-4ab3-4457-9629-ba398384a52d"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onArbolUnidadItemClick",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlDireccionarCentral').removeAll();",
+                                    "    var win = Ext.create('Tramites.view.direccionar.DirecGeneral');",
+                                    "    this.getView().down('#pnlDireccionarCentral').add(win);",
+                                    "    Ext.getCmp('pnlDestinosDireccionar').setVisible(false);",
+                                    "    Ext.getCmp('grdTramite2').getStore().removeAll();",
+                                    "    STRTRAMITEDETA = Ext.getStore('Registro');",
+                                    "    UNIDADDIR = record.data.id;",
+                                    "    PARAMETROPRINCIPAL = Ext.getCmp('cbParametroPrincipal').getValue();",
+                                    "if(record.data.id === '183')//pantalla de direccionamiento general",
+                                    "{",
+                                    "    Ext.getCmp('recibidoCheck').setDisabled(false);",
+                                    "    Ext.getCmp('btnAnularDestino').setVisible(false);",
+                                    "    win.show();",
+                                    "    STRTRAMITEDETA.proxy.extraParams = {",
+                                    "        busqueda: 2,",
+                                    "        parametro: PARAMETROPRINCIPAL",
+                                    "    };",
+                                    "    STRTRAMITEDETA.load();",
+                                    "",
+                                    "}",
+                                    "else if(record.data.id === '1'||record.data.id === '2'||record.data.id === '3'||",
+                                    "        record.data.id === '4'||record.data.id === '5'||record.data.id === '6'||",
+                                    "        record.data.id === '7'||record.data.id === '8'||record.data.id === '9'||",
+                                    "        record.data.id === '123'||record.data.id === '182')//pantallas de unidades de direccionamiento",
+                                    "{",
+                                    "",
+                                    "    Ext.getCmp('recibidoCheck').setHidden(true);",
+                                    "    Ext.getCmp('recibidoCheck').setDisabled(true);",
+                                    "    Ext.getCmp('btnAnularDestino').setVisible(true);",
+                                    "",
+                                    "    win.show();",
+                                    "    STRTRAMITEDETA.proxy.extraParams = {",
+                                    "        busqueda: 3,",
+                                    "        unidad: UNIDADDIR,",
+                                    "        parametro: PARAMETROPRINCIPAL",
+                                    "    };",
+                                    "    console.log(record.data.id);",
+                                    "    STRTRAMITEDETA.load();",
+                                    "",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "itemclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onArbolUnidadItemClick",
+                            "designerId": "636764fb-2e50-491f-ab8c-7a9ebb896e2f"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onArbolUnidadAfterRender",
+                                "implHandler": [
+                                    "Ext.getCmp('ArbolUnidad').getStore().removeAll();",
+                                    "var strArbolDireccion = Ext.getCmp('ArbolUnidad').getStore();",
+                                    "var parametroid = Ext.getCmp('cbParametroPrincipal').getValue();",
+                                    "strArbolDireccion.proxy.extraParams = {",
+                                    "    parametro: parametroid",
+                                    "};",
+                                    "strArbolDireccion.load();"
+                                ],
+                                "name": "afterrender",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onArbolUnidadAfterRender",
+                            "designerId": "2a3e68ff-d2ed-4897-abe5-a9421e7f6c98"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlDireccionarCentral",
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "scrollable": true
+                    },
+                    "configAlternates": {
+                        "layout|region": "string",
+                        "id": "string",
+                        "scrollable": "auto",
+                        "layout": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "04511412-de96-4f5b-9dc9-40b78a321ee0"
+                }
+            ]
+        }
+    ]
+}

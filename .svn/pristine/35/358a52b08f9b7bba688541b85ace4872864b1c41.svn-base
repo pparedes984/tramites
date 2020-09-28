@@ -1,0 +1,411 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "administracion.unidad",
+        "designer|userClassName": "administracion.Unidad",
+        "flex": 1,
+        "layout": "fit",
+        "title": "Unidades"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "flex": "number",
+        "layout": "string"
+    },
+    "name": "MyPanel2",
+    "designerId": "d7e38d7e-15b0-43f7-9d94-009eee5946b7",
+    "viewControllerInstanceId": "d177cfba-52db-4a8d-b89f-720d3fbbf2d2",
+    "viewModelInstanceId": "43f9132c-3ac3-4906-85a0-a85d37e20c35",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "layout": "fit"
+            },
+            "configAlternates": {
+                "flex": "number",
+                "layout": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "adf95b6c-b6c9-4ebc-9b5f-0657867d13ad",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "f61c582d-e8ef-48cf-ac2a-6a70b84ebb59",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "UND_NOMBRE",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbUnidades2",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": "Unidad",
+                                "typeAhead": true,
+                                "valueField": "UND_NOMBRE"
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "queryMode": "string",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "typeAhead": "boolean"
+                            },
+                            "name": "MyComboBox1",
+                            "designerId": "fc407615-c1bf-439e-ad6a-03e79c7d3fb4"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarUnidad",
+                                "layout|flex": null,
+                                "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "c6fd7b30-73f3-4f57-b55f-99acaa087eee",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarUnidadClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdUnidades2');",
+                                            "    var store = grid.getStore();",
+                                            "    store.insert(0,",
+                                            "        {",
+                                            "        UND_CODIGO: 0,",
+                                            "        UND_ACTIVO: 1",
+                                            "        });"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "onBtnAgregarUnidadClick",
+                                    "designerId": "46cfa0c3-9d35-4a0c-8d83-e2990ff7c083"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarUnidades2",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "21fa00f7-893c-492f-8b3d-564f0673de0e",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnLimpiarUnidades2Click",
+                                        "implHandler": [
+                                            "var strUnidad = Ext.getCmp('grdUnidades2').getStore();",
+                                            "strUnidad.proxy.extraParams = {",
+                                            "    ac: 1",
+                                            "};",
+                                            "strUnidad.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "onBtnLimpiarUnidades2Click",
+                                    "designerId": "e098aa12-f8d5-4601-bf9a-1f127d4b34fa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUnidades2",
+                        "store": "Unidad"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel2",
+                    "designerId": "f9906811-41f8-4554-9081-673c8d4f0aac",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "UND_NOMBRE",
+                                "text": "Unidad"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn17",
+                            "designerId": "bc4ed387-2efc-4432-9b55-7d019aeeeaa4",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField15",
+                                    "designerId": "a9a8903d-9c53-45e6-bb5c-e450210970aa"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_ACTIVO",
+                                "disabled": true,
+                                "text": "Activo"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheck1",
+                            "designerId": "82d003f8-0be3-4b12-8ffc-b0f99b0029cb",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckbox2",
+                                    "designerId": "cf3aa35b-9649-4872-88fb-b293e7c73d45"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 336
+                            },
+                            "configAlternates": {
+                                "height": "auto"
+                            },
+                            "name": "MyTable2",
+                            "designerId": "1040390c-c42f-4c89-be46-d72f81d1a97c"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUnidades2Render",
+                                "implHandler": [
+                                    "this.onBtnLimpiarUnidades2Click();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "onGrdUnidades2Render",
+                            "designerId": "61bff472-36d3-4478-808f-9e9dfd70130d"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin",
+                            "designerId": "4c8f0649-2494-4e2d-a21c-d9da79c6927d",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdUnidades2').getStore();",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "            success: function(batch, success)",
+                                            "            {",
+                                            "                store.commitChanges();",
+                                            "                store.load();",
+                                            "            },",
+                                            "",
+                                            "            failure: function(batch, success)",
+                                            "            {",
+                                            "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "            }",
+                                            "        });",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "7c053d74-a9e8-4c22-862f-0764115bfc3c"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "implHandler": [
+                                            "this.onBtnLimpiarUnidades2Click();"
+                                        ],
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "787efa5f-6113-4ab5-86ea-17df15c5a67e"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

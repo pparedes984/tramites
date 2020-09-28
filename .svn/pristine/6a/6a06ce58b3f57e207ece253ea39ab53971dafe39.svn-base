@@ -1,0 +1,194 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.parametros",
+        "designer|userClassName": "adminGeneral.Parametros",
+        "height": 250,
+        "title": "My Panel",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel5",
+    "designerId": "a88c166f-b736-4f86-9aea-7a41e756aaa2",
+    "viewControllerInstanceId": "c27ee718-d3d4-4708-95d7-77af042f8211",
+    "viewModelInstanceId": "7144307f-244f-4adf-a4ab-cc905eb72961",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Panel"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyPanel5",
+            "designerId": "b1341507-c7c4-4ec2-bbb9-508550516cb6",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar7",
+                    "designerId": "c6a3a2db-b4ca-40f8-baec-ffdd57622922",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "cbParametros1",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyComboBox8",
+                            "designerId": "c8f4e1d6-6f8c-4ab4-b869-a82ac9380912"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarParametro",
+                                "layout|flex": null,
+                                "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "ef9d0eb1-1ebc-40fc-b695-2e623506c74f"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-trash",
+                                "id": "btnQuitarParametro",
+                                "layout|flex": null,
+                                "text": "Eliminar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton10",
+                            "designerId": "5f25c349-0fe8-4f07-8370-c13c1def2699"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarParametros",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "b7a55b6f-0848-48ce-a1a4-0de358e2e26a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "My Grid Panel"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyGridPanel7",
+                    "designerId": "0191b91e-8108-4b62-9dd1-a0c65059e08f",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Boolean",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "bool",
+                                "text": "Boolean"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyBooleanColumn",
+                            "designerId": "e7b70668-7702-4d2a-967f-09f7b90e83fb"
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable7",
+                            "designerId": "8cb2c051-b742-40c1-b33b-6cc98b0da942"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "Parametro",
+        "model": "ParametroModel",
+        "storeId": "Parametro"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "01d111b7-0a32-4471-935e-948f29dc9fc2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "api": [
+                    "{create: '../servidor/tramites/parametro/save',",
+                    "          read: '../servidor/tramites/parametro/getParametros',",
+                    "          update: '../servidor/tramites/parametro/save',",
+                    "          destroy: '../servidor/tramites/parametro/delete'}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "url": "string",
+                "actionMethods": "object",
+                "api": "object"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "324205a2-be22-4a1d-a3d2-63237e4a9b21",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "f29b9894-5d5b-4d95-8fce-7b650483a9e4"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AsuntoParametroModel",
+        "idProperty": "PRM_ID"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "83aaef76-830c-430f-b06d-5f9c7f41aa32",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ASU_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger2",
+            "designerId": "e4668c48-7e89-4bae-9260-c7512e7fef5a"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRM_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger3",
+            "designerId": "edcb86c5-aa29-49f6-b5a4-aefcd005bd96"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRM_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString3",
+            "designerId": "ea178e71-be8f-4457-9ebf-fecd459b37f7"
+        }
+    ]
+}

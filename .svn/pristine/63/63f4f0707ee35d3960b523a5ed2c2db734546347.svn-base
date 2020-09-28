@@ -1,0 +1,99 @@
+{
+    "name": "Tramites",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.6.0.13",
+            "frameworkVersion": "6.5.3.57"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:60181/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Medium",
+                "builtIn": true,
+                "height": 768,
+                "width": 1024
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.2.4",
+    "xdsBuild": 389,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext65",
+    "viewOrderMap": {
+        "view": [
+            "54e47636-9794-460b-8654-648635875f0f",
+            "451c908a-5e31-461b-b2de-aa5fee9ba033",
+            "070db1bc-cce4-4747-930c-5854c1844043",
+            "050176c1-8374-4efe-a390-0d768527e53b",
+            "b3ac19ae-a605-4c3d-bad3-b39eb4fdad35",
+            "a395a88c-3953-45ba-9075-3cfa9959933c",
+            "1cf7d47e-8047-4d8b-b6b2-48bc985b6753",
+            "8deca661-961c-4579-add9-b2b247e24b3e",
+            "95b9e3be-9d38-41c1-8ecf-75a38d506d8c",
+            "3247da3c-d2c8-46c8-becf-a1a4d7941081",
+            "bad73419-e0c6-462a-babd-c846c459ad29",
+            "b6c4118b-f52f-4122-92ed-135a6bb37a5a",
+            "c9c68e02-11d8-43d9-b1d9-98b8c1d5e74e",
+            "11a421d3-7289-46c6-9a9b-ffa4855eb2ad",
+            "9f025139-7f2f-48e9-857b-062a45a28f22",
+            "3a14e64d-f035-442c-b0db-06866b6f85f2",
+            "0bfeb9be-ec1b-4ac5-83d2-6414b30c7a42",
+            "19f22b00-7ecf-46dd-ab4a-bcc472c10c7a",
+            "5cc9206d-4ef8-4b67-857b-dcf9e1f8d168",
+            "f3a42309-7a16-4655-b6b6-b6ffabcb1ad4",
+            "872d7875-95db-4f70-9589-96ad29b2508e",
+            "16081c87-4552-46f1-b36b-1ec038ffe8a1",
+            "afacb3db-1530-4522-a70d-bec30f480fd7",
+            "66d3ac85-0904-4d72-8c3e-0b088104e08c",
+            "01722200-06f5-4985-b681-8ffa9a31185c",
+            "cd810fc7-acca-44f1-88eb-476cc8bde2d9",
+            "da09b901-f122-4eba-a88b-ce25d68f7b74",
+            "dbb2b5d9-3d6e-4dbf-8337-2ee3e967be5f",
+            "9a1db7d3-a4bb-48c0-b0c4-2210f3c35a58",
+            "696c8741-f2f1-4cfb-a3f0-7f29a64fdf14",
+            "14da02bf-8f7b-4ef3-8c50-31619ff2f2e6",
+            "75f69edb-f85b-4954-900e-32ec192a8457",
+            "7e9e2278-5654-4b8f-9a0a-58727d704ffd"
+        ],
+        "store": [
+            "05e48667-aeea-4051-9db9-1557de6afdfd",
+            "87970d69-a9d8-4f9d-a9ee-73ab17d58180",
+            "7744cf3d-ff65-4445-9e59-e576084bd058",
+            "01d111b7-0a32-4471-935e-948f29dc9fc2",
+            "ac29b42a-b3ab-43e2-9453-5f12996e1863",
+            "3948f6a2-3f46-40eb-93f2-486b0789baee",
+            "7d9014dd-fd27-4d23-94fd-a61f3d0a3cff",
+            "aba83d95-4da7-4fd2-ab00-bb97fc2b2472"
+        ],
+        "controller": [],
+        "model": [
+            "b952d04d-aced-4867-adf0-383bdb985f48",
+            "f20fcec2-2e4b-4ee6-a1e3-b98e203ee249",
+            "1aad3c55-7cc4-48b0-bb93-01e9446784fc",
+            "814342eb-a58d-47b4-9643-670aed273ca2",
+            "ba32c6be-3e36-4b22-a3ae-7ed7e8de7d39",
+            "b309c2eb-616d-43ab-8f0c-a63093d4a005",
+            "e4f15ea2-563e-48db-bf2e-e530c965a4ec",
+            "948f409d-2861-44ad-b44a-d86c08a815b7"
+        ],
+        "resource": [
+            "fd28750b-67a3-4386-858e-6a7803a70ac2",
+            "594e0c03-aaa8-4271-89e1-2f828432b44b",
+            "8eb06d0d-c9cd-4255-b653-bf1818155aec"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

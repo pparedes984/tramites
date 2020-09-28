@@ -1,0 +1,276 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panel.pnladministrar",
+        "designer|userClassName": "panel.pnlAdministrar",
+        "title": "Administración"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string"
+    },
+    "name": "panel.pnlNuevo2",
+    "designerId": "3a14e64d-f035-442c-b0db-06866b6f85f2",
+    "viewControllerInstanceId": "cd810fc7-acca-44f1-88eb-476cc8bde2d9",
+    "viewModelInstanceId": "872d7875-95db-4f70-9589-96ad29b2508e",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0
+            },
+            "configAlternates": {
+                "activeTab": "auto"
+            },
+            "name": "MyTabPanel",
+            "designerId": "f2328bf2-5fca-4e01-b968-47535beabcc4",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 380,
+                        "id": "pnlRolesUsuario",
+                        "layout": "fit",
+                        "title": "Roles a usuarios"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "title": "string",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "a3e6a411-15cb-489a-a950-37f0f705e851",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "87e127f5-bb0b-40ac-a7cb-ac6ffbcb05f9"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlRolesUsuarioActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlRolesUsuario').removeAll();",
+                                    "var win = Ext.create('Tramites.view.administracion.RolesUsuario');",
+                                    "this.getView().down('#pnlRolesUsuario').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlRolesUsuarioActivate",
+                            "designerId": "10a9b97a-d2e7-4199-af93-bcc82dab72cf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 380,
+                        "id": "pnlUsuarioParametro",
+                        "layout": "fit",
+                        "title": "Usuarios a parámetros"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "height": "auto",
+                        "id": "string",
+                        "layout": "string"
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "168690df-bef6-4b76-939e-2ba36640f029",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "82f07079-6317-45f9-830f-0c2c01d0ba23"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlUsuarioParametroActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlUsuarioParametro').removeAll();",
+                                    "var win = Ext.create('Tramites.view.administracion.UsuarioParametro');",
+                                    "this.getView().down('#pnlUsuarioParametro').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlUsuarioParametroActivate",
+                            "designerId": "f14ff8c2-4cc7-4686-b0ad-c653642775b0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Asuntos a parámetros"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel9",
+                    "designerId": "8ff6ee17-f334-4139-92f3-5625dd29e45a",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "e84d02ca-e757-4ba4-b513-58114e99713a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Usuarios a unidades"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel10",
+                    "designerId": "64ab9e2f-2849-4af0-b2c0-facd1826eab6",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "9443437c-749f-4ca9-87c4-59b104f2875e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Unidades a parámetros"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel11",
+                    "designerId": "348ff4aa-4d72-4cea-bdda-c3a4d6deb9fc",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "43807525-4afd-4607-a61e-21a7bec287f4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Jefes de unidades"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel12",
+                    "designerId": "70d4a057-cb7d-40ac-96b9-983e0b3e6684",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig5",
+                            "designerId": "efe55588-0a8e-4692-b360-d135959e89cc"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,432 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.asuntos",
+        "designer|userClassName": "adminGeneral.Asuntos",
+        "title": "Asuntos"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string"
+    },
+    "name": "MyPanel1",
+    "designerId": "c2868d10-6946-43a4-b8a5-9b2c29fe5bb8",
+    "viewControllerInstanceId": "6b2e2229-22cc-4746-bd8a-ae2e8551402d",
+    "viewModelInstanceId": "b2410312-e0c6-4d07-a1d2-9a715ee57148",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel1",
+            "designerId": "41b85752-5eb8-48fe-a4cf-9622732936b2",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "1fd3e92b-aa1d-41c1-aefd-1bd7aa4b00e5",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "ASU_DESCRIPCION",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbAsuntos",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": "Asunto",
+                                "valueField": "ASU_DESCRIPCION"
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "queryMode": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox",
+                            "designerId": "a6e614fa-9458-4d30-9a32-4ee05002cf2c",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbAsuntosKeyup",
+                                        "implHandler": [
+                                            "var txtAsunto = Ext.getCmp('cbAsuntos').getValue();",
+                                            "if(txtAsunto !== null && e.isSpecialKey() === false){//8 = Backspace",
+                                            "    var strAsunto = Ext.getCmp('cbAsuntos').getStore();",
+                                            "    strAsunto.removeAll();",
+                                            "    Ext.Ajax.request({",
+                                            "    method: 'post',",
+                                            "    url: '../servidor/tramites/asunto/getAsuntoBusqueda',",
+                                            "    params: {",
+                                            "        asunto: txtAsunto",
+                                            "    },",
+                                            "    success: function (response, options) {",
+                                            "        strAsunto.load();",
+                                            "        Ext.getCmp('cbAsuntos').expand();",
+                                            "    }",
+                                            "    });",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbAsuntosKeyup",
+                                    "designerId": "1edd087c-d420-4b5a-bb11-7cbf782c6fc2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarAsunto",
+                                "layout|flex": null,
+                                "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "f99991e8-0e17-493b-8cab-7bc0caaabf7a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarAsuntoClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdAsuntos2');",
+                                            "    var store = grid.getStore();",
+                                            "    store.insert(0,",
+                                            "        {",
+                                            "        ASU_CODIGO: 0,",
+                                            "        ASU_ACTIVO: 1",
+                                            "        });"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarAsuntoClick",
+                                    "designerId": "09428c17-88e4-4ffe-9179-853a09c189eb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarAsuntos2",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "7433295e-51c2-4a3b-a3f8-0efcd4ef51a4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnLimpiarAsuntos2Click",
+                                        "implHandler": [
+                                            "Ext.getCmp('grdAsuntos2').getStore().removeAll();",
+                                            "var strAsunto = Ext.getCmp('grdAsuntos2').getStore();",
+                                            "strAsunto.proxy.extraParams = {",
+                                            "    todo: 1",
+                                            "};",
+                                            "strAsunto.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnLimpiarAsuntos2Click",
+                                    "designerId": "f3876de2-1d1a-4d5d-93b8-d04d50eb614f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdAsuntos2",
+                        "store": "Asunto"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "4e9a88a5-a962-49f9-b1d8-860988746c0c",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "56e4ed16-1bb4-41e0-bd14-1365f01a6e45",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField",
+                                    "designerId": "b26b7dab-d71b-48c1-ae1b-7e1bd7d83520"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ASU_ACTIVO",
+                                "disabled": true,
+                                "text": "Activo"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheck1",
+                            "designerId": "838544ef-a116-4496-a61e-0521c191ec88",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckbox1",
+                                    "designerId": "b002187a-7482-4484-9b17-33a33f4f2a3f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable1",
+                            "designerId": "4da55df7-ec99-45aa-94ef-d78c66eab614"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin1",
+                            "designerId": "a3a864f4-ea94-4173-b43d-ca6abe99572d",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdAsuntos2').getStore();",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "          success: function(batch, success)",
+                                            "          {",
+                                            "            store.commitChanges();",
+                                            "            store.load();",
+                                            "          },",
+                                            "",
+                                            "          failure: function(batch, success)",
+                                            "          {",
+                                            "            Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "          }",
+                                            "        });",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "c5f4333f-f1a0-4aa6-b372-4dc06ff46c80"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "implHandler": [
+                                            "this.onBtnLimpiarAsuntos2Click();"
+                                        ],
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "4720234c-002c-4ca7-bf6e-8854c10c9427"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdAsuntos2Render",
+                                "implHandler": [
+                                    "this.onBtnLimpiarAsuntos2Click();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdAsuntos2Render",
+                            "designerId": "1f7ee3b6-3958-4397-8ae2-f03543c96cf4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

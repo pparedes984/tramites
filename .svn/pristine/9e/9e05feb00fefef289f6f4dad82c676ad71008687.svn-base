@@ -1,0 +1,130 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Consulta1Model"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "b952d04d-aced-4867-adf0-383bdb985f48",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger10",
+            "designerId": "b720c8ab-1dd5-450b-a804-d879e71cea07"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ASU_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger11",
+            "designerId": "9f6c223a-7934-46f6-b038-27e3d8554fe7"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHA"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString26",
+            "designerId": "bcf23cee-1cee-4f64-9aff-c784b658bd69"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger12",
+            "designerId": "47e6f7cd-13b1-429a-b46b-2b61e8113db3"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHARECIBIDO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString27",
+            "designerId": "9a54c1d8-103f-4003-b38c-a26ccec95b1a"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_RECIBIDO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyBoolean3",
+            "designerId": "3f764d82-d740-4a99-8bfc-78d2a1c97c92"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_PRM_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger13",
+            "designerId": "038f9159-9309-4943-8576-c45b38f18adf"
+        }
+    ]
+}

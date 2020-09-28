@@ -1,0 +1,748 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "vwprtprincipal",
+        "designer|userClassName": "vwprtPrincipal",
+        "height": 250,
+        "html": "<style> .myCls .x-panel-header-default {          background-color: #268581;} \t .myCls2 .x-panel-header-default {         background-color: #268562; } </style>",
+        "layout": "fit",
+        "style": "background-color :  #666",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto",
+        "layout": "string",
+        "padding": "auto",
+        "style": "string",
+        "html": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "3247da3c-d2c8-46c8-becf-a1a4d7941081",
+    "viewControllerInstanceId": "b6c4118b-f52f-4122-92ed-135a6bb37a5a",
+    "viewModelInstanceId": "bad73419-e0c6-462a-babd-c846c459ad29",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "header": false,
+                "layout": "border",
+                "title": "My Panel"
+            },
+            "configAlternates": {
+                "header": "boolean",
+                "layout": "string",
+                "title": "string"
+            },
+            "name": "MyPanel4",
+            "designerId": "ddec3dc2-c814-41bf-ac78-267f3bc67ea5",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": "background-color: #010047",
+                        "header": false,
+                        "height": 50,
+                        "html": "<center><img src=\"../servidor/img/banner-interno-sistra.jpg\"></center>",
+                        "layout|region": "north",
+                        "title": "My Panel"
+                    },
+                    "configAlternates": {
+                        "header": "boolean",
+                        "height": "auto",
+                        "layout|region": "string",
+                        "title": "string",
+                        "bodyStyle": "string",
+                        "html": "string"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "7f69dc8a-9cbf-4768-86c4-620bc3714859"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "header": false,
+                        "id": "PanelCentral",
+                        "layout": "fit",
+                        "layout|region": "center",
+                        "title": "My Panel"
+                    },
+                    "configAlternates": {
+                        "header": "boolean",
+                        "id": "string",
+                        "layout|region": "string",
+                        "title": "string",
+                        "layout": "string"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "a6984a20-012b-4487-bdc8-dd0734fe1221",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "enableOverflow": true
+                            },
+                            "configAlternates": {
+                                "dock": "string",
+                                "enableOverflow": "boolean"
+                            },
+                            "name": "MyToolbar",
+                            "designerId": "1ae74303-f5d6-49f5-94ae-c32b91d7d84c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "PRM_NOMBRE",
+                                        "editable": false,
+                                        "fieldLabel": "Parametro:",
+                                        "id": "cbParametroPrincipal",
+                                        "labelWidth": 65,
+                                        "layout|flex": null,
+                                        "store": "Parametro",
+                                        "valueField": "PRM_ID",
+                                        "width": 172
+                                    },
+                                    "configAlternates": {
+                                        "displayField": "datafield",
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|flex": "number",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "id": "string",
+                                        "editable": "boolean",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyComboBox1",
+                                    "designerId": "e9c39220-ed34-4942-b059-d86e7f7779d6",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCbParametroPrincipalSelect",
+                                                "implHandler": [
+                                                    "if(BANDERA === 0){",
+                                                    "Ext.getCmp('PanelCentral').removeAll();",
+                                                    "Ext.Ajax.request(",
+                                                    "    {",
+                                                    "        url: '../servidor/tramites/usuario/getRolUsuario',",
+                                                    "        method: 'post',",
+                                                    "        params:{",
+                                                    "            parametro: Ext.getCmp('cbParametroPrincipal').getValue(),",
+                                                    "            usuario: USUARIO",
+                                                    "        },",
+                                                    "        success: function(response, opts)",
+                                                    "        {",
+                                                    "            var responseData = Ext.JSON.decode(response.responseText);",
+                                                    "            var roles = responseData.data;",
+                                                    "",
+                                                    "            if(VERIFICADO && roles!== 'undefined'){",
+                                                    "                Ext.getCmp('btnConsultarTramite').setVisible(false);",
+                                                    "                Ext.getCmp('btnDireccionarTramite').setVisible(false);",
+                                                    "                Ext.getCmp('btnAdministrarTramite').setVisible(false);",
+                                                    "                Ext.getCmp('btnAdminGeneral').setVisible(false);",
+                                                    "                Ext.getCmp('btnConsultaGeneral').setVisible(false);",
+                                                    "",
+                                                    "                if(Ext.Array.contains(roles, 1)===true){",
+                                                    "                    Ext.getCmp('btnConsultarTramite').setVisible(true);",
+                                                    "                }",
+                                                    "                if(Ext.Array.contains(roles, 2)===true){",
+                                                    "                    Ext.getCmp('btnDireccionarTramite').setVisible(true);",
+                                                    "                }",
+                                                    "                if(Ext.Array.contains(roles, 3)===true){",
+                                                    "                    Ext.getCmp('btnAdministrarTramite').setVisible(true);",
+                                                    "                }",
+                                                    "                if(Ext.Array.contains(roles, 4)===true){",
+                                                    "                    Ext.getCmp('btnAdminGeneral').setVisible(true);",
+                                                    "                }",
+                                                    "                if(Ext.Array.contains(roles, 5)===true){",
+                                                    "                    Ext.getCmp('btnConsultaGeneral').setVisible(true);",
+                                                    "                }",
+                                                    "            }",
+                                                    "        },",
+                                                    "",
+                                                    "        failure: function(response, opts)",
+                                                    "        {",
+                                                    "            Ext.Msg.show({",
+                                                    "                title:'Error',",
+                                                    "                msg: 'Hubo un error',",
+                                                    "                buttons: Ext.Msg.OK,",
+                                                    "                icon: Ext.MessageBox.WARNING",
+                                                    "            });",
+                                                    "        }",
+                                                    "    });",
+                                                    "}",
+                                                    "else{",
+                                                    "    Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "}"
+                                                ],
+                                                "name": "select",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCbParametroPrincipalSelect",
+                                            "designerId": "f1189419-81a2-4c0d-a95b-75381a97598c"
+                                        },
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCbParametroPrincipalExpand",
+                                                "implHandler": [
+                                                    "var strParametroPri = Ext.getCmp('cbParametroPrincipal').getStore();",
+                                                    "strParametroPri.proxy.extraParams={",
+                                                    "    usuario:USUARIO",
+                                                    "};",
+                                                    "strParametroPri.load();"
+                                                ],
+                                                "name": "expand",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCbParametroPrincipalExpand",
+                                            "designerId": "553e5a84-9333-46a7-8bee-66a3cdefa6d6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-plus",
+                                        "id": "btnNuevoTramite",
+                                        "layout|flex": null,
+                                        "text": "Nuevo"
+                                    },
+                                    "configAlternates": {
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "5b21501a-bab8-44b5-83b2-f8a6a80752e6",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnNuevoTramiteClick",
+                                                "implHandler": [
+                                                    "var parametroNum = Ext.getCmp('cbParametroPrincipal').getValue();",
+                                                    "if(parametroNum!== null){",
+                                                    "    if(!Ext.getCmp('pnlNuevo'))",
+                                                    "    {",
+                                                    "        if (BANDERA ===0){",
+                                                    "                Ext.getCmp('PanelCentral').removeAll();",
+                                                    "                var win = Ext.create('Tramites.view.panel.pnlNuevo');",
+                                                    "                this.getView().down('#PanelCentral').add(win);",
+                                                    "                win.show();",
+                                                    "",
+                                                    "            }",
+                                                    "            else{",
+                                                    "                Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "            }",
+                                                    "",
+                                                    "    }",
+                                                    "}",
+                                                    "else{",
+                                                    "    Ext.Msg.alert('Alerta','Seleccione un parámetro');",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnNuevoTramiteClick",
+                                            "designerId": "9cf40a6e-d092-468c-9824-7d4d80d87797"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-search",
+                                        "id": "btnConsultaGeneral",
+                                        "layout|flex": null,
+                                        "text": "Consulta General"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton",
+                                    "designerId": "ec8a9a06-a178-4803-9edf-a71d036a70f1",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnConsultaGeneralClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlConsultaGeneral'))",
+                                                    "{",
+                                                    "    if (BANDERA ===0){",
+                                                    "        Ext.getCmp('PanelCentral').removeAll();",
+                                                    "        var win = Ext.create('Tramites.view.panel.pnlConsultaGeneral');",
+                                                    "        this.getView().down('#PanelCentral').add(win);",
+                                                    "        win.show();",
+                                                    "        ",
+                                                    "    }",
+                                                    "    else{",
+                                                    "        Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "    }",
+                                                    "",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnConsultaGeneralClick",
+                                            "designerId": "db0f42f4-a037-4d26-b2ca-aa8df387e9c3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-info",
+                                        "id": "btnConsultarTramite",
+                                        "layout|flex": null,
+                                        "text": "Consultar"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "837910a1-4aa7-4bbc-b9ab-3998df58d4bb",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnConsultarTramiteClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlConsultar'))",
+                                                    "{",
+                                                    "    if (BANDERA ===0){",
+                                                    "                Ext.getCmp('PanelCentral').removeAll();",
+                                                    "                var win = Ext.create('Tramites.view.panel.pnlConsultar');",
+                                                    "                this.getView().down('#PanelCentral').add(win);",
+                                                    "                win.show();",
+                                                    "",
+                                                    "            }",
+                                                    "            else{",
+                                                    "                Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "            }",
+                                                    "",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnConsultarTramiteClick",
+                                            "designerId": "de20d344-0069-4f49-935d-b45b8bedebe6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-arrow-right",
+                                        "id": "btnDireccionarTramite",
+                                        "layout|flex": null,
+                                        "text": "Direccionar"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "b02ad38c-97a9-44d9-967e-cd216530154a",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnDireccionarTramiteClick",
+                                                "implHandler": [
+                                                    "var parametroNum = Ext.getCmp('cbParametroPrincipal').getValue();",
+                                                    "if(parametroNum!== null){",
+                                                    "    if(!Ext.getCmp('pnlDireccionar'))",
+                                                    "        {",
+                                                    "            if (BANDERA ===0){",
+                                                    "",
+                                                    "                Ext.getCmp('PanelCentral').removeAll();",
+                                                    "                var win = Ext.create('Tramites.view.panel.pnlDireccionar');",
+                                                    "                this.getView().down('#PanelCentral').add(win);",
+                                                    "                win.show();",
+                                                    "                Ext.getCmp('ArbolUnidad').getStore().load();",
+                                                    "",
+                                                    "            }",
+                                                    "            else{",
+                                                    "                Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "            }",
+                                                    "",
+                                                    "        }",
+                                                    "}",
+                                                    "else{",
+                                                    "    Ext.Msg.alert('Alerta','Seleccione un parámetro');",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnDireccionarTramiteClick",
+                                            "designerId": "23d642e2-6d28-43dd-9e68-4644dc6c6e3c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-cog",
+                                        "id": "btnAdministrarTramite",
+                                        "layout|flex": null,
+                                        "text": "Administrar"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton4",
+                                    "designerId": "41abec12-3f26-46bc-b44e-806d1dbfb27f",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnAdministrarTramiteClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlAdministrar'))",
+                                                    "        {",
+                                                    "            if (BANDERA ===0){",
+                                                    "                Ext.getCmp('PanelCentral').removeAll();",
+                                                    "                var win = Ext.create('Tramites.view.panel.pnlAdministrar');",
+                                                    "                this.getView().down('#PanelCentral').add(win);",
+                                                    "                win.show();",
+                                                    "",
+                                                    "            }",
+                                                    "            else{",
+                                                    "                Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "            }",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "        }"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnAdministrarTramiteClick",
+                                            "designerId": "ee399aad-f015-47f6-a614-af80f0a9b3d0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "fa fa-bolt",
+                                        "id": "btnAdminGeneral",
+                                        "layout|flex": null,
+                                        "text": "Admin General"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "fcd85021-ed49-49e2-aadb-4a745cbba9fb",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnAdminGeneralClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlAdminGeneral'))",
+                                                    "        {",
+                                                    "            if (BANDERA === 0){",
+                                                    "                Ext.getCmp('PanelCentral').removeAll();",
+                                                    "                var win = Ext.create('Tramites.view.panel.pnlAdminGeneral');",
+                                                    "                this.getView().down('#PanelCentral').add(win);",
+                                                    "                win.show();",
+                                                    "            }",
+                                                    "            else{",
+                                                    "                Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento');",
+                                                    "            }",
+                                                    "        }"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnAdminGeneralClick",
+                                            "designerId": "725c2a91-be54-4171-b2e7-6f6c950e57ea"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.toolbar.Fill",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null
+                                    },
+                                    "configAlternates": {
+                                        "layout|flex": "number"
+                                    },
+                                    "name": "MyFill",
+                                    "designerId": "8b037068-2fef-4168-9ea8-1fc0da7bd740"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "fa fa-power-off",
+                                        "layout|flex": null,
+                                        "text": "Salir"
+                                    },
+                                    "configAlternates": {
+                                        "iconAlign": "string",
+                                        "iconCls": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "622c4609-7caa-4f05-b667-df5bb7880f2a",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonSalirPClick",
+                                                "implHandler": [
+                                                    "if (BANDERA ===0){",
+                                                    "var viewMain = this;",
+                                                    "    Ext.Ajax.request",
+                                                    "    (",
+                                                    "    {",
+                                                    "      url: '../servidor/login/logout',",
+                                                    "      success:function(response,options)",
+                                                    "      {",
+                                                    "        var responseData = Ext.JSON.decode(response.responseText);",
+                                                    "        if(responseData.success)",
+                                                    "        {",
+                                                    "          viewMain.getView().destroy();",
+                                                    "          Ext.create('Tramites.view.vwprtLogin', {renderTo: Ext.getBody()});",
+                                                    "        }",
+                                                    "      }",
+                                                    "    }",
+                                                    "    );",
+                                                    "}",
+                                                    "else{",
+                                                    "   Ext.Msg.alert('Alerta','Se encuentra en medio del direccionamiento'); ",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onButtonSalirPClick",
+                                            "designerId": "36c563f4-6fbd-4d3c-9b49-d862689ff242"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

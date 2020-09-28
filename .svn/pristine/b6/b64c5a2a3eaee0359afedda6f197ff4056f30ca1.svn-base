@@ -1,0 +1,56 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rolusuariomodel",
+        "designer|userAliasPrefix": "model",
+        "designer|userClassName": "RolUsuarioModel",
+        "idProperty": "ROL_ID"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "2de1556c-0bfb-4257-92df-93f94649c4da",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ROL_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger14",
+            "designerId": "f973e0d1-6a1f-4399-98b9-5a95c652bf41"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ROL_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString33",
+            "designerId": "31422c3c-4176-43a7-9865-dc9e72b32d70"
+        }
+    ]
+}

@@ -1,0 +1,402 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "constrainHeader": true,
+        "designer|userAlias": "direccionar.windestino",
+        "designer|userClassName": "direccionar.winDestino",
+        "draggable": false,
+        "height": 390,
+        "id": "winDestino",
+        "modal": true,
+        "title": "Estado",
+        "width": 451
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "constrainHeader": "boolean",
+        "draggable": "boolean",
+        "modal": "boolean",
+        "id": "string"
+    },
+    "name": "MyWindow",
+    "designerId": "a395a88c-3953-45ba-9075-3cfa9959933c",
+    "viewControllerInstanceId": "451c908a-5e31-461b-b2de-aa5fee9ba033",
+    "viewModelInstanceId": "070db1bc-cce4-4747-930c-5854c1844043",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmEstado",
+                "itemId": "myform",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "itemId": "string",
+                "reference": "string",
+                "title": "string",
+                "id": "string"
+            },
+            "name": "MyForm",
+            "designerId": "2e219954-d1ec-43f4-87e7-07654e7fc4fa",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "txtEstado",
+                        "name": "EST_NOMBRE",
+                        "value": [
+                            "En proceso"
+                        ]
+                    },
+                    "configAlternates": {
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "value": "object",
+                        "id": "string"
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "6852fe13-08ff-4263-b901-8a6d0dbb3723"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "displayField": "UND_NOMBRE",
+                        "fieldLabel": "Destino",
+                        "name": "UND_CODIGO",
+                        "store": "Unidad",
+                        "valueField": "UND_CODIGO",
+                        "width": 378
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "disabled": "boolean",
+                        "displayField": "datafield",
+                        "store": "store",
+                        "valueField": "datafield"
+                    },
+                    "name": "MyComboBox13",
+                    "designerId": "d60dc5d7-76c0-4b3f-9317-f8883c363ee0"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Motivo",
+                        "name": "EST_MOTIVO",
+                        "width": 380
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "80cf1d4b-1c01-487e-810f-8e98a1d1638b"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Fecha recibido",
+                        "format": "Y-m-d",
+                        "name": "EST_FECHARECIBIDO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "value": "object",
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "editable": "boolean",
+                        "format": "string"
+                    },
+                    "name": "MyDateField2",
+                    "designerId": "8c587a0d-1270-4af9-9df8-e3bf9648063c"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Tramitado A",
+                        "name": "EST_TRAMITADO_A",
+                        "width": 382
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField34",
+                    "designerId": "31365f51-d728-4303-9a26-51f0b0a708d7"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "buttons",
+                        "layout": "hbox",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "designer|displayName": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "f9af7ee8-05e7-4050-86fd-0c0e03c4a292",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "formBind": true,
+                                "itemId": "saveButton",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "text": "Guardar"
+                            },
+                            "configAlternates": {
+                                "formBind": "boolean",
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "d45f0df2-0a88-41df-871e-a7f9c085c950",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSave",
+                                        "implHandler": [
+                                            "/*var form = this.getReferences().form,",
+                                            "    values = form.getForm().getValues(),",
+                                            "    store = Ext.StoreManager.lookup('Estado');",
+                                            "",
+                                            "// Valid",
+                                            "if (form.isValid()) {",
+                                            "",
+                                            "    // TODO: Assign the record's ID from data source",
+                                            "    // Normally, this value would be auto-generated,",
+                                            "    // or returned from the server",
+                                            "    values.id = store.count() + 1;",
+                                            "",
+                                            "    // Save record",
+                                            "    store.add(values);",
+                                            "",
+                                            "    // Commit changes",
+                                            "    store.commitChanges();",
+                                            "",
+                                            "    // Complete",
+                                            "    form.close();",
+                                            "",
+                                            "}*/",
+                                            "me = this;",
+                                            "var forma = Ext.getCmp('frmEstado').getForm(),",
+                                            "    store = Ext.StoreManager.lookup('Estado');",
+                                            "",
+                                            "// Valid",
+                                            "if (forma.isValid()) {",
+                                            "    var rec    = forma.getRecord();",
+                                            "    var values = forma.getValues();",
+                                            "    rec.set(values);",
+                                            "    store.add(rec);",
+                                            "    store.sync(",
+                                            "    {",
+                                            "        params:{",
+                                            "            recibido: 1",
+                                            "        },",
+                                            "",
+                                            "        success: function(batch, options)",
+                                            "        {",
+                                            "            store.commitChanges();",
+                                            "            forma.loadRecord(rec);",
+                                            "            store.load();",
+                                            "            Ext.getCmp('grdDirecTramite').getStore().load();",
+                                            "            Ext.Msg.alert('Se han guardado los datos exitosamente');",
+                                            "            me.onCancel();",
+                                            "",
+                                            "        },",
+                                            "        failure: function(batch, options)",
+                                            "          {",
+                                            "            Ext.Msg.alert('Error', 'Hubo un error');",
+                                            "          }",
+                                            "     }",
+                                            "",
+                                            ");",
+                                            "",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Ingrese los datos correctamente');",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSave",
+                                    "designerId": "e88a6315-9f29-41d7-aca7-4a8e92a96f48"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cancelButton",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "text": "Cancelar"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "e629c58a-883c-4264-91ba-d9c7bbeda3c3",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCancel",
+                                        "implHandler": [
+                                            "Ext.getCmp('winDestino').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCancel",
+                                    "designerId": "a29a50df-8498-4e4b-ba50-509ce1093f35"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    " var forma = Ext.getCmp('frmEstado').getForm();",
+                    "    if(component.curRec){",
+                    "",
+                    "      ",
+                    "      if(component.curRec.data.EST_NOMBRE== ''){",
+                    "         component.curRec.data.EST_NOMBRE = 'En proceso'; ",
+                    "      }",
+                    "        forma.loadRecord(component.curRec);",
+                    "    }",
+                    "    else",
+                    "    {",
+                    "      var rec = Ext.create('model.estadomodel');",
+                    "        forma.reset();",
+                    "      forma.loadRecord(rec);",
+                    "    }"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "94e2377f-9bb5-417e-b41c-aacf4d47ebcf"
+        }
+    ]
+}

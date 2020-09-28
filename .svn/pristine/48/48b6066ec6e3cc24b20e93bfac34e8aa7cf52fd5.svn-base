@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RolesModel",
+        "idProperty": "ROL_ID"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "cab6ef37-f554-4f46-a5d4-03e92959fc6c",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ROL_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString30",
+            "designerId": "e7aa6f50-4b71-4976-b1c2-7d92488268c8"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ROL_ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger8",
+            "designerId": "ac914e12-88de-4cfe-806f-293dd1e99ed5"
+        }
+    ]
+}

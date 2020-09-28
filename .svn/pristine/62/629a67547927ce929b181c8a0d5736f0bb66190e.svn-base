@@ -1,0 +1,2072 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "direccionar.direcgeneral",
+        "designer|userClassName": "direccionar.DirecGeneral",
+        "flex": 2,
+        "height": "",
+        "layout": "vbox",
+        "scrollable": true
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "scrollable": "auto",
+        "flex": "number",
+        "container|align": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "14da02bf-8f7b-4ef3-8c50-31619ff2f2e6",
+    "viewControllerInstanceId": "7e9e2278-5654-4b8f-9a0a-58727d704ffd",
+    "viewModelInstanceId": "75f69edb-f85b-4954-900e-32ec192a8457",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlDirecTramite",
+                "layout|flex": null,
+                "scrollable": "vertical"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|region": "string",
+                "scrollable": "auto",
+                "id": "string",
+                "layout|flex": "number",
+                "flex": "number"
+            },
+            "name": "MyPanel",
+            "designerId": "a085962b-2097-42e7-8ae4-a6f0cb32aa55",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "1cb69ba9-923d-4aa3-970c-6dcf3d0ef896",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnRefrescarArbol",
+                                "layout|flex": null,
+                                "text": "Refrescar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "text": "string",
+                                "id": "string"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "a8b02d4c-f690-4414-a832-828c80ec84fe",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "//permite volver a cargar la información que este en el grid de tramites dependiendo de la pantalla en la que este",
+                                            "STRTRAMITEDETA.load();",
+                                            "Ext.getCmp('pnlDestinosDireccionar').setHidden(true);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "80ac6787-8f2e-467a-978e-155993bc9560"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "height": 288,
+                        "id": "grdTramite2",
+                        "store": "Registro",
+                        "title": "Trámites"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "height": "auto",
+                        "id": "string",
+                        "store": "store",
+                        "title": "string"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "1591a655-5f6f-4288-a662-d678f6895f34",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable",
+                            "designerId": "d6314e02-cbba-4042-b49b-49c02f1f0ca7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_CODIGO",
+                                "format": "0",
+                                "text": "Código Tramite"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyNumberColumn",
+                            "designerId": "163db399-47d3-4eed-9e8b-4d936dfcc939"
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHA",
+                                "format": "Y-m-d H:i:s",
+                                "text": "Fecha Trámite"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "format": "string"
+                            },
+                            "name": "MyDateColumn1",
+                            "designerId": "355b5b25-6c53-4b14-ae45-a6aa5b645cce"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_NOMBRE",
+                                "text": "Unidad Solicitante"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "c8ed7820-5ec8-48e8-9aae-3670c8ef406d"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_GASTO",
+                                "text": "Unidad de Gasto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "19d0cd07-21ef-40d5-8f5f-60a8ad1fd594"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "PRM_NOMBRE",
+                                "id": "colParametro",
+                                "text": "Parámetro"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "id": "string"
+                            },
+                            "name": "MyColumn12",
+                            "designerId": "d676b4d2-99de-4a86-9ced-bf3fc5b077da"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn34",
+                            "designerId": "444fbed1-692d-4af4-a42e-12b66648e5c4"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_OFICIO",
+                                "hidden": true,
+                                "text": "N° Oficio"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "06c3af05-dedb-47ee-ba76-9c57d3960923"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_BENEFICIARIO1",
+                                "hidden": true,
+                                "text": "Beneficiario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "0b148643-c991-4dd7-b7ec-8ef6220c1de3"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_CEDULA1",
+                                "hidden": true,
+                                "text": "Cédula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn6",
+                            "designerId": "df15f73e-eb70-4730-b32a-83f95902a73a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_BENEFICIARIO2",
+                                "hidden": true,
+                                "text": "Beneficiario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn5",
+                            "designerId": "76d86ddc-029e-4fdd-a76c-db76992bf072"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_CEDULA2",
+                                "hidden": true,
+                                "text": "Cédula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn7",
+                            "designerId": "55969603-396f-4026-b910-f40340bbb504"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_DESCRIPCION",
+                                "hidden": true,
+                                "text": "Descripcion"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn18",
+                            "designerId": "1ca8fbc8-19de-4df5-9fa3-3a2e5a3ac5cf"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_PROYECTO",
+                                "hidden": true,
+                                "text": "Proyecto/Partida Presupuestario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn8",
+                            "designerId": "8ac31a8a-1c59-41d0-9d2e-a6c624e350d5"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_COMPROMISO",
+                                "hidden": true,
+                                "text": "N° Compromiso"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn9",
+                            "designerId": "fd833b1f-1d2e-4b47-a4d3-e3d88b1ef7ce"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_PERSONA_AUTORIZA",
+                                "hidden": true,
+                                "text": "Persona que autoriza"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn10",
+                            "designerId": "efbcdbe9-be15-4e3e-9d3f-d0ecf407e5a7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_TELEFONO",
+                                "hidden": true,
+                                "text": "N° de Teléfono"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn11",
+                            "designerId": "aded393e-8a98-41a9-ae49-31d2143f2cfe"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_VALOR",
+                                "hidden": true,
+                                "text": "Valor"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyNumberColumn3",
+                            "designerId": "416c16b9-465d-47ba-8033-c76a4a1fd3c6"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_DETALLE_FACTURA",
+                                "format": "0",
+                                "hidden": true,
+                                "text": "Detalle Factura"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyNumberColumn4",
+                            "designerId": "b91801b0-633f-4804-bdeb-20e9f9fbec7d"
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHA_VIAJE_VIATICO",
+                                "format": "Y-m-d",
+                                "hidden": true,
+                                "text": "Fecha Viaje"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "format": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyDateColumn5",
+                            "designerId": "cae81615-99ba-456a-bde2-82cab745fa8b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_DESTINO_VIATICO",
+                                "hidden": true,
+                                "text": "Destino"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn13",
+                            "designerId": "cb3b37ed-13a4-4b8f-b63b-7f696b8241c0"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_RESPONSABLE_VIATICO",
+                                "hidden": true,
+                                "text": "Nombre Responsable"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn14",
+                            "designerId": "99adc586-b6d3-4db9-a9bb-d4d6b516e772"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_PERSONAS_ADIC_VIATICO",
+                                "hidden": true,
+                                "text": "Personas adicionales"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn15",
+                            "designerId": "f7ce214b-3559-4826-a1cd-42daaf44fc4b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_OBSERV_VIAJE_VIATICO",
+                                "hidden": true,
+                                "text": "Observación Viaje"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyColumn16",
+                            "designerId": "399a735c-0157-4344-9f3e-ca5df1ac8267"
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_RECIBIDO",
+                                "id": "recibidoCheck",
+                                "text": "Recibido"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "id": "string"
+                            },
+                            "name": "MyCheck1",
+                            "designerId": "fffbea4e-2ba7-4681-b8e4-4c896062b156",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRecibidoCheckBeforeCheckChange",
+                                        "implHandler": [
+                                            "//controla que al cambiar el check de recibido no se pueda quitar despues y se muestre",
+                                            "//el grid de destinos correspondiente a ese tramite si esta recibido o no",
+                                            "var me = this;",
+                                            "Ext.getCmp('grdTramite2').getView().select(rowIndex);",
+                                            "if(record.data.TRA_RECIBIDO !== true){",
+                                            "        if(record.data.TRA_FECHARECIBIDO===null){",
+                                            "             Ext.Msg.show({",
+                                            "                    title: 'Aviso',",
+                                            "                     msg: 'Va a recepcionar el trámite y después ya no puede modificarlo. ¿Está seguro?',",
+                                            "                    icon: Ext.Msg.QUESTION,",
+                                            "                    buttonText: {",
+                                            "                        yes: 'Aceptar',",
+                                            "                        no: 'Cancelar'",
+                                            "                    },",
+                                            "                    buttons: Ext.Msg.YESNO,",
+                                            "                    fn: function (btn) {",
+                                            "                        if (btn == 'yes') {",
+                                            "                            //Nuevafecha",
+                                            "                            var fecha = Ext.Date.format(new Date(), \"Y-m-d H:i:s\")",
+                                            "",
+                                            "                            var store = Ext.getCmp('grdTramite2').getStore();",
+                                            "                            store.add(record);",
+                                            "                            store.sync(",
+                                            "                                {",
+                                            "                                    params: {",
+                                            "                                        idParametro: record.data.TRA_PRM_ID,//Se envia el codigo del parametro",
+                                            "                                        fechaRecibido: fecha",
+                                            "                                    },",
+                                            "                                    success: function(batch, success)",
+                                            "                                    {",
+                                            "                                        store.commitChanges();",
+                                            "                                        store.load();",
+                                            "                                        //Aqui se crea el registro de Estado para el tramite recibido",
+                                            "                                        var store2 = Ext.getStore('Estado');",
+                                            "                                        var g = Ext.getCmp('grdTramite2');",
+                                            "                                        var rec = g.selection;",
+                                            "                                        var tramiteNum = rec.data.TRA_CODIGO;",
+                                            "                                        var parametroNum = rec.data.TRA_PRM_ID;",
+                                            "                                        var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "",
+                                            "                                        var reco = Ext.create('model.estadomodel');",
+                                            "                                        reco.data.EST_CODIGO = 0;",
+                                            "                                        reco.data.TRA_PRM_ID = parametroNum;",
+                                            "                                        reco.data.EST_FECHARECIBIDO = new Date();",
+                                            "                                        reco.data.EST_FECHAINICIO = fechainicio;",
+                                            "                                        reco.data.TRA_CODIGO = tramiteNum;",
+                                            "                                        reco.data.UND_CODIGO = 183;",
+                                            "                                        reco.data.TIP_CODIGO = 1;",
+                                            "                                        reco.data.EST_DESCRIPCION = 'El trámite fue recibido';",
+                                            "                                        reco.data.EST_OBSERVACION = 'El trámite fue recibido';",
+                                            "",
+                                            "                                        store2.add(reco);",
+                                            "                                        store2.sync(",
+                                            "                                        {",
+                                            "                                            params:{",
+                                            "                                                tipoEstado: 1,",
+                                            "                                                idtramite: reco.data.TRA_CODIGO,",
+                                            "                                                estcodigo: 0,",
+                                            "                                                origenest: 0,",
+                                            "                                                idparametro: reco.data.TRA_PRM_ID",
+                                            "                                            },",
+                                            "                                            success: function(batch, success)",
+                                            "                                            {",
+                                            "                                                store2.commitChanges();",
+                                            "                                                store2.load();",
+                                            "                                                me.onBtnDirecRefreshClick();",
+                                            "",
+                                            "                                            },",
+                                            "",
+                                            "                                            failure: function(batch, success)",
+                                            "                                            {",
+                                            "                                                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                                            }",
+                                            "                                        });//FIN ESTADO tramite recibido",
+                                            "                                    },",
+                                            "",
+                                            "                                    failure: function(batch, success)",
+                                            "                                    {",
+                                            "                                        Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                                    }",
+                                            "                                });",
+                                            "                        }",
+                                            "                        else{",
+                                            "                            var strTramiteDet = Ext.getStore('Registro');",
+                                            "                            strTramiteDet.proxy.extraParams = {",
+                                            "                                busqueda: 2,",
+                                            "                                parametro: PARAMETROPRINCIPAL",
+                                            "                            };",
+                                            "                            strTramiteDet.load();",
+                                            "                            Ext.getCmp('pnlDestinosDireccionar').setVisible(false);",
+                                            "                        }",
+                                            "                    }",
+                                            "                });",
+                                            "",
+                                            "            }",
+                                            "            Ext.getCmp('pnlDestinosDireccionar').setVisible(true);",
+                                            "    }",
+                                            "    else{",
+                                            "        Ext.Msg.alert('Aviso', 'Este trámite ya fue recibido.');",
+                                            "        this.onButtonClick1();",
+                                            "    }"
+                                        ],
+                                        "name": "beforecheckchange",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRecibidoCheckBeforeCheckChange",
+                                    "designerId": "b5d13926-f210-4cda-aea2-5302bc9538f6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHARECIBIDO",
+                                "format": "Y-m-d H:i:s",
+                                "text": "Fecha Recibido"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "format": "string"
+                            },
+                            "name": "MyDateColumn2",
+                            "designerId": "230eae69-fc89-4818-bdcb-e00ea25ade90"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdTramite2CellDblClick",
+                                "implHandler": [
+                                    "if (record)",
+                                    "{",
+                                    "    //crea, y muestra la vemtana para ver el detalle del registro seleccionado",
+                                    "    var winTramiteD = Ext.create('Tramites.view.direccionar.winTramiteDetalle');",
+                                    "    winTramiteD.curRec = record;",
+                                    "    winTramiteD.store = Ext.getStore('Registro');",
+                                    "    Ext.getStore('Registro').load();",
+                                    "    winTramiteD.show();",
+                                    "}",
+                                    "else",
+                                    "{",
+                                    "    Ext.Msg.alert('Error', 'Seleccione un registro para editar');",
+                                    "}"
+                                ],
+                                "name": "celldblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdTramite2CellDblClick",
+                            "designerId": "66efebf5-ffc4-434c-80cb-ebd3cae9ea96"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdTramite2Select",
+                                "implHandler": [
+                                    "if (BANDERA ===0){",
+                                    "    var me = this;",
+                                    "    var grid = Ext.getCmp('grdTramite2');",
+                                    "    var arrayKeys = grid.getSelectionModel().selected.items;",
+                                    "",
+                                    "    if(record.data.TRA_RECIBIDO === true)",
+                                    "    {",
+                                    "        //-hace visible el panel de destinos si el campo seleccionado esta recibido",
+                                    "        Ext.getCmp('pnlDestinosDireccionar').setVisible(true);",
+                                    "        //-------",
+                                    "        //-verifica si el usuario es un jefe de la unidad seleccionada para mostrar el boton de anular.",
+                                    "        Ext.Ajax.request",
+                                    "        (",
+                                    "            {",
+                                    "                method: 'post',",
+                                    "                url: '../servidor/tramites/estadotramite/verificaJefe',",
+                                    "                params:{",
+                                    "                    usuario: USUARIO,",
+                                    "                    unidad: UNIDADDIR",
+                                    "                },",
+                                    "                success: function (response, options) {",
+                                    "                    var responseData = Ext.JSON.decode(response.responseText);",
+                                    "                    if (!responseData.success) {",
+                                    "                        Ext.getCmp('txtAsignadoA').setHidden(false);",
+                                    "                        Ext.getCmp('txtAsignadoADestino').setDisabled(true);",
+                                    "                    }",
+                                    "                    else{",
+                                    "                        Ext.getCmp('txtAsignadoA').setHidden(false);",
+                                    "                        Ext.getCmp('txtAsignadoADestino').setDisabled(false);",
+                                    "                    }",
+                                    "                },",
+                                    "                failure: function (response, options){",
+                                    "                    Ext.Msg.show//Mensaje de Error",
+                                    "                    (",
+                                    "                        {",
+                                    "                            title: 'Error',",
+                                    "                            msg: responseData.message,",
+                                    "                            icon: Ext.Msg.ERROR,",
+                                    "                            buttons: Ext.Msg.OK",
+                                    "                        }",
+                                    "                    );",
+                                    "                    Ext.getCmp('txtAsignadoA').setHidden(true);",
+                                    "                    Ext.getCmp('txtAsignadoADestino').setDisabled(true);",
+                                    "                }",
+                                    "            }",
+                                    "        );",
+                                    "        //------",
+                                    "        //-carga el combo de destinos",
+                                    "        var strDestinos = Ext.getCmp('cbDestinosGrid').getStore();",
+                                    "        var parametro = record.data.TRA_PRM_ID;",
+                                    "        strDestinos.proxy.extraParams = {",
+                                    "            unidireccion: 1,",
+                                    "            destino: 0,",
+                                    "            idparametro: parametro,",
+                                    "            idtramite: record.data.TRA_CODIGO",
+                                    "        };",
+                                    "        strDestinos.load();",
+                                    "        //------",
+                                    "        //-muestra",
+                                    "        Ext.getCmp('grdDirecTramite').getStore().removeAll();",
+                                    "        var strEstado = Ext.getCmp('grdDirecTramite').getStore();",
+                                    "        var tramite = record.data.TRA_CODIGO;",
+                                    "",
+                                    "        var fechainicio = record.data.TRA_FECHARECIBIDO;",
+                                    "        var busc;",
+                                    "        if(UNIDADDIR !== '183')",
+                                    "            busc = 2;//obtiene un unico registro de destino que corresponde a una unidad de direccionamiento paraque pueda tramitar su parte respecto a ese tramite, si esta finalizado ya no se muestra",
+                                    "        else",
+                                    "            busc = 1;//obtiene todos los destinos de un tramite para la pantalla de direccionamiento",
+                                    "        strEstado.proxy.extraParams = {",
+                                    "            idparametro: parametro,",
+                                    "            idtramite: tramite,",
+                                    "            fechaInicio: fechainicio,",
+                                    "            busqueda: busc,",
+                                    "            unidad: UNIDADDIR",
+                                    "        };",
+                                    "        strEstado.load();",
+                                    "        //------",
+                                    "    }",
+                                    "    else",
+                                    "        Ext.getCmp('pnlDestinosDireccionar').setVisible(false);",
+                                    "}",
+                                    "else",
+                                    "    Ext.Msg.alert('Alerta', 'Se ecuentra en medio del direccionamiento');"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdTramite2Select",
+                            "designerId": "e1ac7dde-f99e-413f-ae8b-57b10d608415"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "pnlDestinosDireccionar",
+                "title": "Destinos"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "id": "string",
+                "layout|region": "string",
+                "title": "string",
+                "flex": "number"
+            },
+            "name": "MyPanel5",
+            "designerId": "7a420d1d-5774-45b8-bf8b-dc35c9feefa1",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "ab26a325-ce01-4e05-8074-65d63cedcc02",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarDestino",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "id": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "9914baf2-61aa-4d85-af26-b137738ba7ea",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarDestinoClick",
+                                        "implHandler": [
+                                            "//cada vez que se expanda el combobox de destinos, se van a cargar los destinos que ese tramite",
+                                            "//no tenga en proceso y ya esten finalizados",
+                                            "var strDestinos = Ext.getCmp('cbDestinosGrid').getStore();",
+                                            "var grid = Ext.getCmp('grdTramite2');",
+                                            "var record = grid.selection;",
+                                            "var parametro = record.data.TRA_PRM_ID;",
+                                            "strDestinos.proxy.extraParams = {",
+                                            "    //destino: 2,",
+                                            "    unidireccion: 1,",
+                                            "    destino:0,",
+                                            "    idparametro: parametro,",
+                                            "    idtramite: record.data.TRA_CODIGO",
+                                            "};",
+                                            "strDestinos.load();",
+                                            "",
+                                            "var grid = Ext.getCmp('grdDirecTramite');",
+                                            "var store = grid.getStore();",
+                                            "var g = Ext.getCmp('grdTramite2');",
+                                            "var rec = g.selection;",
+                                            "var tramiteNum = rec.data.TRA_CODIGO;",
+                                            "var parametroNum = rec.data.TRA_PRM_ID;",
+                                            "var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "//genera la primera linea que se inserta para agregar un destino",
+                                            "store.insert(0,",
+                                            "             {",
+                                            "    EST_CODIGO: 0,",
+                                            "    TRA_PRM_ID:parametroNum,",
+                                            "    EST_FECHARECIBIDO:new Date(),",
+                                            "    EST_FECHAINICIO: fechainicio,",
+                                            "    TRA_CODIGO:tramiteNum,",
+                                            "    UND_CODIGO:0,",
+                                            "    TIP_CODIGO:1",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarDestinoClick",
+                                    "designerId": "1f7fb0d6-4edd-4a0f-9735-d4fa4f912788"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnDirecRefresh",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyButton",
+                            "designerId": "5d071e8c-7eed-44db-808b-fb4b27cb3180",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnDirecRefreshClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdDirecTramite');",
+                                            "var store = grid.getStore();",
+                                            "store.removeAll();",
+                                            "var g = Ext.getCmp('grdTramite2');",
+                                            "var rec = g.selection;",
+                                            "var parametro = rec.data.TRA_PRM_ID;",
+                                            "var tramite = rec.data.TRA_CODIGO;",
+                                            "var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "var busc;",
+                                            "if(UNIDADDIR !== '183')",
+                                            "    busc = 2;//obtiene un unico registro de destino que corresponde a una unidad de direccionamiento paraque pueda tramitar su parte respecto a ese tramite, si esta finalizado ya no se muestra",
+                                            "else",
+                                            "    busc = 1;//obtiene todos los destinos de un tramite para la pantalla de direccionamiento",
+                                            "var strEstado = store;",
+                                            "//carga la grid de destinos depdendiendo de la pantalla en la que esta",
+                                            "strEstado.proxy.extraParams = {",
+                                            "    idparametro: parametro,",
+                                            "    idtramite: tramite,",
+                                            "    fechaInicio: fechainicio,",
+                                            "    busqueda: busc,",
+                                            "    unidad: UNIDADDIR",
+                                            "};",
+                                            "strEstado.load();",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnDirecRefreshClick",
+                                    "designerId": "b45f1b7f-b5a1-4d38-8ad0-401f88267039"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnVerDestinos",
+                                "layout|flex": null,
+                                "text": "Ver destinos"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "53001e52-46a3-42bc-9ffc-0a97431d4c5a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnVerDestinosClick",
+                                        "implHandler": [
+                                            "//crea, añade y muestra la ventana para ver todos los destinos de un tramite",
+                                            "var winEstado = Ext.create('Tramites.view.direccionar.winEstado');",
+                                            "winEstado.show();",
+                                            "var grid = Ext.getCmp('grdDirecTramite').setVisible(false);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnVerDestinosClick",
+                                    "designerId": "1a4cbaec-241c-40bb-bdc7-686ff5bc3e55"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "flex": 0,
+                        "forceFit": true,
+                        "height": 278,
+                        "id": "grdDirecTramite",
+                        "reserveScrollbar": true,
+                        "scrollable": "vertical",
+                        "store": "Estado"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|region": "string",
+                        "title": "string",
+                        "id": "string",
+                        "store": "store",
+                        "forceFit": "boolean",
+                        "flex": "number",
+                        "scrollable": "auto",
+                        "reserveScrollbar": "boolean"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "8b2ea34b-1913-46e5-b752-4f7287989cda",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 255,
+                                "loadingText": "Cargando..",
+                                "scrollable": true
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "scrollable": "auto",
+                                "loadingText": "string"
+                            },
+                            "name": "MyTable1",
+                            "designerId": "730dec1a-8448-4b51-845a-a8ef6be4f95f"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_CODIGO",
+                                "emptyCellText": "Ingrese un destino",
+                                "id": "txtDestino",
+                                "text": "Destino"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string",
+                                "width": "auto",
+                                "emptyCellText": "string",
+                                "id": "string"
+                            },
+                            "name": "MyColumn35",
+                            "designerId": "b9afe743-38c8-46cf-9e1b-3dce8000f531",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "anyMatch": true,
+                                        "displayField": "UND_NOMBRE",
+                                        "emptyText": "Ingrese un destino",
+                                        "forceSelection": true,
+                                        "id": "cbDestinosGrid",
+                                        "queryMode": "local",
+                                        "store": "Unidad",
+                                        "typeAhead": true,
+                                        "value": [
+                                            "null"
+                                        ],
+                                        "valueField": "UND_CODIGO"
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "store": "store",
+                                        "displayField": "datafield",
+                                        "valueField": "datafield",
+                                        "id": "string",
+                                        "value": "object",
+                                        "emptyText": "string",
+                                        "editable": "boolean",
+                                        "anyMatch": "boolean",
+                                        "forceSelection": "boolean",
+                                        "queryMode": "string",
+                                        "typeAhead": "boolean"
+                                    },
+                                    "name": "MyComboBox4",
+                                    "designerId": "7d8d89f6-6994-4721-8840-515c833877ce"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "    var descripcion = record.data.UND_CODIGO;",
+                                            "    var combo = metaData.column.getEditor();",
+                                            "    var comboStore = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "    var indice = store.findExact(combo.valueField, value);",
+                                            "",
+                                            "    if (indice >= 0)",
+                                            "        return store.getAt(indice).get(combo.displayField);",
+                                            "    else",
+                                            "        return descripcion;",
+                                            "}",
+                                            "else",
+                                            "    return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "825f611d-ec2f-4f4c-a4d5-ebdb12aa7992"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EST_FECHARECIBIDO",
+                                "format": "Y-m-d H:i:s",
+                                "id": "fechaRecibido",
+                                "text": "Fecha"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string",
+                                "width": "auto",
+                                "id": "string"
+                            },
+                            "name": "MyDateColumn7",
+                            "designerId": "f001fa69-4b93-4b18-b97c-afaf197966b8"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TIP_CODIGO",
+                                "id": "cbEstadoNombre",
+                                "text": "Estado"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "id": "string"
+                            },
+                            "name": "MyColumn37",
+                            "designerId": "ed26d24c-7fb8-4ade-8f50-3557904d1f75",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "TIP_NOMBRE",
+                                        "editable": false,
+                                        "id": "cbEstado",
+                                        "store": "TipoEstado",
+                                        "valueField": "TIP_CODIGO"
+                                    },
+                                    "configAlternates": {
+                                        "value": "object",
+                                        "displayField": "datafield",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "id": "string",
+                                        "editable": "boolean"
+                                    },
+                                    "name": "MyComboBox9",
+                                    "designerId": "f1844fe8-58da-4fb7-a49b-faeec9b6eb51"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "var descripcion = record.data.TIP_CODIGO;",
+                                            "var combo = metaData.column.getEditor();",
+                                            "var comboStore = combo.getStore();",
+                                            "var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "if (indice >= 0)",
+                                            "     return comboStore.getAt(indice).get(combo.displayField);",
+                                            "else",
+                                            "     return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "15f8d52c-0c9a-4cf9-adc2-2f10cfebe87e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EST_ASIGNADO_A",
+                                "id": "txtAsignadoA",
+                                "text": "Asignado A"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "id": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn39",
+                            "designerId": "82378dba-82b4-4475-8134-3e3bf9df8725",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "USR_USUARIO",
+                                        "editable": false,
+                                        "id": "txtAsignadoADestino",
+                                        "queryMode": "local",
+                                        "store": "Usuario",
+                                        "valueField": "USR_USUARIO"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "displayField": "datafield",
+                                        "store": "store",
+                                        "valueField": "datafield",
+                                        "editable": "boolean",
+                                        "queryMode": "string"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "7cc93afc-8f4c-4385-8bae-86ae719014e3",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTxtAsignadoADestinoExpand",
+                                                "implHandler": [
+                                                    "Ext.getCmp('txtAsignaadoADestino').setValue(null);",
+                                                    "var strUsuario = Ext.getCmp('txtAsignadoADestino').getStore();",
+                                                    "strUsuario.removeAll();",
+                                                    "strUsuario.proxy.extraParams = {",
+                                                    "    usr: 2,",
+                                                    "    unidad: UNIDADDIR",
+                                                    "};",
+                                                    "strUsuario.load();"
+                                                ],
+                                                "name": "expand",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTxtAsignadoADestinoExpand",
+                                            "designerId": "be71e434-a192-46fc-9608-5ccaeca4714c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EST_OBSERVACION",
+                                "id": "txtObservacion",
+                                "text": "Observación"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "id": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "f812fa26-16a0-48fe-8104-de3711a8c906",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "txtObservacionDestino"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string"
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "62a104f0-08e5-4bff-8633-8fece18bd930"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EST_DESCRIPCION",
+                                "id": "txtDescripcionDestino",
+                                "text": "Observacion (Unidad)"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "id": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn36",
+                            "designerId": "a0e072f7-6bca-45e8-8d37-5fac4fb0fc40",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "txtDescripDestino"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string"
+                                    },
+                                    "name": "MyTextField10",
+                                    "designerId": "98987ff1-38b5-4326-aa5d-b3823b55e591"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "configAlternates": {
+                                "clicksToEdit": "number"
+                            },
+                            "name": "MyRowEditingPlugin1",
+                            "designerId": "ebbd3bc3-180c-490a-9a6a-980f579bee84",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit1",
+                                        "implHandler": [
+                                            "//guarda los cambios si es que el registro fue nuevo o actualizado",
+                                            "var me =this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var reco = context.record;",
+                                            "    if(context.record.data.TIP_CODIGO === 1){//Cuando el tipo no es finalizado",
+                                            "        var store = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "        store.add(reco);",
+                                            "",
+                                            "        store.sync(",
+                                            "            {",
+                                            "                params:{",
+                                            "                    tipoEstado: reco.data.TIP_CODIGO,",
+                                            "                    tracodigo: reco.data.TRA_CODIGO,",
+                                            "                    estcodigo: reco.data.EST_CODIGO,",
+                                            "                    origenest:reco.data.EST_ORIGEN",
+                                            "                },",
+                                            "                success: function(batch, success)",
+                                            "                {",
+                                            "                    BANDERA = 0;",
+                                            "                    store.commitChanges();",
+                                            "                    store.load();",
+                                            "                    Ext.getCmp('grdDirecTramite').getStore().load();",
+                                            "                },",
+                                            "",
+                                            "                failure: function(batch, success)",
+                                            "                {",
+                                            "                    Ext.Msg.alert('Error', 'Hubor un error al guardar los datos');",
+                                            "                }",
+                                            "            });",
+                                            "    }",
+                                            "",
+                                            "    else if(context.record.data.TIP_CODIGO === 2)//Cuando el tipo es devuelto1(2)",
+                                            "    {",
+                                            "        Ext.Msg.show({",
+                                            "            title: 'Atención',",
+                                            "            msg: 'Una vez finalizado el trámite ya no podrá editarlo, ¿desea finalizar?',",
+                                            "            icon: Ext.Msg.QUESTION,",
+                                            "            iconCls:'',",
+                                            "",
+                                            "            buttonText: {",
+                                            "                yes: 'Si',",
+                                            "                no: 'No'",
+                                            "            },",
+                                            "            buttons: Ext.Msg.YESNO,",
+                                            "            fn: function (btn) {",
+                                            "                if (btn == 'yes') {",
+                                            "                    Ext.Msg.alert('Alerta', 'El trámite ha sido finalizado satisfactoriamente.');",
+                                            "                    var store = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "                    store.add(reco);",
+                                            "",
+                                            "                    store.sync(",
+                                            "                        {",
+                                            "                            params:{",
+                                            "                                tipoEstado: reco.data.TIP_CODIGO,",
+                                            "                                tracodigo: reco.data.TRA_CODIGO,",
+                                            "                                estcodigo: reco.data.EST_CODIGO,",
+                                            "                                origenest:reco.data.EST_ORIGEN",
+                                            "                            },",
+                                            "                            success: function(batch, success)",
+                                            "                            {",
+                                            "                                //store.commitChanges();",
+                                            "                            },",
+                                            "",
+                                            "                            failure: function(batch, success)",
+                                            "                            {",
+                                            "                                Ext.Msg.alert('Error', 'Hubor un error al guardar los datos');",
+                                            "                            }",
+                                            "                        });",
+                                            "",
+                                            "                    //Aqui se crea el registro de Estado para el tramite DEVUELTO1",
+                                            "                    /*store.removeAll();",
+                                            "                    store2 = Ext.getStore('Estado');",
+                                            "                    var reg = Ext.create('model.estadomodel');",
+                                            "                    reg.data.EST_CODIGO = 0;",
+                                            "                    reg.data.TRA_PRM_ID = reco.data.TRA_PRM_ID;",
+                                            "                    reg.data.EST_FECHARECIBIDO = new Date();",
+                                            "                    reg.data.EST_FECHAINICIO = reco.data.EST_FECHAINICIO;",
+                                            "                    reg.data.TRA_CODIGO = reco.data.TRA_CODIGO;",
+                                            "                    reg.data.UND_CODIGO = reco.data.UND_CODIGO;",
+                                            "                    reg.data.TIP_CODIGO = 1;",
+                                            "                    reg.data.EST_FECHAFIN = new Date();",
+                                            "",
+                                            "",
+                                            "                    store2.add(reg);",
+                                            "                    store2.sync(",
+                                            "                        {",
+                                            "                            params:{",
+                                            "                                tipoEstado: 1,",
+                                            "                                tracodigo: reco.data.TRA_CODIGO,",
+                                            "                                estcodigo: 0,",
+                                            "                                origenest: 0",
+                                            "                            },",
+                                            "                            success: function(batch, success)",
+                                            "                            {",
+                                            "                                store2.commitChanges();",
+                                            "                                store2.load();",
+                                            "                            },",
+                                            "",
+                                            "                            failure: function(batch, success)",
+                                            "                            {",
+                                            "                                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                            }",
+                                            "                        });*///FIN ESTADO tramite Devuelto1*/",
+                                            "                }",
+                                            "                else",
+                                            "                    me.onBtnDirecRefreshClick();",
+                                            "            }",
+                                            "        });",
+                                            "    }",
+                                            "    else if(context.record.data.TIP_CODIGO === 3){//Cuando el código es devuelto2",
+                                            "        Ext.Msg.show({",
+                                            "            title: 'Alerta',",
+                                            "            msg: 'Una vez devuelto, el trámite no puede ser editado, desea devolverlo?',",
+                                            "            iconCls:'x-fa fa-info',",
+                                            "            buttonText: {",
+                                            "                yes: 'Si',",
+                                            "                no: 'No'",
+                                            "            },",
+                                            "            buttons: Ext.Msg.YESNO,",
+                                            "            fn: function (btn) {",
+                                            "                if (btn == 'yes') {",
+                                            "                    var store = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "                    var rec = Ext.create('model.estadomodel');",
+                                            "                    if(reco.data.TIP_CODIGO === 3){//permite generar un nuevo destino solo si es que la unidad finalizó su parte",
+                                            "                        Ext.Msg.show({",
+                                            "                            title: 'Atención',",
+                                            "                            msg: 'Una vez devuelto puede agregar un destino más, desea agregarlo?',",
+                                            "                            icon: Ext.Msg.QUESTION,",
+                                            "                            iconCls:'',",
+                                            "",
+                                            "                            buttonText: {",
+                                            "                                yes: 'Si',",
+                                            "                                no: 'No'",
+                                            "                            },",
+                                            "                            buttons: Ext.Msg.YESNO,",
+                                            "                            fn: function (btn) {",
+                                            "                                if (btn == 'yes') {",
+                                            "                                    BANDERA = 1;",
+                                            "                                    var grid = Ext.getCmp('grdDirecTramite');",
+                                            "                                    var store = grid.getStore();",
+                                            "                                    var g = Ext.getCmp('grdTramite2');",
+                                            "                                    var rec = g.selection;",
+                                            "                                    var tramiteNum = rec.data.TRA_CODIGO;",
+                                            "                                    var parametroNum = rec.data.TRA_PRM_ID;",
+                                            "                                    var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "",
+                                            "                                    store.insert(0,",
+                                            "                                                 {",
+                                            "                                        EST_CODIGO: 0,",
+                                            "                                        TRA_PRM_ID:parametroNum,",
+                                            "                                        EST_FECHARECIBIDO:new Date(),",
+                                            "                                        EST_FECHAINICIO: fechainicio,",
+                                            "                                        TRA_CODIGO:tramiteNum,",
+                                            "                                        UND_CODIGO: 0,",
+                                            "                                        TIP_CODIGO: 1,",
+                                            "                                        EST_ORIGEN: reco.data.EST_CODIGO,",
+                                            "                                        EST_FECHAFIN: new Date()",
+                                            "                                    });",
+                                            "                                    Ext.getCmp('cbEstado').setDisabled(true);",
+                                            "                                    Ext.getCmp('txtDestino').setHidden(false);",
+                                            "                                    Ext.getCmp('txtAsignadoADestino').setDisabled(true);",
+                                            "                                }",
+                                            "                            }",
+                                            "                        });",
+                                            "                    }",
+                                            "                    store.add(reco);",
+                                            "",
+                                            "                    store.sync(",
+                                            "                        {",
+                                            "                            params:{",
+                                            "                                tipoEstado: reco.data.TIP_CODIGO",
+                                            "                            },",
+                                            "                            success: function(batch, success)",
+                                            "                            {",
+                                            "                                store.commitChanges();",
+                                            "                                store.load();",
+                                            "                                Ext.getCmp('grdDirecTramite').getStore().load();",
+                                            "                            },",
+                                            "",
+                                            "                            failure: function(batch, success)",
+                                            "                            {",
+                                            "                                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                                me.onBtnDirecRefreshClick();",
+                                            "                            }",
+                                            "                        });",
+                                            "                }",
+                                            "                else",
+                                            "                    me.onBtnDirecRefreshClick();",
+                                            "            }",
+                                            "        });//Fin del mensaje: Una vez devuelto2...",
+                                            "    }",
+                                            "    else if(context.record.data.TIP_CODIGO === 5){//Cuando el código es devuelto3",
+                                            "        Ext.Msg.show({",
+                                            "            title: 'Alerta',",
+                                            "            msg: 'Una vez devuelto, el trámite no puede ser editado, desea devolverlo?',",
+                                            "            iconCls:'x-fa fa-info',",
+                                            "            buttonText: {",
+                                            "                yes: 'Si',",
+                                            "                no: 'No'",
+                                            "            },",
+                                            "            buttons: Ext.Msg.YESNO,",
+                                            "            fn: function (btn) {",
+                                            "                if (btn == 'yes') {",
+                                            "                    var store = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "                    var rec = Ext.create('model.estadomodel');",
+                                            "                    if(reco.data.TIP_CODIGO === 5){//permite generar un nuevo destino solo si es que la unidad finalizó su parte",
+                                            "                        Ext.Msg.show({",
+                                            "                            title: 'Atención',",
+                                            "                            msg: 'Una vez devuelto puede agregar un destino más, desea agregarlo?',",
+                                            "                            icon: Ext.Msg.QUESTION,",
+                                            "                            iconCls:'',",
+                                            "",
+                                            "                            buttonText: {",
+                                            "                                yes: 'Si',",
+                                            "                                no: 'No'",
+                                            "                            },",
+                                            "                            buttons: Ext.Msg.YESNO,",
+                                            "                            fn: function (btn) {",
+                                            "                                if (btn == 'yes') {",
+                                            "                                    BANDERA = 1;",
+                                            "                                    var strDestinos = Ext.getCmp('cbDestinosGrid').getStore();",
+                                            "                                    var grid = Ext.getCmp('grdTramite2');",
+                                            "                                    var record = grid.selection;",
+                                            "                                    var parametro = record.data.TRA_PRM_ID;",
+                                            "                                    strDestinos.proxy.extraParams = {",
+                                            "                                        //destino: 2,",
+                                            "                                        unidireccion: 2,",
+                                            "                                        destino:0,",
+                                            "                                        idparametro: parametro,",
+                                            "                                        idtramite: record.data.TRA_CODIGO",
+                                            "                                    };",
+                                            "                                    strDestinos.load();",
+                                            "                                    var grid = Ext.getCmp('grdDirecTramite');",
+                                            "                                    var store = grid.getStore();",
+                                            "                                    var g = Ext.getCmp('grdTramite2');",
+                                            "                                    var rec = g.selection;",
+                                            "                                    var tramiteNum = rec.data.TRA_CODIGO;",
+                                            "                                    var parametroNum = rec.data.TRA_PRM_ID;",
+                                            "                                    var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "",
+                                            "                                    store.insert(0,",
+                                            "                                                 {",
+                                            "                                        EST_CODIGO: 0,",
+                                            "                                        TRA_PRM_ID:parametroNum,",
+                                            "                                        EST_FECHARECIBIDO:new Date(),",
+                                            "                                        EST_FECHAINICIO: fechainicio,",
+                                            "                                        TRA_CODIGO:tramiteNum,",
+                                            "                                        UND_CODIGO: 0,",
+                                            "                                        TIP_CODIGO: 1,",
+                                            "                                        EST_ORIGEN: reco.data.EST_CODIGO,",
+                                            "                                        EST_FECHAFIN: new Date()",
+                                            "                                    });",
+                                            "                                    Ext.getCmp('cbEstado').setDisabled(true);",
+                                            "                                    Ext.getCmp('txtDestino').setHidden(false);",
+                                            "                                    Ext.getCmp('txtAsignadoADestino').setDisabled(true);",
+                                            "                                }",
+                                            "                            }",
+                                            "                        });",
+                                            "                    }",
+                                            "                    store.add(reco);",
+                                            "",
+                                            "                    store.sync(",
+                                            "                        {",
+                                            "                            params:{",
+                                            "                                tipoEstado: reco.data.TIP_CODIGO",
+                                            "                            },",
+                                            "                            success: function(batch, success)",
+                                            "                            {",
+                                            "                                store.commitChanges();",
+                                            "                                store.load();",
+                                            "                                Ext.getCmp('grdDirecTramite').getStore().load();",
+                                            "                            },",
+                                            "",
+                                            "                            failure: function(batch, success)",
+                                            "                            {",
+                                            "                                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                                me.onBtnDirecRefreshClick();",
+                                            "                            }",
+                                            "                        });",
+                                            "                }",
+                                            "                else",
+                                            "                    me.onBtnDirecRefreshClick();",
+                                            "            }",
+                                            "        });//Fin del mensaje: Una vez devuelto3...",
+                                            "    }",
+                                            "    else if(context.record.data.TIP_CODIGO === 4){//Cuando el código es finalizado",
+                                            "        Ext.Msg.show({",
+                                            "            title: 'Alerta',",
+                                            "            msg: 'Una vez finalizado, el trámite no puede ser editado, desea finalizar?',",
+                                            "            iconCls:'x-fa fa-info',",
+                                            "            buttonText: {",
+                                            "                yes: 'Si',",
+                                            "                no: 'No'",
+                                            "            },",
+                                            "            buttons: Ext.Msg.YESNO,",
+                                            "            fn: function (btn) {",
+                                            "                if (btn == 'yes') {",
+                                            "                    var store = Ext.getCmp('grdDirecTramite').getStore();",
+                                            "                    var rec = Ext.create('model.estadomodel');",
+                                            "                    if(reco.data.TIP_CODIGO === 4){//permite generar un nuevo destino solo si es que la unidad finalizó su parte",
+                                            "                        Ext.Msg.show({",
+                                            "                            title: 'Atención',",
+                                            "                            msg: 'Una vez finalizado puede agregar un destino más, desea agregarlo?',",
+                                            "                            icon: Ext.Msg.QUESTION,",
+                                            "                            iconCls:'',",
+                                            "",
+                                            "                            buttonText: {",
+                                            "                                yes: 'Si',",
+                                            "                                no: 'No'",
+                                            "                            },",
+                                            "                            buttons: Ext.Msg.YESNO,",
+                                            "                            fn: function (btn) {",
+                                            "                                if (btn == 'yes') {",
+                                            "                                    BANDERA = 1;",
+                                            "                                    var grid = Ext.getCmp('grdDirecTramite');",
+                                            "                                    var store = grid.getStore();",
+                                            "                                    var g = Ext.getCmp('grdTramite2');",
+                                            "                                    var rec = g.selection;",
+                                            "                                    var tramiteNum = rec.data.TRA_CODIGO;",
+                                            "                                    var parametroNum = rec.data.TRA_PRM_ID;",
+                                            "                                    var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                                            "                                    store.insert(0,",
+                                            "                                                 {",
+                                            "                                        EST_CODIGO: 0,",
+                                            "                                        TRA_PRM_ID:parametroNum,",
+                                            "                                        EST_FECHARECIBIDO:new Date(),",
+                                            "                                        EST_FECHAINICIO: fechainicio,",
+                                            "                                        TRA_CODIGO:tramiteNum,",
+                                            "                                        UND_CODIGO: 0,",
+                                            "                                        TIP_CODIGO: 1,",
+                                            "                                        EST_ORIGEN: reco.data.EST_CODIGO,",
+                                            "                                        EST_FECHAFIN: new Date()",
+                                            "",
+                                            "                                    });",
+                                            "                                    Ext.getCmp('cbEstado').setDisabled(true);",
+                                            "                                    Ext.getCmp('txtDestino').setHidden(false);",
+                                            "                                    Ext.getCmp('txtAsignadoADestino').setDisabled(true);",
+                                            "                                }",
+                                            "                            }",
+                                            "                        });",
+                                            "                    }",
+                                            "                    store.add(reco);",
+                                            "",
+                                            "                    store.sync(",
+                                            "                        {",
+                                            "                            params:{",
+                                            "                                tipoEstado: reco.data.TIP_CODIGO",
+                                            "                            },",
+                                            "                            success: function(batch, success)",
+                                            "                            {",
+                                            "                                store.commitChanges();",
+                                            "                                store.load();",
+                                            "                                Ext.getCmp('grdDirecTramite').getStore().load();",
+                                            "                            },",
+                                            "",
+                                            "                            failure: function(batch, success)",
+                                            "                            {",
+                                            "                                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                                me.onBtnDirecRefreshClick();",
+                                            "                            }",
+                                            "                        });",
+                                            "                }",
+                                            "                else",
+                                            "                    me.onBtnDirecRefreshClick();",
+                                            "            }",
+                                            "        });//Fin del mensaje: Una vez finalizado...",
+                                            "    }",
+                                            "}",
+                                            ""
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit1",
+                                    "designerId": "6b234629-b054-4ae5-9aa3-3f664adf808d"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "implHandler": [
+                                            "//si cancela, se refresca el grid",
+                                            "this.onBtnDirecRefreshClick();",
+                                            "BANDERA = 0;"
+                                        ],
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "04fd1aaf-9765-495f-8f64-8dfc0f8a2449"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdDirecTramiteCellDblClick",
+                                "implHandler": [
+                                    "if(record.data.TIP_CODIGO !== 1){",
+                                    "    Ext.getCmp('txtObservacionDestino').setDisabled(true);",
+                                    "}",
+                                    "else{",
+                                    "    Ext.getCmp('txtObservacionDestino').setDisabled(false);",
+                                    "}",
+                                    "//desabilita el destino si es uno nuevo o una actualizacion de un registro",
+                                    "if(record.data.UND_CODIGO === 0){",
+                                    "    Ext.getCmp('cbDestinosGrid').setDisabled(false);",
+                                    "    Ext.getCmp('txtObservacionDestino').setDisabled(false);",
+                                    "}",
+                                    "else",
+                                    "    Ext.getCmp('cbDestinosGrid').setDisabled(true);",
+                                    ""
+                                ],
+                                "name": "celldblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdDirecTramiteCellDblClick",
+                            "designerId": "63b2c7a2-a167-4058-8633-fa54ea3dc3c6"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

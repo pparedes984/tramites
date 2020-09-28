@@ -1,0 +1,54 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "administracion.asuntosparametros",
+        "designer|userClassName": "administracion.AsuntosParametrosViewModel1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "administracion.AsuntosParametrosViewModel1",
+    "designerId": "edf37138-4b0f-42bb-ab7b-9484b267e9f5",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"ASU_CODIGO\":902,\"ASU_DESCRIPCION\":\"quam\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":791,\"ASU_DESCRIPCION\":\"reiciendis\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":915,\"ASU_DESCRIPCION\":\"facere\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":175,\"ASU_DESCRIPCION\":\"et\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":935,\"ASU_DESCRIPCION\":\"deleniti\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":863,\"ASU_DESCRIPCION\":\"pariatur\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":120,\"ASU_DESCRIPCION\":\"voluptates\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":388,\"ASU_DESCRIPCION\":\"qui\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":574,\"ASU_DESCRIPCION\":\"quasi\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":215,\"ASU_DESCRIPCION\":\"nihil\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":733,\"ASU_DESCRIPCION\":\"incidunt\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":647,\"ASU_DESCRIPCION\":\"unde\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":834,\"ASU_DESCRIPCION\":\"et\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":680,\"ASU_DESCRIPCION\":\"ad\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":558,\"ASU_DESCRIPCION\":\"ex\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":710,\"ASU_DESCRIPCION\":\"dolorem\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":228,\"ASU_DESCRIPCION\":\"tempore\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":467,\"ASU_DESCRIPCION\":\"facilis\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":807,\"ASU_DESCRIPCION\":\"consequatur\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":485,\"ASU_DESCRIPCION\":\"odio\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":361,\"ASU_DESCRIPCION\":\"assumenda\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":371,\"ASU_DESCRIPCION\":\"natus\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":695,\"ASU_DESCRIPCION\":\"unde\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":454,\"ASU_DESCRIPCION\":\"est\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":825,\"ASU_DESCRIPCION\":\"fugit\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":12,\"ASU_DESCRIPCION\":\"iste\",\"ASU_ACTIVO\":false},{\"ASU_CODIGO\":299,\"ASU_DESCRIPCION\":\"asperiores\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":292,\"ASU_DESCRIPCION\":\"eius\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":716,\"ASU_DESCRIPCION\":\"numquam\",\"ASU_ACTIVO\":true},{\"ASU_CODIGO\":136,\"ASU_DESCRIPCION\":\"enim\",\"ASU_ACTIVO\":false}]"
+                ],
+                "model": "AsuntoModel",
+                "name": "asuntoModels"
+            },
+            "configAlternates": {
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "asuntoModels",
+            "designerId": "b3daff2c-1d79-4fa9-bffb-4c2ea6f7aad8",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy",
+                    "designerId": "4fb0bb17-630b-4df7-a748-20bf793a3d9b"
+                }
+            ]
+        }
+    ]
+}

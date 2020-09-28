@@ -1,0 +1,719 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "administracion.asuntosparametros",
+        "designer|userClassName": "administracion.AsuntosParametros",
+        "layout": "hbox",
+        "title": "Asignación de Asuntos a parámetros"
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string"
+    },
+    "name": "MyPanel5",
+    "designerId": "b8491e8d-fc51-4302-b807-5f3a4bd85b73",
+    "viewControllerInstanceId": "fc08db03-a570-43e3-977c-9526765e4352",
+    "viewModelInstanceId": "54129d3c-b7e5-4698-8e80-c66092cd8e27",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlAsuntos",
+                "layout": "fit",
+                "layout|flex": 1,
+                "scrollable": true,
+                "title": "Asuntos"
+            },
+            "configAlternates": {
+                "id": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "scrollable": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "25a2528e-a13a-4704-a12d-55a081006f7f",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "434d0a92-70d7-494f-b163-d7642f9f0c49",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "ASU_DESCRIPCION",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbAsuntoBuscar",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": "Asunto",
+                                "valueField": "ASU_DESCRIPCION"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "id": "string",
+                                "displayField": "datafield",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "queryMode": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox4",
+                            "designerId": "38c8a960-8b78-431b-91c4-4049d5ee879f",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbAsuntoBuscarKeyup",
+                                        "implHandler": [
+                                            "var txtAsunto = Ext.getCmp('cbAsuntoBuscar').getValue();",
+                                            "if(txtAsunto !== null && e.isSpecialKey() === false){//8 = Backspace",
+                                            "    var strAsunto = Ext.getCmp('cbAsuntoBuscar').getStore();",
+                                            "    strAsunto.removeAll();",
+                                            "    Ext.Ajax.request({",
+                                            "    method: 'post',",
+                                            "    url: '../servidor/tramites/asunto/getAsuntoBusqueda',",
+                                            "    params: {",
+                                            "        asunto: txtAsunto",
+                                            "    },",
+                                            "    success: function (response, options) {",
+                                            "        strAsunto.load();",
+                                            "        Ext.getCmp('cbAsuntoBuscar').expand();",
+                                            "    }",
+                                            "    });",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbAsuntoBuscarKeyup",
+                                    "designerId": "686390c0-4020-4e41-aa34-1fd373c0f11a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarAsuntos",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "90445690-77ad-46fc-9f04-a48bd9cf2014",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnLimpiarAsuntosClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('grdAsuntos').getStore().removeAll();",
+                                            "var strAsunto = Ext.getStore('Asunto');",
+                                            "strAsunto.load();",
+                                            "Ext.getCmp('grdParametroAsunto').getStore().removeAll();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnLimpiarAsuntosClick",
+                                    "designerId": "1ff187cb-1b66-44c8-b4b6-8b5cd7c4ae8c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdAsuntos",
+                        "store": "Asunto"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "forceFit": "boolean",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "a9db4ec2-7933-45e7-a002-2ee54fddfb66",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable1",
+                            "designerId": "f3b42b64-d1a4-404c-8563-5f66ebb235dd"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "ASU_DESCRIPCION",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "align": "string"
+                            },
+                            "name": "MyColumn6",
+                            "designerId": "9519ea7d-2c31-4dbb-a6de-5d38a4771e57"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdAsuntosRender",
+                                "implHandler": [
+                                    "this.onBtnLimpiarAsuntosClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdAsuntosRender",
+                            "designerId": "136c6860-d64e-4308-8ef4-2059f1575f1e"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdAsuntosItemClick",
+                                "implHandler": [
+                                    "var g = Ext.getCmp('grdAsuntos');",
+                                    "var rec = g.selection;",
+                                    "var txtasunto = rec.data.ASU_CODIGO;",
+                                    "var strParam = Ext.getCmp('grdParametroAsunto').getStore();",
+                                    "strParam.removeAll();",
+                                    "strParam.proxy.extraParams = {",
+                                    "    asunto: txtasunto",
+                                    "};",
+                                    "strParam.load();"
+                                ],
+                                "name": "itemclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdAsuntosItemClick",
+                            "designerId": "d72563bb-969a-43d9-bf33-db6e2aa37321"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "id": "pnlParametrosAsunto",
+                "layout": "fit",
+                "layout|flex": 1,
+                "title": "Parámetros"
+            },
+            "configAlternates": {
+                "id": "string",
+                "title": "string",
+                "flex": "number",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel6",
+            "designerId": "ce36a77a-b19a-4f50-8771-8ee566eee97c",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar6",
+                    "designerId": "ae9c25ae-4c9e-43c6-868d-096a7e6a17d5",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarParamAsunto",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "0064b7f1-dd4c-42e9-8a9c-331ab7f01e88",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarParamAsuntoClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdParametroAsunto');",
+                                            "var store = grid.getStore();",
+                                            "var g = Ext.getCmp('grdAsuntos');",
+                                            "var arrayKeys = g.getSelectionModel().selected.items;",
+                                            "var indice = g.getSelectionModel().selectionStartIdx;",
+                                            "if(arrayKeys.length === 0){",
+                                            "    Ext.Msg.alert('Error', 'Debe escoger un Asunto');",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    var rec = g.selection;",
+                                            "    var asuntot = rec.data.ASU_CODIGO;",
+                                            "    var strParam = Ext.getCmp('cbParam2').getStore();",
+                                            "    strParam.proxy.extraParams = {",
+                                            "        asu: 1,",
+                                            "        asunto: asuntot",
+                                            "    };",
+                                            "    store.insert(0,",
+                                            "                 {",
+                                            "        ASU_CODIGO: asuntot,",
+                                            "        PRM_ID: 0",
+                                            "    });",
+                                            "    strParam.load();",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarParamAsuntoClick",
+                                    "designerId": "fd9b1cfa-0caf-417e-a029-47dab81cc417"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-trash",
+                                "id": "btnQuitarParamAsunto",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "fc6ced33-a123-4ddf-8960-110936d10a3c",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnQuitarParamAsuntoClick",
+                                        "implHandler": [
+                                            "var g = Ext.getCmp('grdAsuntos');",
+                                            "var arrayKeys = g.getSelectionModel().selected.items;",
+                                            "var indice = g.getSelectionModel().selectionStartIdx;",
+                                            "if(arrayKeys.length === 0)",
+                                            "    Ext.Msg.alert('Error', 'Debe escoger un asunto');",
+                                            "else",
+                                            "{",
+                                            "    var grid = Ext.getCmp('grdParametroAsunto');",
+                                            "    var arrayKeys = grid.getSelectionModel().selected.items;",
+                                            "    var indice = grid.getSelectionModel().selectionStartIdx;",
+                                            "    if(arrayKeys.length === 0)",
+                                            "        Ext.Msg.alert('Error', 'Debe escoger un parametro');",
+                                            "    else",
+                                            "    {",
+                                            "        var store = grid.getStore();",
+                                            "        var rec = grid.selection;",
+                                            "        var reco = g.selection;",
+                                            "        console.log(rec.data.PRM_ID);",
+                                            "        if(rec.data.PRM_ID === Ext.getCmp('cbParametroPrincipal').getValue() || rec.data.PRM_ID === 0){",
+                                            "            store.remove(rec);",
+                                            "            store.sync(",
+                                            "            {",
+                                            "                    params:{",
+                                            "                        asunto: reco.data.ASU_CODIGO,",
+                                            "                        parametro: rec.data.PRM_ID",
+                                            "                    },",
+                                            "                    success: function(batch, success)",
+                                            "                    {",
+                                            "                        store.commitChanges();",
+                                            "                        store.load();",
+                                            "                    },",
+                                            "",
+                                            "                    failure: function(batch, success)",
+                                            "                    {",
+                                            "                        Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                    }",
+                                            "             });",
+                                            "        }",
+                                            "        else{",
+                                            "            Ext.Msg.alert('Error', 'No puede eliminar el parámetro seleccionado. '",
+                                            "                                      +'Debe tener asignado el parámetro para poder elminarlo');",
+                                            "        }",
+                                            "",
+                                            "    }",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnQuitarParamAsuntoClick",
+                                    "designerId": "a39eb0eb-a22f-4838-bf36-14948f66af14"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdParametroAsunto",
+                        "store": "AsuntoParametro"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "forceFit": "boolean",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel6",
+                    "designerId": "a6994e7a-9561-4673-acf0-4c5e65ca5057",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable6",
+                            "designerId": "37323708-7a62-4b33-9a53-1a1c38492def"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "PRM_ID",
+                                "id": "cbParametros",
+                                "text": "Parámetro"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "id": "string",
+                                "text": "string",
+                                "align": "string"
+                            },
+                            "name": "MyColumn7",
+                            "designerId": "03b4c2f4-864c-4ef2-8853-95fb2a8c860d",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "PRM_NOMBRE",
+                                        "id": "cbParam2",
+                                        "store": "Parametro",
+                                        "valueField": "PRM_ID"
+                                    },
+                                    "configAlternates": {
+                                        "displayField": "datafield",
+                                        "id": "string",
+                                        "store": "store",
+                                        "valueField": "datafield"
+                                    },
+                                    "name": "MyComboBox5",
+                                    "designerId": "a3fbd11c-9829-402d-9df5-351a5b39b5b0"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "    var descripcion = record.data.PRM_ID;",
+                                            "    var combo = metaData.column.getEditor();",
+                                            "    var comboStore = Ext.getCmp('grdParametroAsunto').getStore();",
+                                            "    var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "    if (indice >= 0)",
+                                            "         return comboStore.getAt(indice).get(combo.displayField);",
+                                            "    else",
+                                            "         return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "9dc0d3c3-6188-40eb-8fdd-b773a567fbc2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin2",
+                            "designerId": "2b652134-1de4-43c1-86ff-db706eb77014",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdParametroAsunto').getStore();",
+                                            "    var reco = context.record;",
+                                            "    if(reco.data.PRM_ID===Ext.getCmp('cbParametroPrincipal').getValue()){",
+                                            "        store.add(reco);",
+                                            "        store.sync(",
+                                            "            {",
+                                            "                params:{",
+                                            "                    asunto: reco.data.ASU_CODIGO",
+                                            "                },",
+                                            "                success: function(batch, success)",
+                                            "                {",
+                                            "                    store.commitChanges();",
+                                            "                    store.load();",
+                                            "                },",
+                                            "",
+                                            "                failure: function(batch, success)",
+                                            "                {",
+                                            "                    Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "                }",
+                                            "            });",
+                                            "    }",
+                                            "    else",
+                                            "        Ext.Msg.alert('Error', 'No puede asignar el parámetro seleccionado. '",
+                                            "                     +'Debe tener asignado el parámetro para poder asignarlo.');",
+                                            "}",
+                                            "me.onGrdAsuntosItemClick();"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "edd60ac0-b828-4645-887e-45df58871181"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdParametroAsuntoCellDblClick",
+                                "implHandler": [
+                                    "if(record.data.PRM_ID === 0)",
+                                    "    Ext.getCmp('cbParam2').setDisabled(false);",
+                                    "else",
+                                    "    Ext.getCmp('cbParam2').setDisabled(true);"
+                                ],
+                                "name": "celldblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdParametroAsuntoCellDblClick",
+                            "designerId": "dedd1466-9370-47cc-8167-546aca54edc6"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

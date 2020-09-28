@@ -1,0 +1,22 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panel.pnladmingeneral",
+        "designer|userClassName": "panel.pnlAdminGeneral",
+        "title": "Administración general"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string"
+    },
+    "name": "panel.pnlNuevo3",
+    "designerId": "0bfeb9be-ec1b-4ac5-83d2-6414b30c7a42",
+    "viewControllerInstanceId": "da09b901-f122-4eba-a88b-ce25d68f7b74",
+    "viewModelInstanceId": "16081c87-4552-46f1-b36b-1ec038ffe8a1"
+}

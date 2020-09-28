@@ -1,0 +1,555 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "constrainHeader": true,
+        "designer|userAlias": "direccionar.wintramitedetalle",
+        "designer|userClassName": "direccionar.winTramiteDetalle",
+        "draggable": false,
+        "height": 508,
+        "id": "winTramiteDetalle",
+        "modal": true,
+        "scrollable": true,
+        "title": "Trámite",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto",
+        "constrainHeader": "boolean",
+        "draggable": "boolean",
+        "modal": "boolean"
+    },
+    "name": "MyWindow",
+    "designerId": "671f3045-10dc-4bac-a258-8d3143614c5d",
+    "viewControllerInstanceId": "d4abc6e3-cbe1-4cb8-a931-4d16caeb4fa9",
+    "viewModelInstanceId": "a2a4276f-c307-4736-88dd-75afe2914444",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 1441,
+                "id": "frmTramiteDetalle",
+                "itemId": "myform2"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "height": "auto",
+                "id": "string",
+                "itemId": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "1fde238d-c111-4242-ab27-33187c7e79e0",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Número de trámite",
+                        "id": "txtTraCod",
+                        "name": "TRA_CODIGO",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "642ece0c-4b40-4073-9068-a93822725e4c"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Fecha trámite",
+                        "name": "TRA_FECHA",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField44",
+                    "designerId": "c04d7f4b-18d2-45ca-a861-d62dff4c0c1d"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Parámetro",
+                        "id": "cbParamForm",
+                        "name": "TRA_PRM_ID",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyComboBox6",
+                    "designerId": "6a807df0-f6fc-4e88-810c-cb460b2a07a9"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Asunto",
+                        "name": "ASU_CODIGO",
+                        "readOnly": true,
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "editable": "boolean",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyComboBox7",
+                    "designerId": "63bb2831-b474-49c4-9981-d053000e9805"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Unidad Solicitante",
+                        "name": "UND_CODIGO",
+                        "readOnly": true,
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox14",
+                    "designerId": "966359dd-4ce9-4556-82ad-5b689884c18e"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Unidad de gasto",
+                        "name": "GST_ID",
+                        "readOnly": true,
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox5",
+                    "designerId": "97196eaa-4e14-4646-89c2-7b5e3ac334b5"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Número de oficio",
+                        "name": "TRA_OFICIO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField23",
+                    "designerId": "315adf85-017a-4230-b2bc-7baeb7cedd61"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Beneficiario",
+                        "name": "TRA_BENEFICIARIO1",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField24",
+                    "designerId": "d562d882-2761-4b15-86ed-193e930e4a2f"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Beneficiario",
+                        "name": "TRA_BENEFICIARIO2",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField25",
+                    "designerId": "10f8500c-9a9c-4cb1-b908-0a736af29224"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Cédula",
+                        "name": "TRA_CEDULA1",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField26",
+                    "designerId": "cd4a25f2-9d4a-4b7e-8f85-d95c2fccc303"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Cédula",
+                        "name": "TRA_CEDULA2",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField28",
+                    "designerId": "f701f6d1-935d-420c-bbe7-41e7013e95c0"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Proyecto/ partida presupuestaria",
+                        "name": "TRA_PROYECTO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField29",
+                    "designerId": "aca21814-79c0-4bd7-92a2-84fcc09cc78b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Compromiso",
+                        "name": "TRA_COMPROMISO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField35",
+                    "designerId": "91e993d4-464b-4974-9c86-628979738248"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Descripción",
+                        "name": "TRA_DESCRIPCION",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField43",
+                    "designerId": "6ad37be0-57b4-40f5-9da0-1c4491c38602"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Persona autoriza",
+                        "name": "TRA_PERSONA_AUTORIZA",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField36",
+                    "designerId": "2243766e-af6c-4ec9-afd8-c96a4485b922"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Telefono",
+                        "name": "TRA_TELEFONO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField37",
+                    "designerId": "d7011c80-19d0-47cf-ac76-4e3ba3a02cd7"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Valor",
+                        "name": "TRA_VALOR",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyNumberField6",
+                    "designerId": "c421b3cf-dc7e-4af3-9759-b3d99446eab8"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Detalle factura",
+                        "name": "TRA_DETALLE_FACTURA",
+                        "readOnly": true,
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "width": "auto"
+                    },
+                    "name": "MyNumberField8",
+                    "designerId": "b58199fe-ef8b-4f51-a158-fd4c6df57251"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Fecha de viaje",
+                        "name": "TRA_FECHA_VIAJE_VIATICO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField46",
+                    "designerId": "66600bc0-3f76-40e8-9222-2e38c38ec15b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Destino",
+                        "name": "TRA_DESTINO_VIATICO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField38",
+                    "designerId": "d3aba464-54c6-41b6-bd64-bc57630847c2"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Responsable",
+                        "name": "TRA_RESPONSABLE_VIATICO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextField39",
+                    "designerId": "4bb55e5d-4678-4099-baf8-8c7247f0c1ca"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Personas adicionales",
+                        "name": "TRA_PERSONAS_ADIC_VIATICO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "231ad5c0-216f-490b-889f-e1424b52a6a9"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Observación viaje",
+                        "name": "TRA_OBSERV_VIAJE_VIATICO",
+                        "readOnly": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyTextArea3",
+                    "designerId": "f3fc2ea8-4ba4-4b68-bbde-3bfd1068aced"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFrmTramiteDetalleRender",
+                        "name": "render",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onFrmTramiteDetalleRender",
+                    "designerId": "62078234-fe43-4a70-8c5a-abdc51f9aab7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "UnidadDireccionamientoTree",
+        "model": "UnidadDireccionamientoModel",
+        "storeId": "UnidadDireccionamientoTree"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyTreeStore",
+    "designerId": "aba83d95-4da7-4fd2-ab00-bb97fc2b2472",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../servidor/tramites/UnidadDireccionamiento/obtener_menu"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "ed0c7410-d444-4b93-8135-9df658e160d6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader5",
+                    "designerId": "85a2f7b4-9938-4577-bf5c-13684a4e6696"
+                }
+            ]
+        }
+    ]
+}

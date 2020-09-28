@@ -1,0 +1,355 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "myCls"
+        ],
+        "designer|userAlias": "admingeneral.unidaddireccionamiento",
+        "designer|userClassName": "adminGeneral.UnidadDireccionamiento",
+        "layout": "fit",
+        "title": "Asignar Unidades de Direccionamiento",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "titleAlign": "string",
+        "cls": "typedarray"
+    },
+    "name": "MyPanel7",
+    "designerId": "97552992-b373-4cb7-a8e3-80312fc801de",
+    "viewControllerInstanceId": "a1f0f2f2-3354-4884-8c9c-7f65cafd5e1f",
+    "viewModelInstanceId": "5779859b-5ee7-4b39-a969-8715d36fd98c",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "id": "pnlCbDirec",
+                "layout": "center",
+                "margin": "10 0 0 0"
+            },
+            "configAlternates": {
+                "dock": "string",
+                "id": "string",
+                "layout": "string",
+                "margin": "auto"
+            },
+            "name": "MyPanel7",
+            "designerId": "9d50b72f-f659-4cb3-a70b-b35e9eb9e557",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "PRM_NOMBRE",
+                        "editable": false,
+                        "fieldLabel": "Seleccione un Parámetro",
+                        "id": "cbParametroUnidadDir",
+                        "labelWidth": 150,
+                        "margin": "0 0 10 0",
+                        "store": "Parametro",
+                        "valueField": "PRM_ID"
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "labelWidth": "number",
+                        "margin": "auto",
+                        "store": "store",
+                        "valueField": "datafield"
+                    },
+                    "name": "MyComboBox5",
+                    "designerId": "c51a3d9d-6a42-4001-b099-67ad5d14d820",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCbParametroUnidadDirExpand",
+                                "implHandler": [
+                                    "var strCbUnidadDir = Ext.getCmp('cbParametroUnidadDir').getStore();",
+                                    "strCbUnidadDir.proxy.extraParams={",
+                                    "    param:2//obtiene todos los parametros",
+                                    "};",
+                                    "strCbUnidadDir.load();"
+                                ],
+                                "name": "expand",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onCbParametroUnidadDirExpand",
+                            "designerId": "73b4d0e5-b78a-44af-9de5-c73adc0cb47d"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCbParametroUnidadDirSelect",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlUnidadesDir').setHidden(false);",
+                                    "Ext.getCmp('grdUnidadesDir').getStore().removeAll();",
+                                    "var strUsuario1 = Ext.getCmp('grdUnidadesDir').getStore();",
+                                    "strUsuario1.proxy.extraParams = {",
+                                    "    parametro : Ext.getCmp('cbParametroUnidadDir').getValue(),",
+                                    "};",
+                                    "strUsuario1.load();"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onCbParametroUnidadDirSelect",
+                            "designerId": "39c1bcf4-01dc-4453-9bd1-37fd98495367"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "myCls2"
+                ],
+                "hidden": true,
+                "id": "pnlUnidadesDir",
+                "layout": "fit",
+                "scrollable": true,
+                "titleAlign": "center"
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "id": "string",
+                "layout": "string",
+                "scrollable": "auto",
+                "cls": "typedarray",
+                "titleAlign": "string"
+            },
+            "name": "MyPanel8",
+            "designerId": "fb52521f-ca2a-4293-af22-665a6d283142",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUnidadesDir",
+                        "store": "UnidadDir",
+                        "title": "Unidades de Direccionamiento",
+                        "titleAlign": "center"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store",
+                        "title": "string",
+                        "titleAlign": "string"
+                    },
+                    "name": "MyGridPanel4",
+                    "designerId": "b006a645-02f1-47d6-b3a1-ff94c98c3947",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable4",
+                            "designerId": "03e77499-d927-4ba8-b135-c0319983040d"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_NOMBRE",
+                                "text": "Unidad"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn5",
+                            "designerId": "afc08871-793b-4e1e-a411-08f4a52c448a",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true
+                                    },
+                                    "configAlternates": {
+                                        "disabled": "boolean"
+                                    },
+                                    "name": "MyTextField5",
+                                    "designerId": "3ca375dc-4b7c-40a4-b7fd-11cfa9737025"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_DIRECCIONAMIENTO",
+                                "disabled": true,
+                                "text": "Direccionamiento"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "disabled": "boolean",
+                                "text": "string"
+                            },
+                            "name": "MyCheck4",
+                            "designerId": "d8fe5af7-1d30-4fa1-ac09-3379726e11fe",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckbox3",
+                                    "designerId": "16578066-df47-41d5-aceb-0c3ded7ede5d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin2",
+                            "designerId": "4990ba19-b3e1-4fc5-8c16-4ce66a4aad3c",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdUnidadesDir').getStore();",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "            success: function(batch, success)",
+                                            "            {",
+                                            "                store.commitChanges();",
+                                            "                store.load();",
+                                            "            },",
+                                            "",
+                                            "            failure: function(batch, success)",
+                                            "            {",
+                                            "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "            }",
+                                            "        });",
+                                            "}"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "91088f8d-7ca7-4571-bc14-757f42df7de8"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "ce5b4f36-00e7-4cb6-a7c0-3e1384d348c2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

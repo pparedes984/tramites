@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "TipoEstado",
+        "model": "TipoEstadoModel",
+        "storeId": "TipoEstado"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "storeId": "string",
+        "model": "model",
+        "autoLoad": "boolean"
+    },
+    "name": "MyStore",
+    "designerId": "8b55c058-7075-44f1-8ebb-e6b9570f5f36",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "url": "../servidor/tramites/TipoEstado/getTipoEstados"
+            },
+            "configAlternates": {
+                "actionMethods": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "e81092c1-259f-47d9-95f0-daffd1309696",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "2a9133c7-3f31-4ea6-9c46-88ac1b4bffd6"
+                }
+            ]
+        }
+    ]
+}

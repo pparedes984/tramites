@@ -1,0 +1,464 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panel.pnlconsultar",
+        "designer|userClassName": "panel.pnlConsultar",
+        "layout": "fit",
+        "title": "Consultar trámite"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "layout": "string"
+    },
+    "name": "panel.pnlNuevo1",
+    "designerId": "9f025139-7f2f-48e9-857b-062a45a28f22",
+    "viewControllerInstanceId": "01722200-06f5-4985-b681-8ffa9a31185c",
+    "viewModelInstanceId": "f3a42309-7a16-4655-b6b6-b6ffabcb1ad4",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "scrollable": true
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout": "string",
+                "scrollable": "auto"
+            },
+            "name": "MyPanel3",
+            "designerId": "88bc70df-6f81-47c0-81c2-ebab8d05d6b5",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "My Panel"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "0ce428e7-147e-474e-9cc5-91a664cc4bfb"
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdConsulta1",
+                        "store": "Consulta1",
+                        "title": "Trámites"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "store": "store",
+                        "title": "string",
+                        "forceFit": "boolean"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "fc29358e-5e08-4fd8-80db-6d03f87c57c3",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable1",
+                            "designerId": "03b5c374-83a3-483d-a65b-fd1d2164f78e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_CODIGO",
+                                "format": "0",
+                                "text": "Código de trámite",
+                                "width": 119
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyNumberColumn",
+                            "designerId": "bcce72bd-8b3a-40c2-bca6-1627abca6db5"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHA",
+                                "text": "Fecha trámite"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "6d924226-83fa-44cf-9517-66af74698038"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_PRM_ID",
+                                "text": "Parámetro"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "3475afe7-6832-4a14-8b46-0e311c75b71f",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "var descripcion = record.data.TRA_PRM_ID;",
+                                            "var combo = metaData.column.getEditor();",
+                                            "var comboStore = combo.getStore();",
+                                            "var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "if (indice >= 0)",
+                                            "     return comboStore.getAt(indice).get(combo.displayField);",
+                                            "else",
+                                            "     return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "30f12ff9-b7ee-4263-9a98-a0ea66f36c65"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "PRM_NOMBRE",
+                                        "store": "Parametro",
+                                        "valueField": "PRM_ID"
+                                    },
+                                    "configAlternates": {
+                                        "displayField": "datafield",
+                                        "store": "store",
+                                        "valueField": "datafield"
+                                    },
+                                    "name": "MyComboBox5",
+                                    "designerId": "d193c657-e7c6-4856-bd04-32e9c28478cd"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ASU_CODIGO",
+                                "text": "Asunto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "438826cc-612c-4f78-942d-5ead9ee0ac63",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "var descripcion = record.data.ASU_CODIGO;",
+                                            "var combo = metaData.column.getEditor();",
+                                            "var comboStore = combo.getStore();",
+                                            "var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "if (indice >= 0)",
+                                            "     return comboStore.getAt(indice).get(combo.displayField);",
+                                            "else",
+                                            "     return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "c7ae833e-32af-4413-bbd9-91f431e2c58c"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "ASU_DESCRIPCION",
+                                        "store": "Asunto",
+                                        "valueField": "ASU_CODIGO"
+                                    },
+                                    "configAlternates": {
+                                        "displayField": "datafield",
+                                        "store": "store",
+                                        "valueField": "datafield"
+                                    },
+                                    "name": "MyComboBox4",
+                                    "designerId": "02139f20-d53a-49d9-93ef-cfb899322514"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "UND_CODIGO",
+                                "text": "Unidad Solicitante"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "format": "string",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "edd15ffb-f95a-4f0c-9a32-676761c6ce5b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "UND_NOMBRE",
+                                        "store": "Unidad",
+                                        "valueField": "UND_CODIGO"
+                                    },
+                                    "configAlternates": {
+                                        "displayField": "datafield",
+                                        "store": "store",
+                                        "valueField": "datafield"
+                                    },
+                                    "name": "MyComboBox6",
+                                    "designerId": "56ce6c8e-a487-4146-a6cc-dfd5c24adf8d"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(view)",
+                                            "{",
+                                            "var descripcion = record.data.UND_CODIGO;",
+                                            "var combo = metaData.column.getEditor();",
+                                            "var comboStore = combo.getStore();",
+                                            "var indice = comboStore.findExact(combo.valueField, value);",
+                                            "",
+                                            "if (indice >= 0)",
+                                            "     return comboStore.getAt(indice).get(combo.displayField);",
+                                            "else",
+                                            "     return descripcion;",
+                                            "}",
+                                            "else",
+                                            "     return null;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "4d065c86-d43d-4d09-b355-4fbde0a913fc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_FECHARECIBIDO",
+                                "text": "Fecha Recibido (DGF)"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "d3427497-855b-40d6-a668-a13f4849f27b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TRA_RECIBIDO",
+                                "text": "Recibido (DGF)"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyCheck",
+                            "designerId": "c460cb08-2ba7-4730-b820-b32ca13973de"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdConsulta1Render",
+                                "implHandler": [
+                                    "var strConsulta1 = Ext.getStore('Consulta1');",
+                                    "        strConsulta1.proxy.extraParams = {",
+                                    "            busqueda: 1,",
+                                    "            tramite: 0,",
+                                    "            parametro: 0",
+                                    "        };",
+                                    "        strConsulta1.load();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdConsulta1Render",
+                            "designerId": "faa26756-58b9-4c49-9016-e0884197b84e"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin1",
+                            "designerId": "c575fddb-3b28-4fe4-8c90-a8487d3422be"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

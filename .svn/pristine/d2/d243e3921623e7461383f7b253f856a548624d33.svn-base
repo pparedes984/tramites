@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "consultageneral.winestadogeneral",
+        "designer|userClassName": "consultar.winEstadoConsViewModel1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "consultar.winEstadoConsViewModel1",
+    "designerId": "a4fcdc6e-5f38-4c83-9030-45e2a85b531e"
+}

@@ -1,0 +1,728 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.usuarios",
+        "designer|userClassName": "adminGeneral.Usuarios",
+        "layout": "fit",
+        "title": "Usuarios"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "layout": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "b6947311-2ac6-4fca-b707-1385a3f91634",
+    "viewControllerInstanceId": "7cf0bbac-35fd-44ee-b057-112545763aba",
+    "viewModelInstanceId": "d5eae1ff-86eb-4e4a-b2e6-41989905d608",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit"
+            },
+            "configAlternates": {
+                "title": "string",
+                "layout": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "f0c6ac0b-43b1-44f2-b5a5-99050d92e164",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "f8b4ba23-794c-4cc7-8737-240e702bee24",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "USR_USUARIO",
+                                "emptyText": "Ingrese el usuario",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbUsuarios",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": "Usuario",
+                                "valueField": "USR_USUARIO",
+                                "width": 131
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "emptyText": "string",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "queryMode": "string",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "width": "auto"
+                            },
+                            "name": "MyComboBox6",
+                            "designerId": "089a1fff-6359-4016-92a3-a06bca755d58",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbUsuariosKeyup",
+                                        "implHandler": [
+                                            "var txtUsuario = Ext.getCmp('cbUsuarios').getValue();",
+                                            "if(txtUsuario !== null && e.isSpecialKey() === false){//8 = Backspace",
+                                            "    var strUsuario = Ext.getCmp('cbUsuarios').getStore();",
+                                            "    strUsuario.removeAll();",
+                                            "    Ext.Ajax.request({",
+                                            "    method: 'post',",
+                                            "    url: '../servidor/tramites/usuario/getUsuarioBusqueda',",
+                                            "    params: {",
+                                            "        usuario: txtUsuario",
+                                            "    },",
+                                            "    success: function (response, options) {",
+                                            "        strUsuario.load();",
+                                            "        //Ext.getCmp('cbUsuarios').expand();",
+                                            "    }",
+                                            "    });",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbUsuariosKeyup",
+                                    "designerId": "7565e4b5-23ed-4f7a-a09b-025e3426bae3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "USR_CEDULA",
+                                "emptyText": "Ingrese la cédula del usuario",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbCedulaUsuario",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": "Usuario",
+                                "valueField": "USR_CEDULA",
+                                "width": 194
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "emptyText": "string",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "queryMode": "string",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "width": "auto"
+                            },
+                            "name": "MyComboBox7",
+                            "designerId": "6794c5d9-3a5b-4a6f-975d-1fbc1d99fdcc",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbCedulaUsuarioKeyup",
+                                        "implHandler": [
+                                            "var txtUsuario = Ext.getCmp('cbCedulaUsuario').getValue();",
+                                            "if(txtUsuario !== null && e.isSpecialKey() === false){",
+                                            "    var strUsuario = Ext.getCmp('cbCedulaUsuario').getStore();",
+                                            "    strUsuario.removeAll();",
+                                            "    Ext.Ajax.request({",
+                                            "    method: 'post',",
+                                            "    url: '../servidor/tramites/usuario/getBusquedaCedula',",
+                                            "    params: {",
+                                            "        usuario: txtUsuario",
+                                            "    },",
+                                            "    success: function (response, options) {",
+                                            "        strUsuario.load();",
+                                            "        //Ext.getCmp('cbCedulaUsuario').expand();",
+                                            "    }",
+                                            "    });",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbCedulaUsuarioKeyup",
+                                    "designerId": "9fbb42ff-06e6-4dc1-b315-00a44d3e706e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarUsuario",
+                                "layout|flex": null,
+                                "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "a47913f4-6382-4202-8d60-5c528514054b",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarUsuarioClick",
+                                        "implHandler": [
+                                            "    var grid = Ext.getCmp('grdUsuariosCrud');",
+                                            "    var store = grid.getStore();",
+                                            "    store.insert(0,",
+                                            "        {",
+                                            "        USR_USUARIO: ' ',",
+                                            "        USR_CEDULA: '',",
+                                            "        USR_NOMBRE: '',",
+                                            "        USR_APELLIDO: ''",
+                                            "        });",
+                                            "    grid.scrollTo('top', 0);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarUsuarioClick",
+                                    "designerId": "fa9b1570-4c28-46ce-9c10-c550066998e0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarUsuarios",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "03f55476-94e1-423c-a007-944d1b395ce4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnLimpiarUsuariosClick",
+                                        "implHandler": [
+                                            "//Ext.getCmp('grdUsuariosCrud').getStore().removeAll();",
+                                            "var strUsuario = Ext.getStore('Usuario');",
+                                            "strUsuario.removeAll();",
+                                            "strUsuario.proxy.extraParams={",
+                                            "    usr: 1",
+                                            "};",
+                                            "strUsuario.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnLimpiarUsuariosClick",
+                                    "designerId": "9d6d452f-7cc7-4feb-bdca-3584e7fcd14c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUsuariosCrud",
+                        "store": "Usuario",
+                        "title": "Usuarios"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store",
+                        "title": "string"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "95a40935-be4f-4ac9-a12c-6c43b2c7e52e",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable",
+                            "designerId": "113f56bd-aef2-4416-920a-6a34742dca4e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_CEDULA",
+                                "text": "Cédula"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "b96844fb-ba31-4e3d-9273-d537b690f732",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "blankText": "Este dato es obligatorio"
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "blankText": "string"
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "41343556-b3ed-4e92-b70f-0b1a0c9634d1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_USUARIO",
+                                "text": "Usuario"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "e60ee7b7-e444-4dd6-8fc6-e1cb393a702d",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "blankText": "Este dato es obligatorio",
+                                        "id": "txtUsrCrud"
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "id": "string",
+                                        "blankText": "string"
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "b71f8de8-f1ed-4162-b06f-a21a58543b80",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTxtUsrCrudFocusenter",
+                                                "implHandler": [
+                                                    "var usr = Ext.getCmp('txtUsrCrud').getValue();",
+                                                    "Ext.getCmp('txtUsrCrud').setValue(Ext.String.trim(usr));"
+                                                ],
+                                                "name": "focusenter",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTxtUsrCrudFocusenter",
+                                            "designerId": "9935e631-f439-40f9-9614-71c70170df68"
+                                        },
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTxtUsrCrudFocusleave",
+                                                "implHandler": [
+                                                    "var usr = Ext.getCmp('txtUsrCrud').getValue();",
+                                                    "Ext.getCmp('txtUsrCrud').setValue(Ext.String.trim(usr));"
+                                                ],
+                                                "name": "focusleave",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTxtUsrCrudFocusleave",
+                                            "designerId": "bc1b0d9b-03df-4920-b375-e86d07c4d2da"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_NOMBRE",
+                                "text": "Nombre"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "e8865986-e2bf-4f35-94c1-736cd67eca80",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField2",
+                                    "designerId": "514216c7-237b-42a2-ba2c-be8f616112ec"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_APELLIDO",
+                                "text": "Apellido"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "3702791d-e5e7-48ac-aea3-7c737dd3b7a5",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField3",
+                                    "designerId": "908e84af-ce5c-465e-b29b-614df0483a17"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "USR_ACTIVO",
+                                "disabled": true,
+                                "text": "Activo"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "disabled": "boolean"
+                            },
+                            "name": "MyCheck1",
+                            "designerId": "064bbb10-f902-4133-99ab-bb43957c6c4d",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckbox1",
+                                    "designerId": "d53db8b6-c4fc-4e33-a8c3-43616d044a1c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin",
+                            "designerId": "fe6a056b-608a-4e52-b377-bde634eb4391",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "implHandler": [
+                                            "this.onBtnLimpiarUsuariosClick();"
+                                        ],
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "87184b0a-4950-4be3-9135-83ee0f30fe6c"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var store = Ext.getCmp('grdUsuariosCrud').getStore();",
+                                            "var save = 1;//el registro es nuevo",
+                                            "if(Ext.getCmp('txtUsrCrud').isDisabled())",
+                                            "    save = 0;",
+                                            "",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "            params:{",
+                                            "                usuario: reco.data.USR_USUARIO,",
+                                            "                accion: save",
+                                            "            },",
+                                            "            success: function(batch, success)",
+                                            "            {",
+                                            "                store.commitChanges();",
+                                            "                Ext.Msg.alert('Datos Guardados', 'Los datos se han guardado con éxito');",
+                                            "                var strUsuario = Ext.getStore('Usuario');",
+                                            "                store.removeAll();",
+                                            "                store.proxy.extraParams={",
+                                            "                    usr: 1",
+                                            "                };",
+                                            "                store.load();",
+                                            "            },",
+                                            "",
+                                            "            failure: function(batch, success)",
+                                            "            {",
+                                            "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "            }",
+                                            "        });",
+                                            "}"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "e12c83dc-a7d7-4cb9-b725-f3cd1a36c54c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUsuariosCrudRender",
+                                "implHandler": [
+                                    "this.onBtnLimpiarUsuariosClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdUsuariosCrudRender",
+                            "designerId": "dcd45441-9642-494f-8cc3-590e569f3b1a"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUsuariosCrudCellDblClick",
+                                "implHandler": [
+                                    "if(record.data.USR_USUARIO === ' ')",
+                                    "{",
+                                    "    Ext.getCmp('txtUsrCrud').setDisabled(false);",
+                                    "    Ext.getCmp('txtUsrCrud').focus(true);",
+                                    "    Ext.getCmp('txtUsrCrud').focus(false);",
+                                    "}",
+                                    "else",
+                                    "    Ext.getCmp('txtUsrCrud').setDisabled(true);"
+                                ],
+                                "name": "celldblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onGrdUsuariosCrudCellDblClick",
+                            "designerId": "2a0d14cb-08df-4819-ab65-2a62e81233e4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsuarioModel",
+        "idProperty": "USR_USUARIO"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "c332a249-56e3-4929-aa73-815e0f21b666",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_USUARIO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString1",
+            "designerId": "bae8bf11-36dd-47fc-8bf9-6acd2c56241c"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_CEDULA"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString26",
+            "designerId": "e16defe9-c1b2-446a-86a3-3d67d8dcd7ea"
+        }
+    ]
+}

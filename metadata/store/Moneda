@@ -1,0 +1,72 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"nombre\": \"DOLAR\"",
+            "    },",
+            "    {",
+            "        \"nombre\": \"EURO\"",
+            "    },",
+            "    {",
+            "        \"nombre\": \"OTRO\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "Moneda",
+        "storeId": "Moneda"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyArrayStore",
+    "designerId": "d9d32a2a-89e7-4223-b24e-bb4151bc162f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy5",
+            "designerId": "d91ecc7a-3ac8-4dee-865e-247e953422da",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader",
+                    "designerId": "4e9cce3b-7adc-4d13-87db-f71d4e268de7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString10",
+            "designerId": "ee3cc538-4434-40d7-8712-272f0d42f3c6"
+        }
+    ]
+}

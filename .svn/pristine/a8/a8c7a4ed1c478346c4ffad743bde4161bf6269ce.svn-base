@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admingeneral.unidadgasto",
+        "designer|userClassName": "adminGeneral.UnidadViewModel1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "adminGeneral.UnidadViewModel1",
+    "designerId": "229ab41b-f28f-4162-8891-246acf5ee7bc"
+}

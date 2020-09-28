@@ -1,0 +1,487 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "myCls"
+        ],
+        "designer|userAlias": "admingeneral.unidadgasto",
+        "designer|userClassName": "adminGeneral.UnidadGasto",
+        "flex": 1,
+        "layout": "fit",
+        "title": "Unidades de Gasto",
+        "titleAlign": "center"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "flex": "number",
+        "layout": "string",
+        "titleAlign": "string",
+        "cls": "typedarray"
+    },
+    "name": "adminGeneral.Unidad1",
+    "designerId": "471e1f18-645f-4bfe-93da-7016e3f20217",
+    "viewControllerInstanceId": "b72cbc40-cb48-412c-983a-5f5b2f6f0279",
+    "viewModelInstanceId": "229ab41b-f28f-4162-8891-246acf5ee7bc",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 1,
+                "layout": "fit"
+            },
+            "configAlternates": {
+                "flex": "number",
+                "layout": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "8bdbb527-5bc8-426a-8c13-8129039bdf85",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "90cff52f-8d4c-4e8d-987c-510980443339",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "GST_NOMBRE",
+                                "emptyText": "Ingrese una Unidad de Gasto",
+                                "enableKeyEvents": true,
+                                "hideTrigger": true,
+                                "id": "cbUndGastoBus",
+                                "layout|flex": null,
+                                "store": "UnidadGasto",
+                                "valueField": "GST_NOMBRE",
+                                "width": 228
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "emptyText": "string",
+                                "enableKeyEvents": "boolean",
+                                "hideTrigger": "boolean",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "width": "auto"
+                            },
+                            "name": "MyComboBox2",
+                            "designerId": "c219603c-e8be-473f-b1de-824a634d65f4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCbUndGastoBusquedaKeyup",
+                                        "implHandler": [
+                                            "var txtUndGasto = Ext.getCmp('cbUndGastoBus').getValue();",
+                                            "if(txtUndGasto !== null && e.isSpecialKey() === false){",
+                                            "    var strUndGasto = Ext.getCmp('cbUndGastoBus').getStore();",
+                                            "    strUndGasto.removeAll();",
+                                            "    strUndGasto.proxy.extraParams = {",
+                                            "        busqueda: 1,//Parametro para elegir el tipo de busqueda",
+                                            "        textounidad:txtUndGasto",
+                                            "    };",
+                                            "    strUndGasto.load();",
+                                            "    Ext.getCmp('cbUndGastoBus').expand();",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCbUndGastoBusquedaKeyup",
+                                    "designerId": "dda8bf38-d7fd-4d02-a1f3-11da77edd00f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "id": "btnAgregarUnidadGasto",
+                                "layout|flex": null,
+                                "text": "Agregar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "25e815b1-54fa-461d-9a61-bbadf9acc14c",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAgregarUnidadGastoClick",
+                                        "implHandler": [
+                                            "var grid = Ext.getCmp('grdUnidadesGasto');",
+                                            "    var store = grid.getStore();",
+                                            "    store.insert(0,",
+                                            "        {",
+                                            "        GST_ID: 0,",
+                                            "        GST_DESCRIPCION: ''",
+                                            "        });"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAgregarUnidadGastoClick",
+                                    "designerId": "fef1855e-26ef-48de-b101-d107207edaec"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btnLimpiarUnidadGasto",
+                                "layout|flex": null,
+                                "text": "Limpiar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "84c7de65-17ef-4ed9-85c1-7b4979796adc",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnLimpiarUnidadGastoClick",
+                                        "implHandler": [
+                                            "var strUndGasto = Ext.getCmp('grdUnidadesGasto').getStore();",
+                                            "strUndGasto.removeAll();",
+                                            "strUndGasto.proxy.extraParams = {",
+                                            "};",
+                                            "strUndGasto.load();",
+                                            "",
+                                            "Ext.getCmp('cbUndGastoBus').setValue(null);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnLimpiarUnidadGastoClick",
+                                    "designerId": "d39de566-5296-4f31-98a0-a10c2ea7cef8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "forceFit": true,
+                        "id": "grdUnidadesGasto",
+                        "store": "UnidadGasto"
+                    },
+                    "configAlternates": {
+                        "forceFit": "boolean",
+                        "id": "string",
+                        "store": "store"
+                    },
+                    "name": "MyGridPanel2",
+                    "designerId": "004a48d9-83f6-436b-958f-ce7395b77de5",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 336
+                            },
+                            "configAlternates": {
+                                "height": "auto"
+                            },
+                            "name": "MyTable2",
+                            "designerId": "43b842f4-081e-4fca-8d71-7dd00a74496a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "GST_NOMBRE",
+                                "text": "Unidad de Gasto"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn5",
+                            "designerId": "57ac0f3d-5ed4-4077-b32e-dbd4fe90aa46",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "7c2ab0ff-1158-40da-ac94-ad14e705e8a4"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "GST_DESCRIPCION",
+                                "text": "Descripción"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn12",
+                            "designerId": "236ce72c-2816-4020-82f1-895fed0d804e",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField2",
+                                    "designerId": "ca3e1525-7e46-458b-9717-973f929cceac"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Check",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "GST_ACTIVO",
+                                "disabled": true,
+                                "text": "Activo"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "disabled": "boolean",
+                                "text": "string"
+                            },
+                            "name": "MyCheck3",
+                            "designerId": "a7f0788f-25df-4366-a821-6816b45a8472",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyCheckbox3",
+                                    "designerId": "1ba79f74-c857-4f74-ba6b-96833e711464"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGrdUnidades2Render",
+                                "implHandler": [
+                                    "this.onBtnLimpiarUnidadGastoClick();"
+                                ],
+                                "name": "render",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "onGrdUnidades2Render",
+                            "designerId": "8d42ae1d-904f-4aef-b781-52e021aad98a"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyRowEditingPlugin",
+                            "designerId": "f79da015-f873-4d6e-addb-683cc7a0005d",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingEdit",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "if (context.record.modified)",
+                                            "{",
+                                            "    var store = Ext.getCmp('grdUnidadesGasto').getStore();",
+                                            "    var reco = context.record;",
+                                            "    store.add(reco);",
+                                            "    store.sync(",
+                                            "        {",
+                                            "            success: function(batch, success)",
+                                            "            {",
+                                            "                store.commitChanges();",
+                                            "                store.load();",
+                                            "            },",
+                                            "",
+                                            "            failure: function(batch, success)",
+                                            "            {",
+                                            "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                            "            }",
+                                            "        });",
+                                            "}"
+                                        ],
+                                        "name": "edit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "onRowEditingEdit",
+                                    "designerId": "aa4f266d-14ec-4aab-bb85-f3b45b4e0d69"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRowEditingCanceledit",
+                                        "implHandler": [
+                                            "this.onBtnLimpiarUnidadGastoClick();"
+                                        ],
+                                        "name": "canceledit",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRowEditingCanceledit",
+                                    "designerId": "538989e9-36a0-4434-8807-c6caaf8ef1d0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

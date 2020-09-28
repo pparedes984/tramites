@@ -1,0 +1,157 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "panel.pnldireccionar",
+        "designer|userClassName": "panel.pnlDireccionar",
+        "dock": null,
+        "height": 900,
+        "layout": "vbox",
+        "scrollable": true,
+        "title": "Direccionamiento de trámites"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "layout": "string",
+        "container|align": "string",
+        "dock": "string",
+        "height": "auto",
+        "scrollable": "auto"
+    },
+    "name": "panel.pnlNuevo4",
+    "designerId": "11a421d3-7289-46c6-9a9b-ffa4855eb2ad",
+    "viewControllerInstanceId": "66d3ac85-0904-4d72-8c3e-0b088104e08c",
+    "viewModelInstanceId": "5cc9206d-4ef8-4b67-857b-dcf9e1f8d168",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "border",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel1",
+            "designerId": "94298f69-1f88-43da-ba0a-ebe1ca5542fd",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlDireccionarCentral",
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "scrollable": true
+                    },
+                    "configAlternates": {
+                        "layout|region": "string",
+                        "id": "string",
+                        "scrollable": "auto",
+                        "layout": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "04511412-de96-4f5b-9dc9-40b78a321ee0"
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ArbolUnidad",
+                        "layout|region": "west",
+                        "rootVisible": false,
+                        "store": "UnidadDireccionamientoTree",
+                        "width": 188
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "rootVisible": "boolean",
+                        "store": "store",
+                        "width": "auto"
+                    },
+                    "name": "MyTreePanel",
+                    "designerId": "58da6890-132a-44e3-ac1c-fc9a1094195e",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "frame": false,
+                                "rootVisible": false,
+                                "toggleOnDblClick": false,
+                                "width": 169
+                            },
+                            "configAlternates": {
+                                "frame": "boolean",
+                                "rootVisible": "boolean",
+                                "toggleOnDblClick": "boolean",
+                                "width": "auto"
+                            },
+                            "name": "MyTreeView1",
+                            "designerId": "ce4174ee-4ab3-4457-9629-ba398384a52d"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onArbolUnidadItemClick",
+                                "implHandler": [
+                                    "var recor = record;    ",
+                                    "Ext.getCmp('pnlDireccionarCentral').removeAll();",
+                                    "    var win = Ext.create('Tramites.view.direccionar.DirecGeneral');",
+                                    "    this.getView().down('#pnlDireccionarCentral').add(win);",
+                                    "    Ext.getCmp('formDireccionar').setVisible(false);",
+                                    "    Ext.getCmp('pnlDestinosDireccionar').setVisible(false);",
+                                    "    Ext.getCmp('pnlDireccionarCentral').setScrollable(true);",
+                                    "    win.show();"
+                                ],
+                                "name": "itemclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onArbolUnidadItemClick",
+                            "designerId": "636764fb-2e50-491f-ab8c-7a9ebb896e2f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

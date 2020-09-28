@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "Unidad",
+        "model": "UnidadModel",
+        "storeId": "Unidad"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "ac29b42a-b3ab-43e2-9453-5f12996e1863",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "api": [
+                    "{create: '../servidor/tramites/unidad/save',",
+                    "          read: '../servidor/tramites/unidad/getUnidad',",
+                    "          update: '../servidor/tramites/unidad/save',",
+                    "          destroy: '../servidor/tramites/unidad/delete'}"
+                ]
+            },
+            "configAlternates": {
+                "actionMethods": "object",
+                "url": "string",
+                "api": "object"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "f8e4d87b-e486-47c4-aa66-9797d0e993d6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "cf2e2148-e844-4e58-84d3-20ce471a78ad"
+                }
+            ]
+        }
+    ]
+}

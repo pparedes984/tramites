@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panel.pnlconsultageneral",
+        "designer|userClassName": "panel.pnlNuevoViewController5"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "panel.pnlNuevoViewController5",
+    "designerId": "97085ab5-903d-4c72-9def-833a79f4cf11"
+}

@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "rolesstore",
+        "designer|userAliasPrefix": "store",
+        "designer|userClassName": "Roles",
+        "model": "RolesModel",
+        "storeId": "Roles"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "MyStore",
+    "designerId": "44181770-45c8-4ca8-9195-c80f6996285c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "url": "../servidor/tramites/rol/getRoles"
+            },
+            "configAlternates": {
+                "url": "string",
+                "actionMethods": "object"
+            },
+            "name": "MyAjaxProxy10",
+            "designerId": "ac87c1c5-85ab-4b41-a602-165cfaf42f20",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "7ba5ff32-a0ba-48ad-aac2-b78e60ea80f3"
+                }
+            ]
+        }
+    ]
+}

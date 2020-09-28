@@ -1,0 +1,341 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "panel.pnladmingeneral",
+        "designer|userClassName": "panel.pnlAdminGeneral",
+        "scrollable": true,
+        "title": "Administración general"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string",
+        "scrollable": "auto"
+    },
+    "name": "panel.pnlNuevo3",
+    "designerId": "0bfeb9be-ec1b-4ac5-83d2-6414b30c7a42",
+    "viewControllerInstanceId": "da09b901-f122-4eba-a88b-ce25d68f7b74",
+    "viewModelInstanceId": "16081c87-4552-46f1-b36b-1ec038ffe8a1",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0
+            },
+            "configAlternates": {
+                "activeTab": "auto"
+            },
+            "name": "MyTabPanel1",
+            "designerId": "ef78a429-9a5d-44e6-a79d-4d135bbe8e3d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlUsuarios",
+                        "title": "Usuarios"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel13",
+                    "designerId": "26d0e581-0c05-4417-8db3-57fc467f5aa2",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig6",
+                            "designerId": "16bc8945-6d5a-4e9a-8cd0-5a6c5af6cf9e"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlUsuariosActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlParametros').removeAll();",
+                                    "Ext.getCmp('pnlUsuarios').removeAll();",
+                                    "Ext.getCmp('pnlAsuntos2').removeAll();",
+                                    "Ext.getCmp('pnlUnidades').removeAll();",
+                                    "var win = Ext.create('Tramites.view.adminGeneral.Usuarios');",
+                                    "this.getView().down('#pnlUsuarios').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlUsuariosActivate",
+                            "designerId": "6ef31270-fff9-4929-b7e0-2bf31b1867a0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlParametros",
+                        "title": "Parámetros"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "id": "string"
+                    },
+                    "name": "MyPanel14",
+                    "designerId": "42301d0b-aa1f-47a5-8334-9e4174ed83f3",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig7",
+                            "designerId": "a37fa2e5-3b66-4695-b31c-6ae33ff8fa45"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlParametrosActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlParametros').removeAll();",
+                                    "Ext.getCmp('pnlUsuarios').removeAll();",
+                                    "Ext.getCmp('pnlAsuntos2').removeAll();",
+                                    "Ext.getCmp('pnlUnidades').removeAll();",
+                                    "var win = Ext.create('Tramites.view.adminGeneral.Parametros');",
+                                    "this.getView().down('#pnlParametros').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlParametrosActivate",
+                            "designerId": "6a990ba6-f89e-4a21-9684-0bcb90bc8008"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlAsuntos2",
+                        "title": "Asuntos"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "id": "string"
+                    },
+                    "name": "MyPanel15",
+                    "designerId": "caa0c380-095c-49f3-b565-c8b158730ce0",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig8",
+                            "designerId": "9b9596e0-6bff-480f-a768-f77111c8415b"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlAsuntos2Activate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlParametros').removeAll();",
+                                    "Ext.getCmp('pnlUsuarios').removeAll();",
+                                    "Ext.getCmp('pnlAsuntos2').removeAll();",
+                                    "Ext.getCmp('pnlUnidades').removeAll();",
+                                    "var win = Ext.create('Tramites.view.adminGeneral.Asuntos');",
+                                    "this.getView().down('#pnlAsuntos2').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlAsuntos2Activate",
+                            "designerId": "35f21377-a964-49e3-bc58-b5f2729865a9"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlUnidades",
+                        "title": "Unidades"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "26f2d364-29b6-41af-9cc7-9c9f3d0d6f5d",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "0ff13288-6543-440f-a81a-bdd5c41e921b"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPnlUnidadesActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlParametros').removeAll();",
+                                    "Ext.getCmp('pnlUsuarios').removeAll();",
+                                    "Ext.getCmp('pnlAsuntos2').removeAll();",
+                                    "Ext.getCmp('pnlUnidades').removeAll();",
+                                    "var win = Ext.create('Tramites.view.adminGeneral.Unidad');",
+                                    "this.getView().down('#pnlUnidades').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPnlUnidadesActivate",
+                            "designerId": "05bb0bbe-21e8-42d5-b756-e07eb7b0014f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlRolesUsuario",
+                        "title": "Roles a usuarios"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel16",
+                    "designerId": "90825c4e-e495-4091-bdcd-63c30f1f0f85",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig9",
+                            "designerId": "6d88c6cc-5f08-4e04-b639-001820bd931f"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPanelActivate",
+                                "implHandler": [
+                                    "Ext.getCmp('pnlRolesUsuario').removeAll();",
+                                    "var win = Ext.create('Tramites.view.adminGeneral.RolesUsuario');",
+                                    "this.getView().down('#pnlRolesUsuario').add(win);",
+                                    "win.show();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPanelActivate",
+                            "designerId": "55b794b3-7957-43a9-b5e3-30da3586286d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,454 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Consulta1Model"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "b952d04d-aced-4867-adf0-383bdb985f48",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_CODIGO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger10",
+            "designerId": "b720c8ab-1dd5-450b-a804-d879e71cea07"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHA"
+            },
+            "configAlternates": {
+                "name": "string",
+                "dateFormat": "string"
+            },
+            "name": "MyField5",
+            "designerId": "bcf23cee-1cee-4f64-9aff-c784b658bd69"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_RECIBIDO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyBoolean3",
+            "designerId": "3f764d82-d740-4a99-8bfc-78d2a1c97c92"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_OFICIO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString22",
+            "designerId": "8f5e2d9e-b8d4-42bf-8549-231c6effd4f5"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_BENEFICIARIO1"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString23",
+            "designerId": "4f1a285c-9538-4c29-9ff2-ce4fa7f8d3b9"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_BENEFICIARIO2"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString29",
+            "designerId": "58050703-995d-4824-9d97-833d6bafc03a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_PROYECTO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString30",
+            "designerId": "83d3b446-564c-4d2a-b74a-8cd3d9cd37d8"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_GASTO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString31",
+            "designerId": "e3533660-0fc1-4881-89d0-4519c4c67b98"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_DESCRIPCION"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString32",
+            "designerId": "70231751-39b9-4045-a25d-198b08696629"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_ANULADO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyBoolean4",
+            "designerId": "e1aa25cb-88d7-4093-9b2c-d65aa606aff5"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UND_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString33",
+            "designerId": "ae00d3ae-e912-4f9d-9fb4-8ba98a8f6916"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ASU_DESCRIPCION"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString34",
+            "designerId": "37a10542-a218-4d0f-82fb-d3d9604f4f96"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRM_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString35",
+            "designerId": "3913a5f6-4fd3-4d53-9491-aabe99a5ab32"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHARECIBIDO"
+            },
+            "configAlternates": {
+                "name": "string",
+                "dateFormat": "string"
+            },
+            "name": "MyField3",
+            "designerId": "662a911b-d1b9-47e1-b149-93b162760692"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_CEDULA1"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString37",
+            "designerId": "9976324a-7f7b-4663-830e-1b0c80436150"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_CEDULA2"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString38",
+            "designerId": "66dfa49b-5b22-4aea-a5eb-542368320328"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_COMPROMISO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString39",
+            "designerId": "ada67626-7bb1-42f6-a980-16bec6c91ab9"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_PERSONA_AUTORIZA"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString40",
+            "designerId": "19808690-9efd-488e-8a49-aca50d2112ad"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_TELEFONO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString41",
+            "designerId": "95230e8a-67ef-4167-9d4d-72d48c09600e"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_VALOR"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyNumber1",
+            "designerId": "5390de17-bf23-4db0-85f1-5947fc81fd3b"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_DETALLE_FACTURA"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString42",
+            "designerId": "7024fca1-5527-467c-acda-cfb03c207f92"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHA_VIAJE_VIATICO"
+            },
+            "configAlternates": {
+                "name": "string",
+                "dateFormat": "string"
+            },
+            "name": "MyString43",
+            "designerId": "6aa6d898-6e8e-4321-b1dd-0a036165a74b"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_DESTINO_VIATICO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString44",
+            "designerId": "9beafcae-35a2-4fb9-8f09-1850c2f7511e"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_PERSONAS_ADIC_VIATICO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString45",
+            "designerId": "59b50410-3d3e-4e50-8fcc-018a9183b0b3"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_OBSERV_VIAJE_VIATICO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString46",
+            "designerId": "796e0b4f-3378-4bfc-8c13-6d50a65157df"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_FECHA_VIAJE_FIN_VIATICO"
+            },
+            "configAlternates": {
+                "name": "string",
+                "dateFormat": "string"
+            },
+            "name": "MyString48",
+            "designerId": "50b5e8f1-b55f-4ff6-8d88-52a4de95060e"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRA_POSICION"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString47",
+            "designerId": "a34373cc-1f0a-499c-8b15-c21c0a3e3ad3"
+        }
+    ]
+}

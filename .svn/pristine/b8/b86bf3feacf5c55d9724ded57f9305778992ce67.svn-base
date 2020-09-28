@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsuarioModel",
+        "idProperty": "USR_USUARIO"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "c332a249-56e3-4929-aa73-815e0f21b666",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_USUARIO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString1",
+            "designerId": "bae8bf11-36dd-47fc-8bf9-6acd2c56241c"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_CEDULA"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString26",
+            "designerId": "e16defe9-c1b2-446a-86a3-3d67d8dcd7ea"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_NOMBRE"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString31",
+            "designerId": "22b7c8b8-3aba-4007-98ec-e8b4ae4cf722"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_APELLIDO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyString32",
+            "designerId": "0608c6c4-6652-4b8c-9fbb-5d720339d14a"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "USR_ACTIVO"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyBoolean",
+            "designerId": "89fdcb6e-7871-4c65-acb1-1b98e56376af"
+        }
+    ]
+}

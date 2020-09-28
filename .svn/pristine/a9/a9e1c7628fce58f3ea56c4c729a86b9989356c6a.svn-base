@@ -1,0 +1,310 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "constrainHeader": true,
+        "designer|userAlias": "direccionar.winestado",
+        "designer|userClassName": "direccionar.winEstado",
+        "draggable": false,
+        "expandOnShow": false,
+        "height": 290,
+        "layout": "fit",
+        "modal": true,
+        "title": "Estados",
+        "width": 900
+    },
+    "configAlternates": {
+        "autoShow": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "constrainHeader": "boolean",
+        "draggable": "boolean",
+        "modal": "boolean",
+        "expandOnShow": "boolean",
+        "scrollable": "auto",
+        "layout": "string"
+    },
+    "name": "MyWindow",
+    "designerId": "050176c1-8374-4efe-a390-0d768527e53b",
+    "viewControllerInstanceId": "b3ac19ae-a605-4c3d-bad3-b39eb4fdad35",
+    "viewModelInstanceId": "54e47636-9794-460b-8654-648635875f0f",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "forceFit": true,
+                "id": "grdEstadoRevisar",
+                "scrollable": "vertical",
+                "store": "Estado"
+            },
+            "configAlternates": {
+                "id": "string",
+                "store": "store",
+                "forceFit": "boolean",
+                "scrollable": "auto"
+            },
+            "name": "MyGridPanel2",
+            "designerId": "e4272e7f-e93a-4be3-a697-d7608b8829a6",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 250
+                    },
+                    "configAlternates": {
+                        "height": "auto"
+                    },
+                    "name": "MyTable2",
+                    "designerId": "586d775a-3ad1-4239-9b78-33dcf379a839"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "UND_NOMBRE",
+                        "text": "Destino"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyColumn40",
+                    "designerId": "4b117f90-67cb-46c9-bb70-39e8bd6a29c6"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_FECHARECIBIDO",
+                        "format": "Y-m-d",
+                        "text": "Fecha"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyDateColumn6",
+                    "designerId": "44a41446-bd56-466d-b5e4-607ec694c273"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "TIP_NOMBRE",
+                        "text": "Estado"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn12",
+                    "designerId": "a76610a0-bf48-4379-a16f-67e02e1d04f3"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_OBSERVACION",
+                        "text": "Observación"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn34",
+                    "designerId": "3fbeda1a-10ee-49eb-b074-b67d44b5f33f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_DESCRIPCION",
+                        "text": "Descripción de la unidad"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn35",
+                    "designerId": "4baa05d6-ebfa-4aad-8e48-42887516625e"
+                },
+                {
+                    "type": "Ext.grid.column.Check",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_REVISADO_UNIDAD",
+                        "disabled": true,
+                        "text": "Revisado"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "disabled": "boolean"
+                    },
+                    "name": "MyCheck",
+                    "designerId": "80e16464-276f-46b3-942a-e4356b753fc1"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_ASIGNADO_A",
+                        "text": "Asignado A"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn17",
+                    "designerId": "42eaa101-7fcf-4132-ab32-43ef4240f3a9"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EST_FECHAFIN",
+                        "format": "Y-m-d",
+                        "text": "Fecha de finalización"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyDateColumn4",
+                    "designerId": "c5e39315-0811-42fb-bf9d-7d8226dc6766"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGrdEstadoRevisarRender",
+                        "implHandler": [
+                            "var grid = Ext.getCmp('grdEstadoRevisar');",
+                            "var store = grid.getStore();",
+                            "var g = Ext.getCmp('grdTramite2');",
+                            "var rec = g.selection;",
+                            "var tramiteNum = rec.data.TRA_CODIGO;",
+                            "var parametroNum = rec.data.TRA_PRM_ID;",
+                            "var strEstado2 = store;",
+                            "strEstado2.proxy.extraParams = {",
+                            "    busqueda: 1,",
+                            "    idtramite: tramiteNum,",
+                            "    idparametro: parametroNum",
+                            "};",
+                            "strEstado2.load();"
+                        ],
+                        "name": "render",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onGrdEstadoRevisarRender",
+                    "designerId": "49820366-94ac-40d9-be7f-8a4844570d8c"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowClose",
+                "implHandler": [
+                    "",
+                    "//controla que al cerrar la ventana, el grid vuelva a tener la información que tenia antes",
+                    "//porque es el mismo store",
+                    "var grid = Ext.getCmp('grdDirecTramite').setVisible(true);",
+                    "grid.getStore().removeAll();",
+                    "var strEstado = Ext.getStore('Estado');",
+                    "var g = Ext.getCmp('grdTramite2');",
+                    "var rec = g.selection;",
+                    "var tramite = rec.data.TRA_CODIGO;",
+                    "var parametro = rec.data.TRA_PRM_ID;",
+                    "var fechainicio = rec.data.TRA_FECHARECIBIDO;",
+                    "strEstado.proxy.extraParams = {",
+                    "    idparametro: parametro,",
+                    "    idtramite: tramite,",
+                    "    fechaInicio: fechainicio,",
+                    "    busqueda: 2,",
+                    "    unidad: UNIDADDIR",
+                    "};",
+                    "strEstado.load();"
+                ],
+                "name": "close",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowClose",
+            "designerId": "48ee8b68-2409-4a19-8884-cf1f7c061ffb"
+        }
+    ]
+}
